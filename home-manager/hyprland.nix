@@ -7,7 +7,8 @@
       "GBM_BACKEND,nvidia-drm"
       "__GLX_VENDOR_LIBRARY_NAME,nvidia"
       "NVD_BACKEND,direct"
-      "SDL_BACKEND,wayland"
+      "GDK_BACKEND,wayland"
+      # "SDL_BACKEND,wayland"
     ];
   
     monitor = ",preferred,auto,auto";
