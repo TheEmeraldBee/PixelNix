@@ -2,6 +2,12 @@
   wayland.windowManager.hyprland.settings = {
     env = [
       "QT_QPA_PLATFORM,wayland"
+      "LIBVA_DRIVER_NAME,nvidia"
+      "XDG_SESSION_TYPE,wayland"
+      "GBM_BACKEND,nvidia-drm"
+      "__GLX_VENDOR_LIBRARY_NAME,nvidia"
+      "NVD_BACKEND,direct"
+      "SDL_BACKEND,wayland"
     ];
   
     monitor = ",preferred,auto,auto";
@@ -20,7 +26,7 @@
       "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
       "col.inactive_border" = "rgba(595959aa)";
 
-      # allow_tearing = true;
+      allow_tearing = true;
 
       layout = "dwindle";
     };
@@ -55,6 +61,10 @@
     misc = {
       disable_splash_rendering = true;
       disable_hyprland_logo = true;
+    };
+
+    cursor = {
+      no_hardware_cursors = true;
     };
 
     "$mod" = "SUPER";

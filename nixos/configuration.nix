@@ -9,8 +9,12 @@
     ./hardware-configuration.nix
   ];
 
+  boot.supportedFilesystems = [ "ntfs" ];
+
   programs.hyprland = {
     enable = true;
+    xwayland.enable = true;
+    
     package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
     portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
   };
@@ -49,7 +53,7 @@
     open = false;
 
     nvidiaSettings = true;
-    package = config.boot.kernelPackages.nvidiaPackages.beta;
+    package = config.boot.kernelPackages.nvidiaPackages.production;
 
     forceFullCompositionPipeline = true;
   };
@@ -122,10 +126,24 @@
 
     # Steam
     steam
+    procps
+    usbutils
+
+    gamemode
+
+    # ALVR
+    alvr
   ] ++ [
     inputs.swww.packages.${pkgs.system}.swww
     inputs.zen-browser.packages.${pkgs.system}.specific
   ];
+
+  hardware.steam-hardware.enable = true;
+
+  programs.alvr = {
+    enable = true;
+    openFirewall = true;
+  };
 
   services.blueman.enable = true;
 
@@ -133,13 +151,24 @@
 
   programs.steam = {
     enable = true;
+    remotePlay.openFirewall = true;
+    dedicatedServer.openFirewall = true;
+
     package = pkgs.steam.override {
-      extraLibraries = (pkgs: [ pkgs.openssl pkgs.nghttp2 pkgs.libidn2 pkgs.rtmpdump pkgs.libpsl pkgs.curl pkgs.krb5 pkgs.keyutils ]);
+      extraLibraries = (pkgs: with pkgs; [
+        openssl 
+        nghttp2 
+        libidn2 
+        rtmpdump 
+        libpsl 
+        curl 
+        krb5 
+        keyutils 
+      ]);
     };
   };
 
   # List services that you want to enable:
-  services.flatpak.enable = true;
   services.openssh.enable = true;
 
   programs._1password.enable = true;
