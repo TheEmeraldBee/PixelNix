@@ -15,14 +15,14 @@
     icon_color = "red"
 
     [[app."Zen Browser".event]]
-    Exec = "/home/brightonlcox/nvidia-offload zen"
+    Exec = "zen"
 
     [app."Discord".style]
     icon = ""
     icon_color = "blue"
 
     [[app."Discord".event]]
-    Exec = "/home/brightonlcox/nvidia-offload discord"
+    Exec = "discord"
 
     [app."1Password".style]
     icon = ""
@@ -36,6 +36,6 @@
     icon_color = "blue"
 
     [[app."Steam".event]]
-    Exec = "/home/brightonlcox/nvidia-offload steam"
+    Exec = "steam"
   '';
 }
