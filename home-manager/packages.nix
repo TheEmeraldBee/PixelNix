@@ -58,6 +58,9 @@
     # Communication
     discord
 
+    # Gaming
+    mons
+
     # ----------- #
     # Programming #
     # ----------- #
