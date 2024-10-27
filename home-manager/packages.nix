@@ -95,7 +95,4 @@
     fira-code-nerdfont
     fira-sans
   ];
-
-  # External Files For Packages
-  olympus = pkgs.callPackage ./packages/olympus.nix {};
 }
