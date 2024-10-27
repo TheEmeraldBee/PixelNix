@@ -12,11 +12,6 @@
     username = "brightonlcox";
     homeDirectory = "/home/brightonlcox";
     stateVersion = "24.11";
-
-    # sessionPath = [
-    #   # Put ~/.cargo/bin into my PATH
-    #   "/home/brightonlcox/.cargo/bin"
-    # ];
   };
 
   imports = [
