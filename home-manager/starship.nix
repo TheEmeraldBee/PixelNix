@@ -8,7 +8,7 @@
       "$directory"
       "$cmd_duration"
       "$line_break"
-      "\n$character"
+      "$character"
     ];
 
     right_format = lib.concatStrings [
