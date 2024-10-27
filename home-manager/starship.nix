@@ -3,20 +3,20 @@
 
   programs.starship.settings = {
     format = lib.concatStrings [
-      "$username "
-      "$hostname "
-      "$directory "
-      "$cmd_duration "
-      "$line_break "
+      "$username"
+      "$hostname"
+      "$directory"
+      "$cmd_duration"
+      "$line_break"
       "$character"
     ];
 
     right_format = lib.concatStrings [
-      "$git_branch "
-      "$git_state "
-      "$git_status "
-      "$nix_shell "
-      "$cmd_duration "
+      "$git_branch"
+      "$git_state"
+      "$git_status"
+      "$nix_shell"
+      "$cmd_duration"
       "$time"
     ];
 
@@ -61,7 +61,7 @@
       disabled = false;
       time_format = "%R";
       style = "green";
-      format = "[ $time]($style)";
+      format = "[   $time]($style)";
     };
 
     nix_shell = {
