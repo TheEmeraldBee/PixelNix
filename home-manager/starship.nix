@@ -8,7 +8,7 @@
       "$directory "
       "$cmd_duration "
       "$line_break "
-      "$character "
+      "$character"
     ];
 
     right_format = lib.concatStrings [
@@ -17,7 +17,7 @@
       "$git_status "
       "$nix_shell "
       "$cmd_duration "
-      "$time "
+      "$time"
     ];
 
     directory = {
