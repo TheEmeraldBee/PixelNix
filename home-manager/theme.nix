@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   home.pointerCursor = {
     gtk.enable = true;
     x11.enable = true;
@@ -24,15 +24,14 @@
     };
 
     gtk3.extraConfig = {
-      Settings =  ''
+      Settings = ''
         gtk-application-prefer-dark-theme=1
         gtk-cursor-theme-name=Bibata-Modern-Classic
       '';
     };
 
-    
     gtk4.extraConfig = {
-      Settings =  ''
+      Settings = ''
         gtk-application-prefer-dark-theme=1
         gtk-cursor-theme-name=Bibata-Modern-Classic
       '';
@@ -47,4 +46,4 @@
       };
     };
   };
-} 
+}

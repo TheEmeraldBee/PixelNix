@@ -1,4 +1,4 @@
-{ ... }: {
+{...}: {
   networking.hostName = "brighton-pc";
   networking.networkmanager.enable = true;
 

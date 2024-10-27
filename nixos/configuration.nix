@@ -1,7 +1,12 @@
-{ inputs, config, lib, pkgs, ... }: {
-
+{
+  inputs,
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   # Enable flakes and the `nix` command
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   # Allow unfree packages in nix
   nixpkgs.config.allowUnfree = pkgs.lib.mkForce true;
@@ -9,14 +14,14 @@
   # Import all files that are needed
   imports = [
     ./packages.nix
-  
+
     ./network.nix
     ./services.nix
     ./nvidia.nix
 
     ./steam.nix
     ./1password.nix
-  
+
     ./hardware-configuration.nix
   ];
 
@@ -30,18 +35,18 @@
   # Define User Account
   users.users.brightonlcox = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
-    shell = pkgs.zsh;    
+    extraGroups = ["wheel"]; # Enable ‘sudo’ for the user.
+    shell = pkgs.zsh;
   };
 
   # Enable ZSH
   programs.zsh.enable = true;
-  
+
   # Enable Hyprland and XWayland
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;
-    
+
     package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
     portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
   };
@@ -64,6 +69,4 @@
   #
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
   system.stateVersion = "24.05"; # Did you read the comment?
-
 }
-

@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   hardware.steam-hardware.enable = true;
 
   programs.steam = {
@@ -7,16 +7,17 @@
     dedicatedServer.openFirewall = true;
 
     package = pkgs.steam.override {
-      extraLibraries = (pkgs: with pkgs; [
-        openssl 
-        nghttp2 
-        libidn2 
-        rtmpdump 
-        libpsl 
-        curl 
-        krb5 
-        keyutils 
-      ]);
+      extraLibraries = pkgs:
+        with pkgs; [
+          openssl
+          nghttp2
+          libidn2
+          rtmpdump
+          libpsl
+          curl
+          krb5
+          keyutils
+        ];
     };
   };
 

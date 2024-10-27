@@ -1,39 +1,45 @@
-{ inputs, pkgs, ... }: {
-    environment.systemPackages = with pkgs; [
-    # Programming
-    git
-    gcc
+{
+  inputs,
+  pkgs,
+  ...
+}: {
+  environment.systemPackages = with pkgs;
+    [
+      # Programming
+      git
+      gcc
 
-    # Home Manager
-    home-manager
+      # Home Manager
+      home-manager
 
-    # Misc
-    libnotify
-    pulseaudio
+      # Misc
+      libnotify
+      pulseaudio
 
-    pipewire
-    wireplumber
+      pipewire
+      wireplumber
 
-    # TaskBar
-    eww
+      # TaskBar
+      eww
 
-    # Notifications
-    mako
+      # Notifications
+      mako
 
-    bluez
+      bluez
 
-    # Steam
-    steam
-    procps
-    usbutils
+      # Steam
+      steam
+      procps
+      usbutils
 
-    gamemode
+      gamemode
 
-    # ALVR
-    alvr
-  ] ++ [
-    inputs.swww.packages.${pkgs.system}.swww
-    inputs.zen-browser.packages.${pkgs.system}.specific
-    inputs.app-launcher.packages.${pkgs.system}.default
-  ];
+      # ALVR
+      alvr
+    ]
+    ++ [
+      inputs.swww.packages.${pkgs.system}.swww
+      inputs.zen-browser.packages.${pkgs.system}.specific
+      inputs.app-launcher.packages.${pkgs.system}.default
+    ];
 }

@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -16,7 +16,7 @@
       cd = "z";
 
       # Zellij
-      e="zellij action new-tab --layout ~/.config/zellij/layouts/ide.kdl";
+      e = "zellij action new-tab --layout ~/.config/zellij/layouts/ide.kdl";
 
       # Rust
       cup = "cargo +nightly -Zunstable-options update --breaking";
@@ -37,9 +37,7 @@
       img = "hyprctl dispatch -- exec \"[float; size 1920 1080;]\" feh -.";
 
       # OS Stuff
-      osupdate = "sudo nixos-rebuild switch --flake ~/nix-flake#nixos";
-      hmupdate = "home-manager switch --flake ~/nix-flake#brightonlcox";
-      ne = "hx ~/nix-flake";
+      ne = "~/dotfiles/scripts/edit.sh";
     };
 
     plugins = [
@@ -59,7 +57,8 @@
   programs.zsh.oh-my-zsh = {
     enable = true;
     plugins = [
-      "git" "sudo"
+      "git"
+      "sudo"
     ];
   };
 

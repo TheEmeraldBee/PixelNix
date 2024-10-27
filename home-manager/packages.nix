@@ -1,4 +1,4 @@
-{ pkgs, ...}: {
+{pkgs, ...}: {
   home.packages = with pkgs; [
     # ----- #
     # Shell #
@@ -34,6 +34,7 @@
     gnutar
     fzf
     gitui
+    alejandra
 
     # Screenshots
     grim

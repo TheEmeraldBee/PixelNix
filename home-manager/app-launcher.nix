@@ -1,4 +1,4 @@
-{ ... }: {
+{...}: {
   xdg.configFile."launcher/config.toml".text = ''
     [[each]]
     Exit = {}

@@ -1,4 +1,4 @@
-{ ... }: {
+{...}: {
   # Document Printing.
   services.printing.enable = true;
 

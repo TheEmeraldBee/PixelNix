@@ -1,4 +1,9 @@
-{ config, libs, pkgs, ...}: {
+{
+  config,
+  libs,
+  pkgs,
+  ...
+}: {
   wayland.windowManager.hyprland.settings = {
     env = [
       "QT_QPA_PLATFORM,wayland"
@@ -10,7 +15,7 @@
       "GDK_BACKEND,wayland"
       # "SDL_BACKEND,wayland"
     ];
-  
+
     monitor = ",preferred,auto,auto";
 
     xwayland = {
@@ -53,7 +58,7 @@
       pseudotile = true;
       preserve_split = true;
     };
-  
+
     input = {
       follow_mouse = 1;
       sensitivity = -0.5;
@@ -75,31 +80,33 @@
       "eww daemon && eww open sidebar"
       "mako"
     ];
-    bind = [
-      "$mod, return, exec, alacritty"
-      "$mod, space, exec, alacritty --class AppLauncher -e app-launcher"
+    bind =
+      [
+        "$mod, return, exec, alacritty"
+        "$mod, space, exec, alacritty --class AppLauncher -e app-launcher"
 
-      "$mod, X, killactive,"
-      "$mod, M, exit,"
-      "$mod, P, pin,"
+        "$mod, X, killactive,"
+        "$mod, M, exit,"
+        "$mod, P, pin,"
 
-      "$mod, V, togglefloating,"
+        "$mod, V, togglefloating,"
 
-      "$mod, F, fullscreenstate, 3"
+        "$mod, F, fullscreenstate, 3"
 
-      "$mod, O, exec, grim ~/Screenshots/$(date +'%Y%m%d%H%M.png')"
-      "$mod SHIFT, O, exec, grim -g \"$(slurp)\" ~/Screenshots/$(date +'%Y%m%d%H%M.png')"
-    ]
-    ++ (
-      builtins.concatLists (builtins.genList (i:
-        let ws = i + 1;
-        in [
-          "$mod, code:1${toString i}, workspace, ${toString ws}"
-          "$mod SHIFT, code:1${toString i}, movetoworkspace, ${toString ws}"
-        ]
-      )
-      9)
-    );
+        "$mod, O, exec, grim ~/Screenshots/$(date +'%Y%m%d%H%M.png')"
+        "$mod SHIFT, O, exec, grim -g \"$(slurp)\" ~/Screenshots/$(date +'%Y%m%d%H%M.png')"
+      ]
+      ++ (
+        builtins.concatLists (builtins.genList (
+            i: let
+              ws = i + 1;
+            in [
+              "$mod, code:1${toString i}, workspace, ${toString ws}"
+              "$mod SHIFT, code:1${toString i}, movetoworkspace, ${toString ws}"
+            ]
+          )
+          9)
+      );
     bindm = [
       "$mod, mouse:272, movewindow"
       "$mod, mouse:273, resizewindow"

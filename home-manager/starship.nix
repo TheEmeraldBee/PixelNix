@@ -1,4 +1,4 @@
-{ lib, ... }: {
+{lib, ...}: {
   programs.starship.enable = true;
 
   programs.starship.settings = {
@@ -14,7 +14,7 @@
       "[ ](fg:#1d2230)"
       "\n$character"
     ];
-  
+
     directory = {
       style = "fg:#e3e5e5 bg:#769ff0";
       format = "[ $path ]($style)";
@@ -39,6 +39,5 @@
       style = "bg:#1d2230";
       format = "[[  $time ](fg:#a0a9cb bg:#1d2230)]($style)";
     };
-    
   };
 }

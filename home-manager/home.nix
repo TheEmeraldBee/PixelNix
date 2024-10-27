@@ -1,4 +1,9 @@
-{ config, libs, pkgs, ...}: {
+{
+  config,
+  libs,
+  pkgs,
+  ...
+}: {
   # Enable Unfree Packages
   nixpkgs.config.allowUnfree = pkgs.lib.mkForce true;
 
@@ -37,4 +42,3 @@
     ./hyprland.nix
   ];
 }
-
