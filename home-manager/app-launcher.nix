@@ -37,5 +37,12 @@
 
     [[app."Steam".event]]
     Exec = "steam"
+
+    [app."Git Kraken".style]
+    icon = ""
+    icon_color = "blue"
+
+    [[app."Git Kraken".event]]
+    Exec = "gitkraken"
   '';
 }
