@@ -1,4 +1,4 @@
-{ config, libs, pkgs, ...}: {
+{ pkgs, ...}: {
   home.packages = with pkgs; [
     # ----- #
     # Shell #
@@ -45,11 +45,6 @@
     # Applications #
     # ------------ #
 
-    # File-Explorer
-    dolphin
-    kdePackages.qtwayland
-    kdePackages.qtsvg
-
     # Audio Editor
     pavucontrol
 
@@ -58,12 +53,6 @@
 
     # Communication
     discord
-
-    # Gaming
-    steam
-    osu-lazer
-
-    libsForQt5.kdeconnect-kde
 
     # ----------- #
     # Programming #
