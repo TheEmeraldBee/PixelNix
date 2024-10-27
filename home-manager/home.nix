@@ -8,10 +8,10 @@
     homeDirectory = "/home/brightonlcox";
     stateVersion = "24.11";
 
-    sessionPath = [
-      # Put ~/.cargo/bin into my PATH
-      "/home/brightonlcox/.cargo/bin"
-    ];
+    # sessionPath = [
+    #   # Put ~/.cargo/bin into my PATH
+    #   "/home/brightonlcox/.cargo/bin"
+    # ];
   };
 
   imports = [
@@ -29,6 +29,9 @@
     ./git.nix
     ./zellij.nix
     ./starship.nix
+
+    # Applications
+    ./app-launcher.nix
 
     # Home Manager
     ./hyprland.nix

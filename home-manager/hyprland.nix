@@ -76,7 +76,6 @@
       "mako"
     ];
     bind = [
-      "$mod, E, exec, zen"
       "$mod, return, exec, alacritty"
       "$mod, space, exec, alacritty --class AppLauncher -e app-launcher"
 
@@ -109,7 +108,10 @@
     windowrulev2 = [
       "suppressevent maximize, class:.*"
       "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
+
       "float,class:AppLauncher"
+      "pin,class:AppLauncher"
+      "stayfocused,class:AppLauncher"
     ];
   };
 }

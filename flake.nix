@@ -13,6 +13,7 @@
     };
     swww.url = "github:LGFae/swww";
     zen-browser.url = "github:MarceColl/zen-browser-flake";
+    app-launcher.url = "github:TheEmeraldBee/tui-launcher";
   };
   outputs = { nixpkgs, home-manager, hyprland, ... } @ inputs:
     let

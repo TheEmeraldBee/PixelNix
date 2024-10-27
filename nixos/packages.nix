@@ -34,5 +34,6 @@
   ] ++ [
     inputs.swww.packages.${pkgs.system}.swww
     inputs.zen-browser.packages.${pkgs.system}.specific
+    inputs.app-launcher.packages.${pkgs.system}.default
   ];
 }
