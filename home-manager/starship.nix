@@ -58,7 +58,6 @@
     };
 
     time = {
-      disabled = false;
       time_format = "%R";
       style = "green";
       format = "[$time]";
