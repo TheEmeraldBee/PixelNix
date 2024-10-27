@@ -33,8 +33,11 @@
     wget
     gnutar
     fzf
-    gitui
     alejandra
+
+    # Git
+    gitui
+    gitkraken
 
     # Screenshots
     grim
