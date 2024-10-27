@@ -27,6 +27,7 @@
 
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
+    zlib
   ];
 
   # Use the systemd-boot EFI boot loader.
