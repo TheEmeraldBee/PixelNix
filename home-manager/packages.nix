@@ -59,7 +59,7 @@
     discord
 
     # Gaming
-    mons
+    everest-mons
 
     # ----------- #
     # Programming #
