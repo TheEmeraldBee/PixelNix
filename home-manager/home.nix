@@ -7,6 +7,8 @@
   # Enable Unfree Packages
   nixpkgs.config.allowUnfree = pkgs.lib.mkForce true;
 
+  news.display = "silent";
+
   # Define Normal Home Modules
   home = {
     username = "brightonlcox";
