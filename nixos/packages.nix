@@ -36,6 +36,9 @@
 
       # ALVR
       alvr
+
+      # External Packages
+      (callPackage "${inputs.nixpkgs-olympus}/pkgs/by-name/ol/olympus/package.nix" {})
     ]
     ++ [
       inputs.swww.packages.${pkgs.system}.swww
