@@ -32,6 +32,8 @@
       "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
       "col.inactive_border" = "rgba(595959aa)";
 
+      allow_tearing = true;
+
       layout = "dwindle";
     };
 
@@ -55,6 +57,7 @@
     dwindle = {
       pseudotile = true;
       preserve_split = true;
+      smart_split = true;
     };
 
     input = {
@@ -117,6 +120,8 @@
       "float,class:AppLauncher"
       "pin,class:AppLauncher"
       "stayfocused,class:AppLauncher"
+
+      "immediate, class:(.*)$"
     ];
   };
 }
