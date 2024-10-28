@@ -9,11 +9,11 @@
       font.size = 12.5;
 
       shell = {
-        program = "/bin/zsh";
+        program = "zsh";
         args = [
           "--login"
           "-c"
-          "zellij"
+          "zellij -l welcome"
         ];
       };
     };
