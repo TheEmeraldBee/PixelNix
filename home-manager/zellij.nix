@@ -28,7 +28,7 @@
 
   xdg.configFile."zellij/layouts/default.swap.kdl".text = ''
     swap_tiled_layout name="one_pane" {
-      ui exact_panes=2 {
+      ui exact_panes=3 {
         pane split_direction="vertical" {
           pane name="sidebar" size="20%"
           pane name="editor" command="hx"
@@ -37,7 +37,7 @@
     }
 
     swap_tiled_layout name="sidebar_open_two_or_more_panes" {
-      ui min_panes=3 {
+      ui min_panes=4 {
         pane split_direction="vertical" {
           pane name="sidebar" size="20%"
           pane split_direction="horizontal" {
