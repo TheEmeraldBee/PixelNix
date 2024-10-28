@@ -16,7 +16,7 @@
       # "SDL_BACKEND,wayland"
     ];
 
-    monitor = ",preferred,auto,auto";
+    monitor = ",preferred,1,auto";
 
     xwayland = {
       enabled = true;
