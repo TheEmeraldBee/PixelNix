@@ -16,11 +16,10 @@
       # "SDL_BACKEND,wayland"
     ];
 
-    monitor = ",preferred,auto,2";
+    monitor = ",preferred,auto,auto";
 
     xwayland = {
       enabled = true;
-      force_zero_scaling = true;
     };
 
     general = {
