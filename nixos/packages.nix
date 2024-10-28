@@ -33,6 +33,7 @@
       usbutils
 
       gamemode
+      gamescope
 
       # ALVR
       alvr

@@ -5,6 +5,7 @@
     enable = true;
     remotePlay.openFirewall = true;
     dedicatedServer.openFirewall = true;
+    gamescopeSession.enable = true;
 
     package = pkgs.steam.override {
       extraLibraries = pkgs:
@@ -20,6 +21,8 @@
         ];
     };
   };
+
+  programs.gamescope.enable = true;
 
   programs.alvr = {
     enable = true;
