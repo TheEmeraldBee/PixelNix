@@ -47,7 +47,7 @@
 
     [app."Olympus".style]
     icon = ""
-    icon_color = "purple"
+    icon_color = "magenta"
 
     [[app."Olympus".event]]
     Exec = "olympus"

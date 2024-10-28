@@ -36,13 +36,12 @@
 
       # ALVR
       alvr
-
-      # External Packages
-      (callPackage "${inputs.nixpkgs-olympus}/pkgs/by-name/ol/olympus/package.nix" {})
     ]
     ++ [
       inputs.swww.packages.${pkgs.system}.swww
       inputs.zen-browser.packages.${pkgs.system}.specific
       inputs.app-launcher.packages.${pkgs.system}.default
+
+      inputs.nixpkgs-olympus.legacyPackages.${system}.olympus
     ];
 }
