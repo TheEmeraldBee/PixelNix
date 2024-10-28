@@ -28,7 +28,7 @@
     nvidiaSettings = true;
     package = config.boot.kernelPackages.nvidiaPackages.beta;
 
-    forceFullCompositionPipeline = true;
+    # forceFullCompositionPipeline = true;
 
     prime = {
       sync.enable = true;
