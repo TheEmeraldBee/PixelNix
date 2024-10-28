@@ -68,6 +68,10 @@
       vrr = 1;
     };
 
+    render = {
+      direct_scanout = true;
+    };
+
     cursor = {
       no_hardware_cursors = true;
     };
