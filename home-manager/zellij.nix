@@ -2,7 +2,7 @@
   programs.zellij = {
     enable = true;
     settings = {
-      theme = "gruvbox-dark";
+      theme = "catppuccin-mocha";
 
       pane_frames = false;
     };
