@@ -11,6 +11,7 @@
   services.xserver.videoDrivers = lib.mkForce ["nvidia"];
   hardware.graphics = {
     enable = true;
+    enable32Bit = true;
     extraPackages = with pkgs; [
       vaapiVdpau
       libvdpau-va-gl
