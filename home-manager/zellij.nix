@@ -12,10 +12,16 @@
     layout {
       tab_template name="ui" {
           children
+          pane size=1 borderless=true {
+            plugin location="zellij:compact-bar"
+          }
       }
 
       default_tab_template {
           pane name="sidebar"
+          pane size=1 borderless=true {
+            plugin location="zellij:compact-bar"
+          }
       }
     }
   '';
