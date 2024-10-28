@@ -44,5 +44,12 @@
 
     [[app."Git Kraken".event]]
     Exec = "gitkraken"
+
+    [app."Olympus".style]
+    icon = ""
+    icon_color = "purple"
+
+    [[app."Olympus".event]]
+    Exec = "olympus"
   '';
 }
