@@ -7,6 +7,15 @@
 
       font.normal.family = "FiraCode Nerd Font";
       font.size = 12.5;
+
+      shell = {
+        program = "/bin/zsh";
+        args = [
+          "--login"
+          "-c"
+          "zellij"
+        ];
+      };
     };
   };
 }
