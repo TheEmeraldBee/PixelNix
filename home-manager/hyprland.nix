@@ -65,7 +65,6 @@
     misc = {
       disable_splash_rendering = true;
       disable_hyprland_logo = true;
-      vrr = 1;
     };
 
     render = {
@@ -82,6 +81,11 @@
       "swww-daemon"
       "eww daemon && eww open sidebar"
       "mako"
+
+      # Start Up Applications that are used everywhere.
+      "[workspace 2 silent] discord"
+      "[workspace 2 silent] 1password"
+      "[workspace 1 silent] zen"
     ];
     bind =
       [

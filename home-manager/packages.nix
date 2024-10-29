@@ -25,6 +25,7 @@
     # Replacements
     zoxide
     eza
+    bat
 
     # Multiplexing
     zellij
