@@ -79,6 +79,10 @@
     clippy
     rust-analyzer
 
+    # Zig
+    zig
+    zls
+
     # Java
     temurin-bin
     google-java-format
