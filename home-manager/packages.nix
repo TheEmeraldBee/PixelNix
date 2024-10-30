@@ -62,6 +62,9 @@
     # Gaming
     everest-mons
 
+    # Work
+    xournalpp
+
     # ----------- #
     # Programming #
     # ----------- #
