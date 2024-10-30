@@ -51,5 +51,12 @@
 
     [[app."Olympus".event]]
     Exec = "olympus"
+
+    [app."Whiteboard".style]
+    icon = "|"
+    icon_color = "white"
+
+    [[app."Whiteboard".event]]
+    Exec = "xournalpp"
   '';
 }
