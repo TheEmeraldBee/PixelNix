@@ -6,6 +6,8 @@
     zsh
     oh-my-zsh
 
+    nushell
+
     # ------------------ #
     # Command Line Tools #
     # ------------------ #
