@@ -1,6 +1,5 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
-    goddamnit
     # ----- #
     # Shell #
     # ----- #
@@ -27,8 +26,8 @@
 
     # Replacements
     zoxide
-    eza
     bat
+    carapace
 
     # Multiplexing
     zellij
@@ -36,7 +35,6 @@
     # Misc
     wget
     gnutar
-    fzf
     alejandra
 
     # Git
