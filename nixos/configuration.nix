@@ -36,7 +36,7 @@
   users.users.brightonlcox = {
     isNormalUser = true;
     extraGroups = ["wheel"]; # Enable ‘sudo’ for the user.
-    shell = pkgs.zsh;
+    shell = pkgs.nushell;
   };
 
   # Enable ZSH
