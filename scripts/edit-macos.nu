@@ -23,17 +23,11 @@ if $formatting_failed {
 
 print "Rebuilding Nix"
 try {
-  sudo nixos-rebuild switch --flake ~/dotfiles#macos
+  darwin-rebuild switch --flake ~/dotfiles#macos 
 } catch {
   print "Failed to Rebuild Nix"
   exit 1
 }
-
-# Get Current Generaton Metadata.
-let current = nixos-rebuild list-generations | grep current
-
-# Commit all changes witih the generation metadata
-git commit -am $current
 
 print "Rebuilt Ok!"
 

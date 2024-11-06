@@ -19,14 +19,11 @@
     };
 
     taps = [];
-    brews = [ "cowsay" ];
-    casks = [];
+    brews = [];
+    casks = ["zen-browser"];
   };
 
   services.nix-daemon.enable = true;
-
-  # Enable Unfree Packages
-  nixpkgs.config.allowUnfree = pkgs.lib.mkForce true;
 
   nix.settings.experimental-features = "nix-command flakes";
 

@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   home.packages = with pkgs; [
     # ----- #
     # Shell #
@@ -28,6 +28,12 @@
     # Terminal Multiplexer
     zellij
 
+    # Terminal Theming
+    starship
+
+    # Git
+    gitui
+
     # ------------ #
     # Applications #
     # ------------ #
@@ -37,7 +43,6 @@
 
     # Communication
     discord
-    teams
 
     # ----------- #
     # Programming #
@@ -65,10 +70,12 @@
     google-java-format
     jdt-language-server
 
-    
-    # # ------------------- #
-    # # Password Management #
-    # # ------------------- #
+    # Nix
+    alejandra
+
+    # ------------------- #
+    # Password Management #
+    # ------------------- #
     # _1password
     # _1password-gui
 
@@ -78,5 +85,4 @@
     fira-code-nerdfont
     fira-sans
   ];
-
 }

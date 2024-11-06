@@ -1,4 +1,4 @@
-{ configScriptPath, ... }: { pkgs, ... }: {
+{configScriptPath, ...}: {pkgs, ...}: {
   programs.nushell = {
     enable = true;
     shellAliases = {

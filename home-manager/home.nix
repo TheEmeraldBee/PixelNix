@@ -27,7 +27,7 @@
     ./alacritty.nix
 
     # Shell
-    (import ../shared/shell.nix { configScriptPath = "~/dotfiles/scripts/edit-nixos.nu"; })
+    (import ../shared/shell.nix {configScriptPath = "~/dotfiles/scripts/edit-nixos.nu";})
     ./git.nix
     ./zellij.nix
     ./starship.nix
