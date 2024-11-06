@@ -30,13 +30,10 @@
     zellij
 
     # Misc
-    wget
-    gnutar
     alejandra
 
     # Git
     gitui
-    gitkraken
 
     # Screenshots
     grim
