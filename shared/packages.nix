@@ -1,61 +1,43 @@
-{pkgs, ...}: {
+{ pkgs, ... }: {
   home.packages = with pkgs; [
     # ----- #
     # Shell #
     # ----- #
-    nushell
+    nushell # Main Shell
+    carapace # Autocompletions
 
-    # ------------------ #
-    # Command Line Tools #
-    # ------------------ #
+    # ----------------- #
+    # Misc Command Line #
+    # ----------------- #
 
     # Editor
     helix
 
-    # Tools
+    # Rust Build Watching
     bacon
 
-    # Desktop Replacements
+    # Task and CPU Usage Viewer
     htop
 
-    # CLI Theming
-    starship
-
-    # Replacements
+    # `cd` replacement
     zoxide
+
+    # better `cat`
     bat
-    carapace
 
-    # Multiplexing
+    # Terminal Multiplexer
     zellij
-
-    # Misc
-    wget
-    gnutar
-    alejandra
-
-    # Git
-    gitui
-    gitkraken
-
-    # Screenshots
-    grim
-    slurp
-
-    feh
 
     # ------------ #
     # Applications #
     # ------------ #
-
-    # Audio Editor
-    pavucontrol
 
     # Terminal
     alacritty
 
     # Communication
     discord
+    teams
 
     # ----------- #
     # Programming #
@@ -83,11 +65,12 @@
     google-java-format
     jdt-language-server
 
-    # ------------------- #
-    # Password Management #
-    # ------------------- #
-    _1password-gui
-    _1password
+    
+    # # ------------------- #
+    # # Password Management #
+    # # ------------------- #
+    # _1password
+    # _1password-gui
 
     # ----- #
     # Fonts #
@@ -95,4 +78,5 @@
     fira-code-nerdfont
     fira-sans
   ];
+
 }
