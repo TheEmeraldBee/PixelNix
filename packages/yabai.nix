@@ -26,12 +26,12 @@
       mouse_action2 = "resize";
     };
 
-    # extraConfig = ''
-    #   # rules
-    #   yabai -m rule --add app='Settings' manage=off
-    #   yabai -m rule --add app='Raycast' manage=off
+    extraConfig = ''
+      # rules
+      yabai -m rule --add app='Settings' manage=off
+      yabai -m rule --add app='Raycast' manage=off
 
-    #   # Any other arbitrary config here
-    # '';
+      # Any other arbitrary config here
+    '';
   };
 }
