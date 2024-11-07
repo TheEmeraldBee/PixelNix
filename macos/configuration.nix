@@ -5,6 +5,17 @@
   pkgs,
   ...
 }: {
+  imports = [
+    # Window Manager
+    ../packages/yabai.nix
+
+    # Keyboard Shortcuts
+    ../packages/skhd.nix
+
+    # Window Borders
+    ../packages/jankyborders.nix
+  ];
+
   users.users.brightoncox = {
     name = "brightoncox";
     home = "/Users/brightoncox";
@@ -20,7 +31,7 @@
 
     taps = [];
     brews = [];
-    casks = ["zen-browser"];
+    casks = ["zen-browser" "raycast" "microsoft-teams"];
   };
 
   services.nix-daemon.enable = true;
