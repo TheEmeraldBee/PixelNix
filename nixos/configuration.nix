@@ -8,9 +8,6 @@
   # Enable flakes and the `nix` command
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
-  # Allow unfree packages in nix
-  nixpkgs.config.allowUnfree = pkgs.lib.mkForce true;
-
   # Import all files that are needed
   imports = [
     ./packages.nix

@@ -4,9 +4,6 @@
   pkgs,
   ...
 }: {
-  # Enable Unfree Packages
-  nixpkgs.config.allowUnfree = pkgs.lib.mkForce true;
-
   news.display = "silent";
 
   # Define Normal Home Modules
@@ -24,13 +21,13 @@
     ./theme.nix
 
     # Programs
-    ./alacritty.nix
+    ../packages/alacritty.nix
 
     # Shell
     (import ../shared/shell.nix {configScriptPath = "~/dotfiles/scripts/edit-nixos.nu";})
     ./git.nix
-    ./zellij.nix
-    ./starship.nix
+    ../packages/zellij.nix
+    ../packages/starship.nix
 
     # Applications
     ./app-launcher.nix
