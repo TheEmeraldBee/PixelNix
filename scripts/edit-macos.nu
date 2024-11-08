@@ -4,13 +4,8 @@ enter ~/dotfiles/
 
 hx
 
-let no_changes = (git diff "*" | is-empty);
-if $no_changes {
-  print "No changes detected, exiting."
-  exit
-}
-
 git diff -U0 "*"
+git add .
 
 # Autoformat your nix files
 let formatting_failed = alejandra -q . | is-not-empty
