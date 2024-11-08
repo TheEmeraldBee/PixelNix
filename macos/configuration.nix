@@ -6,13 +6,7 @@
   ...
 }: {
   imports = [
-    # Window Manager
-    ../packages/yabai.nix
-
-    # Keyboard Shortcuts
-    ../packages/skhd.nix
-
-    # Window Borders
+    # Pretty Borders!
     ../packages/jankyborders.nix
   ];
 
@@ -29,9 +23,16 @@
       upgrade = true;
     };
 
-    taps = [];
+    taps = [
+      "nikitabobko/tap" # aerospace
+    ];
     brews = [];
-    casks = ["zen-browser" "raycast" "microsoft-teams"];
+    casks = [
+      "zen-browser"
+      "raycast"
+      "microsoft-teams"
+      "nikitabobko/tap/aerospace"
+    ];
   };
 
   services.nix-daemon.enable = true;

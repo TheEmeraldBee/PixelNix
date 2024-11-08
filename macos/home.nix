@@ -4,6 +4,9 @@
   home.stateVersion = "24.11";
 
   imports = [
+    # Window Manager
+    ../packages/aerospace.nix
+
     ../shared/packages.nix
 
     # Terminal
