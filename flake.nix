@@ -26,6 +26,9 @@
     # Non-Specific Applications
     steel-helix.url = "github:mattwparas/helix";
     steel-helix.inputs.nixpkgs.follows = "nixpkgs";
+
+    steel.url = "github:mattwparas/steel";
+    steel.inputs.nixpkgs.follows = "nixpkgs";
   };
   outputs = {
     nixpkgs,
