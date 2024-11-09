@@ -98,6 +98,12 @@
         action = "<cmd>NvimTreeToggle<cr>";
         options = {desc = "Toggle File Tree";};
       }
+      {
+        mode = "n";
+        key = "<leader>fo";
+        action = "<cmd>Oil<cr>";
+        options = {desc = "Open Oil";};
+      }
     ];
   };
 }
