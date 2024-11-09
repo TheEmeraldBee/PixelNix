@@ -11,8 +11,7 @@
     # ----------------- #
 
     # Editor
-    neovim
-    helix
+    # helix
 
     # Rust Build Watching
     bacon

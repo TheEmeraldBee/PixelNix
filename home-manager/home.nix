@@ -14,8 +14,8 @@
   };
 
   imports = [
-    # All package installations defined here.
-    ./packages.nix
+    ../shared/packages.nix # Contains shared applications between machines.
+    ./packages.nix # Contains applications specific to this machine.
 
     # Theme the required applications
     ./theme.nix
