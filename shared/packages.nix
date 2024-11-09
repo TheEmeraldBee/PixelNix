@@ -26,6 +26,9 @@
     # better `cat`
     bat
 
+    # better `grep`
+    ripgrep
+
     # Terminal Multiplexer
     zellij
 

@@ -10,6 +10,8 @@
 
   # Import all files that are needed
   imports = [
+    inputs.sops-nix.nixosModules.sops
+
     ./packages.nix
 
     ./network.nix
@@ -21,6 +23,11 @@
 
     ./hardware-configuration.nix
   ];
+
+  sops.defaultSopsFile = ./secrets/secrets.yaml;
+  sops.defaultSopsFormat = "yaml";
+
+  sops.age.keyFile = "/home/brightonlcox/.config/sops/age/keys.txt";
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
