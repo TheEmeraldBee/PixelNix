@@ -74,6 +74,7 @@
     exec-once = [
       "hyprctl setcursor Bibata-Modern-Classic 20"
       "swww-daemon"
+      "swww img /home/brightonlcox/wallpapers/forest.png"
       "eww daemon && eww open sidebar"
       "mako"
 
