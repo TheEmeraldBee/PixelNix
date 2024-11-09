@@ -44,5 +44,7 @@
       inputs.app-launcher.packages.${pkgs.system}.default
 
       inputs.nixpkgs-olympus.legacyPackages.${system}.olympus
+
+      inputs.steel-helix.packages.${system}.default
     ];
 }

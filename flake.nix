@@ -3,6 +3,8 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+
+    # Nixos Specific
     nixpkgs-olympus.url = "github:nixos/nixpkgs/57943708113949d3f9f7fce5b835f71a99ebc5b8";
 
     home-manager = {
@@ -20,6 +22,10 @@
     # Macos Specific
     nix-darwin.url = "github:LnL7/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
+
+    # Non-Specific Applications
+    steel-helix.url = "github:mattwparas/helix";
+    steel-helix.inputs.nixpkgs.follows = "nixpkgs";
   };
   outputs = {
     nixpkgs,
