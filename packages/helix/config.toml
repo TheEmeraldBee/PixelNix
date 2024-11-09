@@ -1,4 +1,4 @@
-theme = "onedark"
+theme = "catppuccin_mocha"
 
 [editor]
 idle-timeout=100
