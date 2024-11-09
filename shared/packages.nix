@@ -11,6 +11,7 @@
     # ----------------- #
 
     # Editor
+    neovim
     helix
 
     # Rust Build Watching
