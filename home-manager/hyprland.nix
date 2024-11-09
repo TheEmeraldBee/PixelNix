@@ -13,7 +13,6 @@
       "__GLX_VENDOR_LIBRARY_NAME,nvidia"
       "NVD_BACKEND,direct"
       "GDK_BACKEND,wayland"
-      # "SDL_BACKEND,wayland"
     ];
 
     monitor = ",preferred,auto,auto";
@@ -73,13 +72,12 @@
     "$mod" = "SUPER";
     exec-once = [
       "hyprctl setcursor Bibata-Modern-Classic 20"
-      "swww-daemon"
-      "swww img /home/brightonlcox/wallpapers/forest.png"
+      "swww-daemon && sleep 5sec && swww img /home/brightonlcox/wallpapers/forest.png && swww restore"
       "eww daemon && eww open sidebar"
       "mako"
 
       # Start Up Applications that are used everywhere.
-      "[workspace 2 silent] discord"
+      # "[workspace 2 silent] discord" # This one doesn't work very well.
       "[workspace 2 silent] 1password"
       "[workspace 1 silent] zen"
     ];
