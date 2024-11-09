@@ -23,6 +23,9 @@
     # Programs
     ../packages/alacritty.nix
 
+    # Helix
+    ../packages/helix.nix
+
     # Shell
     (import ../shared/shell.nix {configScriptPath = "~/dotfiles/scripts/edit-nixos.nu";})
     ./git.nix

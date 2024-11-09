@@ -1,0 +1,4 @@
+theme = "onedark"
+
+[editor]
+idle-timeout=100
