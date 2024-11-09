@@ -31,9 +31,23 @@
 
       vim-surround.enable = true;
 
+      nvim-tree.enable = true;
+
+      bufferline.enable = true;
+
+      which-key.enable = true;
+
       leap.enable = true;
 
-      avante.enable = true;
+      avante = {
+        enable = true;
+        settings = {
+          provider = "gemini";
+          gemini = {
+            api_key_name = "cmd:cat /run/secrets/ai-key";
+          };
+        };
+      };
 
       lsp = {
         enable = true;

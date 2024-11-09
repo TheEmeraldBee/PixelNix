@@ -1,5 +1,8 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
+    hypridle
+    hyprlock
+
     # Screenshots
     grim
     slurp

@@ -5,14 +5,14 @@
     # ----- #
     nushell # Main Shell
     carapace # Autocompletions
+    fzf # Fuzzy Finder
 
     # ----------------- #
     # Misc Command Line #
     # ----------------- #
 
     # Editor
-    # neovim
-    nix
+    nil
 
     # Rust Build Watching
     bacon
