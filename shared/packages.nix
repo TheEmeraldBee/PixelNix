@@ -12,6 +12,7 @@
 
     # Editor
     neovim
+    nix
 
     # Rust Build Watching
     bacon
