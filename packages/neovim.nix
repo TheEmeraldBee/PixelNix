@@ -92,6 +92,12 @@
         action = "<cmd>Telescope help_tags<cr>";
         options = {desc = "View Help Tags";};
       }
+      {
+        mode = "n";
+        key = "<leader>ft";
+        action = "<cmd>NvimTreeToggle<cr>";
+        options = {desc = "Toggle File Tree";};
+      }
     ];
   };
 }
