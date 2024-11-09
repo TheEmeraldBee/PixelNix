@@ -45,7 +45,7 @@
 
       inputs.nixpkgs-olympus.legacyPackages.${system}.olympus
 
-      inputs.steel-helix.packages.${system}.default
+      inputs.steel-helix.packages.${system}.helix
       inputs.steel.packages.${system}.steel
     ];
 }
