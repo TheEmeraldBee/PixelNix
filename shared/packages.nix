@@ -11,7 +11,7 @@
     # ----------------- #
 
     # Editor
-    neovim
+    # neovim
     nix
 
     # Rust Build Watching

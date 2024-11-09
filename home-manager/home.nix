@@ -26,6 +26,9 @@
     # Helix
     ../packages/helix.nix
 
+    # NeoVim
+    ../packages/neovim.nix
+
     # Shell
     (import ../shared/shell.nix {configScriptPath = "~/dotfiles/scripts/edit-nixos.nu";})
     ./git.nix

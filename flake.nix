@@ -29,12 +29,17 @@
 
     steel.url = "github:mattwparas/steel";
     steel.inputs.nixpkgs.follows = "nixpkgs";
+
+    # Neovim
+    nixvim.url = "github:nix-community/nixvim";
+    nixvim.inputs.nixpkgs.follows = "nixpkgs";
   };
   outputs = {
     nixpkgs,
     home-manager,
     nix-darwin,
     hyprland,
+    nixvim,
     ...
   } @ inputs: let
   in {
@@ -84,6 +89,7 @@
               package = hyprland.packages.x86_64-linux.hyprland;
             };
           }
+          nixvim.homeManagerModules.nixvim
           ./home-manager/home.nix
         ];
       };
