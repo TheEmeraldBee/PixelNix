@@ -11,6 +11,7 @@
       # Programming
       git
       gcc
+      cmake
 
       # Home Manager
       home-manager
