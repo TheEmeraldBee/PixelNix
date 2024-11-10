@@ -39,7 +39,7 @@
 
       leap.enable = true;
 
-      zig.enable = true;
+      # zig.enable = true;
 
       avante = {
         enable = true;
