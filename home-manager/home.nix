@@ -13,6 +13,11 @@
     stateVersion = "24.11";
   };
 
+  programs.direnv = {
+    enable = true;
+    enableNushellIntegration = true;
+  };
+
   imports = [
     ../shared/packages.nix # Contains shared applications between machines.
     ./packages.nix # Contains applications specific to this machine.
