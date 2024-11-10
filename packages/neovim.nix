@@ -39,7 +39,9 @@
 
       leap.enable = true;
 
-      # zig.enable = true;
+      fugitive.enable = true;
+
+      coq-nvim.enable = true;
 
       avante = {
         enable = true;
