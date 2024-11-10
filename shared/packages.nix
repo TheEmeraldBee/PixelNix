@@ -64,26 +64,26 @@
       # ----------- #
 
       # Python
-      python3Full
-      uv
-      pyright
-      black
+      # python3Full
+      # uv
+      # pyright
+      # black
 
       # Rust
-      cargo
-      rustc
-      rustfmt
-      clippy
-      rust-analyzer
+      # cargo
+      # rustc
+      # rustfmt
+      # clippy
+      # rust-analyzer
 
       # Zig
       # zig
       # zls
 
       # Java
-      temurin-bin
-      google-java-format
-      jdt-language-server
+      # temurin-bin
+      # google-java-format
+      # jdt-language-server
 
       # Nix
       alejandra
