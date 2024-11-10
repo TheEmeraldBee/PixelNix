@@ -43,6 +43,9 @@
     ../packages/zellij.nix
     ../packages/starship.nix
 
+    # For File Exploring
+    ../packages/yazi.nix
+
     # Applications
     ./app-launcher.nix
 
