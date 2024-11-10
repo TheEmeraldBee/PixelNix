@@ -1,6 +1,11 @@
 {configScriptPath, ...}: {pkgs, ...}: {
   programs.nushell = {
     enable = true;
+    extraConfig = ''
+      $env.config = {
+        show_banner: false,
+      }
+    '';
     shellAliases = {
       # Listing Files
       ll = "ls -al";
