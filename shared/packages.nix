@@ -14,6 +14,8 @@
       carapace # Autocompletions
       fzf # Fuzzy Finder
 
+      yazi # Awesome Explorer!
+
       # ----------------- #
       # Misc Command Line #
       # ----------------- #
