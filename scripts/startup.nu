@@ -22,11 +22,16 @@ cd $dir
 while (true) {
   print
 
-  let action = ["create", "attach", "delete sessions", "new session"] | input list "Which action?"
+  let action = ["new session", "attach", "delete sessions"] | input list "Which action?"
 
   match $action {
-    "skip" => {
-      zellij
+    "new session" => {
+      let session = input "Enter Name For Session (nothing: <random>): " | str trim
+      if ($session | is-empty) {
+        zellij
+      } else {
+        zellij -s $session
+      }
       break
     }
     "attach" => {
@@ -40,15 +45,6 @@ while (true) {
     },
     "delete sessions" => {
       zellij da
-    }
-    "new session" => {
-      let session = input "Enter Name For Session (nothing: <random>): " | str trim
-      if ($session | is-empty) {
-        zellij
-      } else {
-        zellij -s $session
-      }
-      break
     }
     _ => {
       break
