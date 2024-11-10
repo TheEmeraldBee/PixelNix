@@ -4,6 +4,10 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
+    # Helix editor
+    helix.url = "github:helix-editor/helix";
+    helix.inputs.nixpkgs.follows = "nixpkgs";
+
     # Nixos Specific
     nixpkgs-olympus.url = "github:nixos/nixpkgs/57943708113949d3f9f7fce5b835f71a99ebc5b8";
 
@@ -23,17 +27,6 @@
     nix-darwin.url = "github:LnL7/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
 
-    # Non-Specific Applications
-    steel-helix.url = "github:mattwparas/helix";
-    steel-helix.inputs.nixpkgs.follows = "nixpkgs";
-
-    steel.url = "github:mattwparas/steel";
-    steel.inputs.nixpkgs.follows = "nixpkgs";
-
-    # Neovim
-    nixvim.url = "github:nix-community/nixvim";
-    nixvim.inputs.nixpkgs.follows = "nixpkgs";
-
     # Secrets
     sops-nix.url = "github:Mic92/sops-nix";
     sops-nix.inputs.nixpkgs.follows = "nixpkgs";
@@ -43,10 +36,8 @@
     home-manager,
     nix-darwin,
     hyprland,
-    nixvim,
     ...
-  } @ inputs: let
-  in {
+  } @ inputs: {
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
         pkgs = import nixpkgs {
@@ -86,6 +77,8 @@
           config.allowUnfree = true;
         };
 
+        extraSpecialArgs = {inherit inputs;};
+
         modules = [
           {
             wayland.windowManager.hyprland = {
@@ -93,7 +86,6 @@
               package = hyprland.packages.x86_64-linux.hyprland;
             };
           }
-          nixvim.homeManagerModules.nixvim
           ./home-manager/home.nix
         ];
       };

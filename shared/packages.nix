@@ -1,92 +1,102 @@
-{pkgs, ...}: {
-  home.packages = with pkgs; [
-    # ----- #
-    # Shell #
-    # ----- #
-    nushell # Main Shell
-    carapace # Autocompletions
-    fzf # Fuzzy Finder
+{
+  inputs,
+  pkgs,
+  ...
+}: {
+  home.packages = with pkgs;
+    [
+      # ----- #
+      # Shell #
+      # ----- #
+      nushell # Main Shell
+      carapace # Autocompletions
+      fzf # Fuzzy Finder
 
-    # ----------------- #
-    # Misc Command Line #
-    # ----------------- #
+      # ----------------- #
+      # Misc Command Line #
+      # ----------------- #
 
-    # Editor
-    nil
+      # Editor
+      nil
 
-    # Rust Build Watching
-    bacon
+      # Rust Build Watching
+      bacon
 
-    # Task and CPU Usage Viewer
-    htop
+      # Task and CPU Usage Viewer
+      htop
 
-    # `cd` replacement
-    zoxide
+      # `cd` replacement
+      zoxide
 
-    # better `cat`
-    bat
+      # better `cat`
+      bat
 
-    # better `grep`
-    ripgrep
+      # better `grep`
+      ripgrep
 
-    # Terminal Multiplexer
-    zellij
+      # Terminal Multiplexer
+      zellij
 
-    # Terminal Theming
-    starship
+      # Terminal Theming
+      starship
 
-    # Git
-    gitui
+      # Git
+      gitui
 
-    # ------------ #
-    # Applications #
-    # ------------ #
+      raylib
 
-    # Terminal
-    alacritty
+      # ------------ #
+      # Applications #
+      # ------------ #
 
-    # Communication
-    discord
+      # Terminal
+      alacritty
 
-    # ----------- #
-    # Programming #
-    # ----------- #
+      # Communication
+      discord
 
-    # Python
-    python3Full
-    uv
-    pyright
-    black
+      # ----------- #
+      # Programming #
+      # ----------- #
 
-    # Rust
-    cargo
-    rustc
-    rustfmt
-    clippy
-    rust-analyzer
+      # Python
+      python3Full
+      uv
+      pyright
+      black
 
-    # Zig
-    zig
-    zls
+      # Rust
+      cargo
+      rustc
+      rustfmt
+      clippy
+      rust-analyzer
 
-    # Java
-    temurin-bin
-    google-java-format
-    jdt-language-server
+      # Zig
+      zig
+      zls
 
-    # Nix
-    alejandra
+      # Java
+      temurin-bin
+      google-java-format
+      jdt-language-server
 
-    # ------------------- #
-    # Password Management #
-    # ------------------- #
-    # _1password
-    # _1password-gui
+      # Nix
+      alejandra
 
-    # ----- #
-    # Fonts #
-    # ----- #
-    fira-code-nerdfont
-    fira-sans
-  ];
+      # ------------------- #
+      # Password Management #
+      # ------------------- #
+      # _1password
+      # _1password-gui
+
+      # ----- #
+      # Fonts #
+      # ----- #
+      fira-code-nerdfont
+      fira-sans
+    ]
+    ++ [
+      inputs.helix.packages.${pkgs.system}.default
+    ];
 }
