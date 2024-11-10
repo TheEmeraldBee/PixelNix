@@ -29,7 +29,7 @@ while (true) {
       break
     }
     _ => {
-      print "Unrecognized Command. How is this possible?"
+      break
     },
   }
 }
