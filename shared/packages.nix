@@ -19,7 +19,6 @@
       # ----------------- #
 
       # Editor
-      neovim
       nil
 
       # Rust Build Watching
