@@ -39,6 +39,8 @@
 
       leap.enable = true;
 
+      zig.enable = true;
+
       avante = {
         enable = true;
         settings = {
@@ -52,6 +54,7 @@
       lsp = {
         enable = true;
         servers = {
+          # Lua
           lua_ls.enable = true;
 
           # Rust
