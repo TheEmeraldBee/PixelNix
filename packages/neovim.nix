@@ -57,6 +57,8 @@
           # Lua
           lua_ls.enable = true;
 
+          zls.enable = true;
+
           # Rust
           rust_analyzer.enable = true;
           rust_analyzer.installRustc = false;
