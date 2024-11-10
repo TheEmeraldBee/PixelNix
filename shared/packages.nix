@@ -75,8 +75,8 @@
       rust-analyzer
 
       # Zig
-      zig
-      zls
+      # zig
+      # zls
 
       # Java
       temurin-bin
