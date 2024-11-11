@@ -46,15 +46,6 @@
     xorg.libXi
   ];
 
-  sops.defaultSopsFile = ./secrets/secrets.yaml;
-  sops.defaultSopsFormat = "yaml";
-
-  sops.age.keyFile = "/home/brightonlcox/.config/sops/age/keys.txt";
-
-  sops.secrets.ai-key = {
-    owner = config.users.users.brightonlcox.name;
-  };
-
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;

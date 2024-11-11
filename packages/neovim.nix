@@ -56,7 +56,7 @@
         settings = {
           provider = "gemini";
           gemini = {
-            api_key_name = "cmd:cat /run/secrets/ai-key";
+            api_key_name = "cmd:op read op://secrets/gemini-key/password";
           };
         };
       };
