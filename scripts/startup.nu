@@ -15,7 +15,7 @@ while (true) {
 
   match $action {
     0 => {
-      let inputs = yazi --chooser-file=/dev/stdout | each {|line| $line} | split row "\n"
+      let inputs = yazi --chooser-file=/dev/stdout ../ | each {|line| $line} | split row "\n"
 
       mut dir = if (($inputs | length) == 0) {
         print $"(ansi gb)No Folder Selected. Using `pwd`.(ansi reset)"
