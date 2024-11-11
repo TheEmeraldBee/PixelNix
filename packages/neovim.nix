@@ -39,6 +39,9 @@
 
       fugitive.enable = true;
 
+      none-ls.enable = true;
+      trouble.enable = true;
+
       coq-nvim = {
         enable = true;
         settings = {

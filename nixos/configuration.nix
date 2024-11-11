@@ -24,6 +24,17 @@
     ./hardware-configuration.nix
   ];
 
+  services.greetd = {
+    enable = true;
+    settings = rec {
+      initial_session = {
+        command = "Hyprland";
+        user = "brightonlcox";
+      };
+      default_session = initial_session;
+    };
+  };
+
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
     libGL
