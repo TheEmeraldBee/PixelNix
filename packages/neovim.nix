@@ -25,8 +25,6 @@
 
       oil.enable = true;
 
-      treesitter.enable = true;
-
       luasnip.enable = true;
 
       vim-surround.enable = true;
@@ -67,6 +65,8 @@
           lua_ls.enable = true;
 
           zls.enable = true;
+
+          nushell.enable = true;
 
           # Rust
           rust_analyzer.enable = true;
