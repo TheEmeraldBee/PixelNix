@@ -2,10 +2,6 @@
   home.file.aerospace = {
     target = ".aerospace.toml";
     text = ''
-      after-startup-command = [
-        'exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=5.0'
-      ]
-
       [gaps]
       inner.horizontal = 15
       inner.vertical = 15
@@ -15,10 +11,23 @@
       outer.right = 15
 
       [mode.main.binding]
+      alt-shift-b = 'exec-and-forget borders active_color=0xee00ff99 inactive_color=0xaa595959 width=10.0'
+
       alt-f = 'fullscreen'
 
       alt-d = 'layout v_accordion tiles'
       alt-shift-f = 'layout floating tiling'
+      alt-e = 'layout tiles horizontal vertical'
+
+      alt-h = 'focus left'
+      alt-j = 'focus down'
+      alt-k = 'focus up'
+      alt-l = 'focus right'
+
+      alt-shift-h = 'join-with left'
+      alt-shift-j = 'join-with down'
+      alt-shift-k = 'join-with up'
+      alt-shift-l = 'join-with right'
 
       alt-1 = 'workspace 1'
       alt-2 = 'workspace 2'
@@ -41,6 +50,12 @@
       alt-shift-8 = 'move-node-to-workspace 8'
       alt-shift-9 = 'move-node-to-workspace 9'
       alt-shift-0 = 'move-node-to-workspace 10'
+
+      alt-r = 'mode resize'
+
+      [mode.resize.binding]
+      minus = 'resize smart -50'
+      equal = 'resize smart 50'
     '';
   };
 }

@@ -6,8 +6,6 @@
   ...
 }: {
   imports = [
-    # Pretty Borders!
-    ../packages/jankyborders.nix
   ];
 
   users.users.brightoncox = {
@@ -25,13 +23,18 @@
 
     taps = [
       "nikitabobko/tap" # aerospace
+      "FelixKratz/formulae" # jankyborders
     ];
-    brews = [];
+    brews = [
+      "FelixKratz/formulae/borders"
+    ];
     casks = [
+      "balenaetcher"
       "zen-browser"
       "raycast"
       "microsoft-teams"
       "nikitabobko/tap/aerospace"
+      "1password"
     ];
   };
 
