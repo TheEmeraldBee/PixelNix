@@ -11,7 +11,23 @@ if (zellij ls | str contains current) {
 while (true) {
   print
 
-  let action = [$"(ansi gb)1. new session(ansi reset)", $"(ansi blue_bold)2. attach(ansi reset)", $"(ansi rb)3. delete sessions(ansi reset)"] | input list $"(ansi cb)Which action?(ansi reset)" -i
+  let sessions = zellij ls -s 
+    | each { |x| $x } 
+    | split row "\n"
+    | drop 1
+
+  let visual_sessions = zellij ls o+e>| each {|line| $line}
+    | split row "\n" 
+    | drop 1 
+    | filter {|x| str trim | is-not-empty}
+
+  let action = [
+      $"(ansi gb)1. new session(ansi reset)", 
+      $"(ansi grey)2. list sessions(ansi reset)", 
+      $"(ansi blue_bold)3. attach(ansi reset)", 
+      $"(ansi rb)4. delete session(ansi reset)"
+      $"(ansi pb)5. delete all inactive sessions(ansi reset)"
+    ] | input list $"(ansi cb)Which action?(ansi reset)" -i
 
   match $action {
     0 => {
@@ -40,32 +56,55 @@ while (true) {
       break
     }
     1 => {
-      try { let sessions = zellij ls } catch {
+      try { let _ = zellij ls } catch {
         print $"(ansi rb)There are no active sessions to attach to.(ansi reset)"
         continue
       }
 
-      let actual_attach_list = zellij ls -s 
-            | each { |x| $x } 
-            | split row "\n"
-            | drop 1
-      let input_list = zellij ls o+e>| each {|line| $line} 
-            | split row "\n" 
-            | drop 1 
-            | filter {|x| str trim | is-not-empty}
-            
-      let name = $input_list | input list $"(ansi cb)Which Session Would You Like To Use?(ansi reset)" -i
+      print "Sessions:" $visual_sessions
+    }
+    2 => {
+      try { let _ = zellij ls } catch {
+        print $"(ansi rb)There are no active sessions to attach to.(ansi reset)"
+        continue
+      }
+
+      let name = $visual_sessions | input list $"(ansi cb)Which Session Would You Like To Use?(ansi reset)" -i
 
       if ($name | is-empty) {
         break
       }
 
-      let attach = $actual_attach_list | get $name
+      let attach = $sessions | get $name
       
       zellij a $attach
       break
     },
-    2 => {
+    3 => {
+      try { let _ = zellij ls } catch {
+        print $"(ansi rb)There are no active sessions to attach to.(ansi reset)"
+        continue
+      }
+
+      let name = $visual_sessions | input list $"(ansi cb)Which Session Would You Like To Delete?(ansi reset)" -i
+
+      if ($name | is-empty) {
+        continue
+      }
+
+      let delete = $sessions | get $name
+
+      try { let _ = zellij d $delete } catch {
+        let val = input $"(ansi cb)This session is active. Are you sure? \(Y/n\)(ansi reset)" -n 1 -s | str downcase
+        print ""
+        if ($val == "y") {
+          zellij d --force $delete
+        } else {
+          print $"(ansi rb)OK, Not Deleting(ansi reset)"
+        }
+      }
+    }
+    4 => {
       zellij da
     }
     _ => {
