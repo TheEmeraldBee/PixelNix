@@ -9,10 +9,6 @@
         show_banner: false,
       }
     '';
-    extraLogin = ''
-      nu ~/dotfiles/scripts/startup.nu
-      exit 0
-    '';
     shellAliases = {
       # Listing Files
       ll = "ls -al";
