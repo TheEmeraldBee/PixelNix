@@ -1,4 +1,4 @@
 model: gemini
 clients:
 - type: gemini
-  api_key: 
+  api_key: op read op://secrets/gemini-key/password
