@@ -5,9 +5,6 @@
 }: {
   environment.systemPackages = with pkgs;
     [
-      # Secrets
-      sops
-
       # Programming
       git
       gcc

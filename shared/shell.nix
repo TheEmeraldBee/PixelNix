@@ -21,6 +21,8 @@
 
       # Editing Configuration
       ne = "nu ${configScriptPath}";
+
+      e = "nu ~/dotfiles/scripts/startup.nu";
     };
   };
 

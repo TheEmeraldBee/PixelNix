@@ -1,9 +1,12 @@
-{pkgs, ...}: {
+{...}: {
   news.display = "silent";
 
   home.stateVersion = "24.11";
 
   imports = [
+    # Local Packages
+    ./packages.nix
+
     # Window Manager
     ../packages/aerospace.nix
 
@@ -14,7 +17,13 @@
     ../packages/starship.nix
     ../packages/zellij.nix
 
+    ../packages/helix.nix
+
     # Shell
     (import ../shared/shell.nix {configScriptPath = "~/dotfiles/scripts/edit-macos.nu";})
   ];
+
+  programs.nushell.extraConfig = ''
+    $env.PATH = ($env.PATH | split row (char esep) | prepend '/opt/homebrew/bin')
+  '';
 }

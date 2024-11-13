@@ -34,6 +34,8 @@
       "raycast"
       "microsoft-teams"
       "nikitabobko/tap/aerospace"
+
+      "1password-cli"
       "1password"
     ];
   };

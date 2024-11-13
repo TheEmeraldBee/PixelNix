@@ -66,6 +66,7 @@
         ./macos/configuration.nix
         home-manager.darwinModules.home-manager
         {
+          home-manager.extraSpecialArgs = {inherit inputs;};
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.users.brightoncox = import ./macos/home.nix;
