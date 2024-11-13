@@ -25,7 +25,7 @@
       # Editing Configuration
       ne = "nu ${configScriptPath}";
 
-      ai-env = ''if ("GEMINI_API_KEY" not-in $env) { $env.GEMINI_API_KEY = (op read op://secrets/gemini-key/password) }'';
+      ai-env = "if (\"GEMINI_API_KEY\" not-in $env) { $env.GEMINI_API_KEY = (op read op://secrets/gemini-key/password) }";
 
       ai = "ai-env; aichat";
       ask = "ai-env; aichat -e";
