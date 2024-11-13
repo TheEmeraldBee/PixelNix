@@ -18,6 +18,7 @@
     ../packages/zellij.nix
 
     ../packages/helix.nix
+    ../packages/zellix.nix
 
     # Shell
     (import ../shared/shell.nix {configScriptPath = "~/dotfiles/scripts/edit-macos.nu";})

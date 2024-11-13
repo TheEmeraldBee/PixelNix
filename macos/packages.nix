@@ -1,6 +1,13 @@
-{pkgs, ...}: {
-  home.packages = with pkgs; [
-    zig
-    zls
-  ];
+{
+  inputs,
+  pkgs,
+  ...
+}: {
+  home.packages = with pkgs;
+    [
+      zls
+    ]
+    ++ [
+      inputs.zig.packages.${system}.master
+    ];
 }
