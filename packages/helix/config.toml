@@ -3,9 +3,14 @@ theme = "catppuccin_mocha"
 [editor]
 idle-timeout=100
 
+[keys.normal.space.q]
+s = ":wq"
+q = ":q"
+a = ":wqa"
+
 [keys.normal.space.f]
 f = "file_picker"
 t = ":sh zellij run -c -f -x 10% -y 10% --width 80% --height 80% -- nu $ZELLIX_MOD/yazi.nu"
 
-[keys.normal.space]
-A = ":sh zellij run -c -f -x 10% -y 10% --width 80% --height 80% -- nu $ZELLIX_MOD/yazi.nu"
+[keys.normal.space.A]
+a = ":sh zellij run -c -f -x 10% -y 10% --width 80% --height 80% -- nu $ZELLIX_MOD/ai.nu"
