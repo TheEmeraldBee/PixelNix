@@ -20,8 +20,6 @@
   };
 
   imports = [
-    inputs.nixvim.homeManagerModules.nixvim
-
     ../shared/packages.nix # Contains shared applications between machines.
     ./packages.nix # Contains applications specific to this machine.
 
@@ -33,9 +31,7 @@
 
     # Helix
     ../packages/helix.nix
-
-    # Neovim
-    ../packages/neovim.nix
+    ../packages/zellix.nix
 
     # Shell
     (import ../shared/shell.nix {configScriptPath = "~/dotfiles/scripts/edit-nixos.nu";})
