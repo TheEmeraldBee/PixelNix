@@ -7,6 +7,9 @@
     [
       direnv
 
+      # AI Assistant!
+      aichat
+
       # ----- #
       # Shell #
       # ----- #
