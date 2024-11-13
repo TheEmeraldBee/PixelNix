@@ -36,7 +36,7 @@ try {
 let current = nixos-rebuild list-generations | grep current
 
 # Commit all changes witih the generation metadata
-git commit -am $current
+git commit -am $"($current) - nixos"
 
 notify-send -e "NixOS Rebuilt Ok!"
 

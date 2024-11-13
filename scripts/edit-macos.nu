@@ -24,6 +24,12 @@ try {
   exit 1
 }
 
-print "Rebuilt Ok!"
+# Get Current Generaton Metadata.
+let current = darwin-rebuild --list-generations | grep current
+
+# Commit all changes witih the generation metadata
+git commit -am $"($current) - macos"
+
+print "Macos Rebuilt Ok!"
 
 n
