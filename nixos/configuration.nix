@@ -1,7 +1,5 @@
 {
   inputs,
-  config,
-  lib,
   pkgs,
   ...
 }: {
@@ -10,8 +8,6 @@
 
   # Import all files that are needed
   imports = [
-    inputs.sops-nix.nixosModules.sops
-
     ./packages.nix
 
     ./network.nix
