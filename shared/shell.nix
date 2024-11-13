@@ -8,9 +8,6 @@
       $env.config = {
         show_banner: false,
       }
-
-      # Set Gemini key from the 1password value
-      $env.GEMINI_API_KEY = (op read op://secrets/gemini-key/password)
     '';
     shellAliases = {
       # Listing Files
@@ -28,8 +25,12 @@
       # Editing Configuration
       ne = "nu ${configScriptPath}";
 
-      ai = "aichat";
-      ask = "aichat -e";
+      ai-env = ''
+        if ("GEMINI_API_KEY" not-in $env) { $env.GEMINI_API_KEY = op read op://secrets/gemini-key/password }
+      '';
+
+      ai = "ai-env; aichat";
+      ask = "ai-env; aichat -e";
 
       e = "nu ~/dotfiles/scripts/startup.nu";
     };
