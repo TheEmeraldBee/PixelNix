@@ -26,8 +26,8 @@
       # OS Stuff
       cd = "z";
 
-      # Helix
-      zx = "nu ~/.config/zellix/run.nu ~/.config/zellix/example";
+      # zellix
+      zl = "nu ~/.config/zellix/run.nu ~/.config/zellix/example";
 
       # Editing Configuration
       ne = "nu ${configScriptPath}";
