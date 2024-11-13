@@ -8,6 +8,13 @@
       $env.config = {
         show_banner: false,
       }
+
+      try {
+        $env.GEMINI_API_KEY = open ~/.gemini-key
+      } catch {
+        $env.GEMINI_API_KEY = (op read op://secrets/gemini-key/password)
+        $env.GEMINI_API_KEY | save ~/.gemini-key
+      }
     '';
     shellAliases = {
       # Listing Files
