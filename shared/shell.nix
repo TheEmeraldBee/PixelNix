@@ -8,10 +8,6 @@
       $env.config = {
         show_banner: false,
       }
-
-      if ("GEMINI_API_KEY" not-in $env) {
-        $env.GEMINI_API_KEY = (op read op://secrets/gemini-key/password)
-      }
     '';
     shellAliases = {
       # Listing Files
