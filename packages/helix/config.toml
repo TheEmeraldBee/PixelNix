@@ -12,5 +12,5 @@ a = ":wqa"
 f = "file_picker"
 t = ":sh zellij run -c -f -x 10% -y 10% --width 80% --height 80% -- nu $ZELLIX_MOD/yazi.nu"
 
-[keys.normal.space.A]
+[keys.normal.space.l]
 a = ":sh zellij run -c -f -x 10% -y 10% --width 80% --height 80% -- nu $ZELLIX_MOD/ai.nu"
