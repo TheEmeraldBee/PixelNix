@@ -29,6 +29,9 @@
     # Programs
     ../packages/alacritty.nix
 
+    # AI Chat!
+    ../packages/aichat.nix
+
     # Helix
     ../packages/helix.nix
     ../packages/zellix.nix
