@@ -37,6 +37,8 @@
 
       "postman"
 
+      "utm"
+
       "1password-cli"
       "1password"
     ];
