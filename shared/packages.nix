@@ -67,10 +67,10 @@
       # ----------- #
 
       # Python
-      # python3Full
-      # uv
-      # pyright
-      # black
+      python3Full
+      uv
+      pyright
+      black
 
       # Rust
       # cargo
