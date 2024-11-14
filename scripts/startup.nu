@@ -1,7 +1,4 @@
-# 
-# The purpose of this file is to, on start of my shell, to create a zellij session, or run other zellij actions.
-#
-# By: Brighton (TheEmeraldBee)
+# On start, attach to, create, or delete zellij sessions.
 
 if (zellij ls | str contains current) {
   print "You are currently in a zellij session. Nested Sessions Aren't Supported"
