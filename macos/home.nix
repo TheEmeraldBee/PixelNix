@@ -24,7 +24,7 @@
     (import ../shared/shell.nix {configScriptPath = "~/dotfiles/scripts/edit-macos.nu";})
   ];
 
-  programs.nushell.extraConfig = ''
+  programs.nushell.extraEnv = ''
     $env.PATH = ($env.PATH | split row (char esep) | prepend '/opt/homebrew/bin')
   '';
 }
