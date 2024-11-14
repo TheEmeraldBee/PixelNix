@@ -35,6 +35,8 @@
       "microsoft-teams"
       "nikitabobko/tap/aerospace"
 
+      "postman"
+
       "1password-cli"
       "1password"
     ];
