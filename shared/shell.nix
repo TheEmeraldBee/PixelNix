@@ -27,7 +27,7 @@
       cd = "z";
 
       # zellix
-      zl = "nu ~/.config/zellix/run.nu ~/.config/zellix/example";
+      hw = "nu ~/.config/zellix/run.nu ~/.config/zellix/example";
 
       # Editing Configuration
       ne = "nu ${configScriptPath}";
