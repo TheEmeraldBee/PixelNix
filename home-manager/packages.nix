@@ -18,6 +18,9 @@
     # Audio Editor
     pavucontrol
 
+    # Gaming
+    modrinth-app
+
     # ------------------- #
     # Password Management #
     # ------------------- #
