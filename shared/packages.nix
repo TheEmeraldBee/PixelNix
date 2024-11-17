@@ -7,9 +7,6 @@
     [
       direnv
 
-      # AI Assistant!
-      aichat
-
       # ----- #
       # Shell #
       # ----- #
@@ -50,7 +47,8 @@
       # Git
       gitui
 
-      raylib
+      # AI Assistant!
+      aichat
 
       # ------------ #
       # Applications #
@@ -62,10 +60,14 @@
       # Communication
       discord
 
+      # Gaming
+      prismlauncher
+
       # ----------- #
       # Programming #
       # ----------- #
 
+<<<<<<< HEAD
       # Python
       python3Full
       uv
@@ -83,14 +85,10 @@
       google-java-format
       jdt-language-server
 
+=======
+>>>>>>> 3fd61d4 (110 current  2024-11-12 17:20:12  24.11.20241018.4c2fcb0  6.6.57                          * - nixos)
       # Nix
       alejandra
-
-      # ------------------- #
-      # Password Management #
-      # ------------------- #
-      # _1password
-      # _1password-gui
 
       # ----- #
       # Fonts #
