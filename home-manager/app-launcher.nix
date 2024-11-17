@@ -38,19 +38,19 @@
     [[app."Steam".event]]
     Exec = "steam"
 
-    [app."Git Kraken".style]
-    icon = ""
-    icon_color = "blue"
-
-    [[app."Git Kraken".event]]
-    Exec = "gitkraken"
-
     [app."Olympus".style]
     icon = ""
     icon_color = "magenta"
 
     [[app."Olympus".event]]
     Exec = "olympus"
+
+    [app."Modrinth".style]
+    icon = "󰍳"
+    icon_color = "green"
+
+    [[app."Modrinth.event"]]
+    Exec = "modrinth-app"
 
     [app."Whiteboard".style]
     icon = "|"
