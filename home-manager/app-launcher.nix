@@ -45,12 +45,12 @@
     [[app."Olympus".event]]
     Exec = "olympus"
 
-    [app."Modrinth".style]
+    [app."Prism Launcher".style]
     icon = "󰍳"
     icon_color = "green"
 
-    [[app."Modrinth".event]]
-    Exec = "modrinth-app"
+    [[app."Prism Launcher".event]]
+    Exec = "prismlauncher"
 
     [app."Whiteboard".style]
     icon = "|"
