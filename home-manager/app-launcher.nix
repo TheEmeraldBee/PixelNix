@@ -49,7 +49,7 @@
     icon = "󰍳"
     icon_color = "green"
 
-    [[app."Modrinth.event"]]
+    [[app."Modrinth".event]]
     Exec = "modrinth-app"
 
     [app."Whiteboard".style]
