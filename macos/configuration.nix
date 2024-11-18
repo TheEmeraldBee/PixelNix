@@ -39,6 +39,8 @@
 
       "utm"
 
+      "obsidian"
+
       "1password-cli"
       "1password"
     ];
