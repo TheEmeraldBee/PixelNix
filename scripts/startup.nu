@@ -1,6 +1,6 @@
 # On start, attach to, create, or delete zellij sessions.
 
-if (zellij ls | str contains current) {
+if (zellij ls o+e>| str contains current) {
   print "You are currently in a zellij session. Nested Sessions Aren't Supported"
   exit 0
 }
