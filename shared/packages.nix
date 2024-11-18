@@ -69,24 +69,19 @@
       # Python
       python3Full
       uv
-      pyright
+      ruff
       black
 
       # Rust
-      # cargo
-      # rustc
-      # rustfmt
-      # clippy
-      # rust-analyzer
+      rustfmt
+      clippy
 
       # Zig
-      # zig
-      # zls
+      zls
 
       # Java
-      # temurin-bin
-      # google-java-format
-      # jdt-language-server
+      google-java-format
+      jdt-language-server
 
       # Nix
       alejandra
