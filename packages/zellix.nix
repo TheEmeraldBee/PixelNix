@@ -2,7 +2,7 @@
   xdg.configFile."zellix" = {
     source = builtins.fetchGit {
       url = "https://github.com/TheEmeraldBee/zellix";
-      rev = "0c0cf3d00e77651d807248f388dbde4862680085";
+      rev = "c273feba923f747702d0d9da126ce7d8343afd39";
     };
     recursive = true;
   };
