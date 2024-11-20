@@ -9,12 +9,6 @@ insert = "bar"
 normal = "block"
 select = "underline"
 
-[keys.normal.space.q]
-s = ":wq"
-q = ":q"
-a = ":wqa"
-w = ":w"
-
 [keys.normal.space.f]
 f = "file_picker"
 t = ":sh zellij run -c -f -x 10% -y 10% --width 80% --height 80% -- nu $ZELLIX_MOD/yazi.nu"
@@ -22,6 +16,7 @@ t = ":sh zellij run -c -f -x 10% -y 10% --width 80% --height 80% -- nu $ZELLIX_M
 [keys.normal.space.l]
 a = ":sh zellij run -c -f -x 10% -y 10% --width 80% --height 80% -- nu $ZELLIX_MOD/ai.nu"
 
-[keys.normal.space.';']
+[keys.normal.';']
+s = ":sh zellij run -c -f -x 10% -y 10% --width 80% --height 80% -- nu"
 r = ":sh nu $ZELLIX_MOD/makefile.nu last"
 ';' = ":sh nu $ZELLIX_MOD/makefile.nu"
