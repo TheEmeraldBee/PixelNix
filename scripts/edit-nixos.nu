@@ -38,6 +38,10 @@ let current = nixos-rebuild list-generations | grep current
 # Commit all changes witih the generation metadata
 git commit -am $"($current) - nixos"
 
-notify-send -e "NixOS Rebuilt Ok!"
+notify-send -e "NixOS Rebuilt Ok!\nCheck console to finish up!"
+
+if (input "Would you like to push? y/n" -n 1 -s) == 'y' {
+  git push
+}
 
 n
