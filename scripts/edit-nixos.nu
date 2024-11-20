@@ -2,7 +2,7 @@ use std/dirs shells-aliases *
 
 enter ~/dotfiles/
 
-hx
+nu ~/.config/zellix/run.nu ~/.config/zellix/example
 
 git diff -U0 "*"
 git add .
@@ -39,6 +39,8 @@ let current = nixos-rebuild list-generations | grep current
 git commit -am $"($current) - nixos"
 
 notify-send -e "NixOS Rebuilt Ok!\nCheck console to finish up!"
+
+print ""
 
 if (input "Would you like to push? y/n" -n 1 -s) == 'y' {
   git push
