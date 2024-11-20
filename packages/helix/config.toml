@@ -21,3 +21,7 @@ t = ":sh zellij run -c -f -x 10% -y 10% --width 80% --height 80% -- nu $ZELLIX_M
 
 [keys.normal.space.l]
 a = ":sh zellij run -c -f -x 10% -y 10% --width 80% --height 80% -- nu $ZELLIX_MOD/ai.nu"
+
+[keys.normal.space.';']
+r = ":sh nu $ZELLIX_MOD/makefile.nu last"
+';' = ":sh nu $ZELLIX_MOD/makefile.nu"
