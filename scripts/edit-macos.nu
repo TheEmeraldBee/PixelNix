@@ -32,4 +32,8 @@ git commit -am $"($current) - macos"
 
 print "Macos Rebuilt Ok!"
 
+if (input "Would you like to push? y/n" -n 1 -s) == 'y' {
+  git push
+}
+
 n
