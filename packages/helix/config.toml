@@ -17,6 +17,7 @@ t = ":sh zellij run -c -f -x 10% -y 10% --width 80% --height 80% -- nu $ZELLIX_M
 [keys.normal.space.m]
 g = ":sh zellij run -c -f -x 10% -y 10% --width 80% --height 80% -- gitui"
 a = ":sh zellij run -c -f -x 10% -y 10% --width 80% --height 80% -- nu $ZELLIX_MOD/ai.nu"
+A = ":sh zellij run -c -d right -- nu $ZELLIX_MOD/ai.nu pane"
 
 [keys.normal.';']
 s = ":sh zellij run -c -f -x 10% -y 10% --width 80% --height 80% -- nu"
