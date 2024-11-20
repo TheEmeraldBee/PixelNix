@@ -14,6 +14,8 @@
       carapace # Autocompletions
       fzf # Fuzzy Finder
 
+      fzf-make # Used for running makefile scripts in zellix
+
       yazi # Awesome Explorer!
 
       # ----------------- #
