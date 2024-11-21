@@ -7,6 +7,9 @@
     [
       zig
       zls
+
+      go
+      gopls
     ]
     ++ [
       # inputs.zig.packages.${system}.master
