@@ -13,8 +13,8 @@ select = "underline"
 f = "file_picker"
 t = ":sh zellij run -c -f -x 10% -y 10% --width 80% --height 80% -- nu $ZELLIX_MOD/yazi.nu"
 
-# Misc Clis
 [keys.normal.space.m]
+r = ":reload"
 g = ":sh zellij run -c -f -x 10% -y 10% --width 80% --height 80% -- gitui"
 a = ":sh zellij run -c -f -x 10% -y 10% --width 80% --height 80% -- nu $ZELLIX_MOD/ai.nu"
 A = ":sh zellij run -c -d right -- nu $ZELLIX_MOD/ai.nu pane"
