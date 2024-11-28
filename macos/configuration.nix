@@ -43,6 +43,8 @@
 
       "steam"
 
+      "olympus"
+
       "1password-cli"
       "1password"
     ];
