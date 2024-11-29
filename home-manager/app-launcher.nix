@@ -56,7 +56,7 @@
     icon = ""
     icon_color = "blue"
 
-    [[app."Nexus Mods".style]]
+    [[app."Nexus Mods".event]]
     Exec = "NexusMods.app"
 
     [app."Whiteboard".style]
