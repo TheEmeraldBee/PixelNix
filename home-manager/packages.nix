@@ -19,7 +19,7 @@
     pavucontrol
 
     # Mods
-    nexusmods-app
+    nexusmods-app-unfree
 
     # ------------------- #
     # Password Management #

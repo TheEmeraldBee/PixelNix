@@ -52,6 +52,13 @@
     [[app."Prism Launcher".event]]
     Exec = "prismlauncher"
 
+    [app."Nexus Mods".style]
+    icon = ""
+    icon_color = "blue"
+
+    [[app."Nexus Mods".style]]
+    Exec = "NexusMods.app"
+
     [app."Whiteboard".style]
     icon = "|"
     icon_color = "white"
