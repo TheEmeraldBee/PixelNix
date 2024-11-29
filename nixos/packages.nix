@@ -35,6 +35,8 @@
       gamemode
       gamescope
 
+      steamtinkerlaunch
+
       # ALVR
       alvr
     ]
