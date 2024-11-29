@@ -18,8 +18,8 @@
     # Audio Editor
     pavucontrol
 
-    # Gaming
-    modrinth-app
+    # Mods
+    nexusmods-app
 
     # ------------------- #
     # Password Management #
