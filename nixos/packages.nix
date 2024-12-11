@@ -9,10 +9,6 @@
       git
       gcc
 
-      # Window Manager
-      leftwm
-      leftwm-config
-
       # Home Manager
       home-manager
 
