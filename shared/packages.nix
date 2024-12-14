@@ -80,6 +80,7 @@
       clippy
       cargo
       rustc
+      rust-analyzer
 
       # Zig
       zls
