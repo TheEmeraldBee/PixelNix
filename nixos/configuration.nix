@@ -50,14 +50,16 @@
   # Enable ZSH
   programs.zsh.enable = true;
 
-  # Enable Hyprland and XWayland
-  # programs.hyprland = {
-  #   enable = true;
-  #   xwayland.enable = true;
+  programs.dconf.enable = true;
 
-  #   package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-  #   portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
-  # };
+  # Enable Hyprland and XWayland
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
+
+    package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+    portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+  };
 
   # This option defines the first version of NixOS you have installed on this particular machine,
   # and is used to maintain compatibility with application data (e.g. databases) created on older NixOS versions.

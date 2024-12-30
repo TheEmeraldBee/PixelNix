@@ -24,7 +24,7 @@
     ./packages.nix # Contains applications specific to this machine.
 
     # Theme the required applications
-    # ./theme.nix
+    ./theme.nix
 
     # Programs
     ../packages/alacritty.nix
@@ -49,6 +49,6 @@
     ./app-launcher.nix
 
     # Home Manager
-    # ./hyprland.nix
+    ./hyprland.nix
   ];
 }
