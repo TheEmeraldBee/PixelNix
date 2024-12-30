@@ -24,7 +24,7 @@
   boot.extraModulePackages = [];
 
   # Enable specific nvidia settings in kernel
-  boot.kernelParams = ["nvidia-drm.fbdev=1" "nvidia-drm.modeset=1"];
+  # boot.kernelParams = ["nvidia-drm.fbdev=1" "nvidia-drm.modeset=1"];
 
   # Define Enabled File Systems
   fileSystems."/" = {
