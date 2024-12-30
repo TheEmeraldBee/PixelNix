@@ -20,16 +20,16 @@
     ./hardware-configuration.nix
   ];
 
-  services.greetd = {
-    enable = true;
-    settings = rec {
-      initial_session = {
-        command = "Hyprland";
-        user = "brightonlcox";
-      };
-      default_session = initial_session;
-    };
-  };
+  #services.greetd = {
+  #  enable = true;
+  #  settings = rec {
+  #    initial_session = {
+  #      command = "Hyprland";
+  #      user = "brightonlcox";
+  #    };
+  #    default_session = initial_session;
+  #  };
+  #};
 
   security.polkit.enable = true;
 
@@ -51,13 +51,13 @@
   programs.zsh.enable = true;
 
   # Enable Hyprland and XWayland
-  programs.hyprland = {
-    enable = true;
-    xwayland.enable = true;
+  # programs.hyprland = {
+  #   enable = true;
+  #   xwayland.enable = true;
 
-    package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-    portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
-  };
+  #   package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+  #   portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+  # };
 
   # This option defines the first version of NixOS you have installed on this particular machine,
   # and is used to maintain compatibility with application data (e.g. databases) created on older NixOS versions.
