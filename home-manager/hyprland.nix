@@ -63,7 +63,7 @@
       "GDK_BACKEND,wayland"
     ];
 
-    monitor = ",preferred,auto,auto";
+    monitor = ",3840x1600@60,0x0,1";
 
     xwayland = {
       enabled = true;
@@ -125,7 +125,7 @@
     "$mod" = "SUPER";
     exec-once = [
       # Run lock on system
-      "hyprlock"
+      # "hyprlock"
 
       #
       "hyprctl setcursor Bibata-Modern-Classic 20"
