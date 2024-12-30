@@ -19,7 +19,7 @@
   powerManagement.cpuFreqGovernor = "performance";
 
   boot.initrd.availableKernelModules = ["xhci_pci" "ahci" "nvme" "usbhid" "usb_storage" "sd_mod"];
-  boot.initrd.kernelModules = ["nvidia" "i915" "nvidia-modeset" "nvidia_uvm" "nvidia_drm"];
+  # boot.initrd.kernelModules = ["nvidia" "i915" "nvidia-modeset" "nvidia_uvm" "nvidia_drm"];
   boot.kernelModules = ["kvm-intel"];
   boot.extraModulePackages = [];
 

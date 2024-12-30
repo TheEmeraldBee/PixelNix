@@ -12,7 +12,7 @@
 
     ./network.nix
     ./services.nix
-    ./nvidia.nix
+    # ./nvidia.nix
 
     ./steam.nix
     ./1password.nix
