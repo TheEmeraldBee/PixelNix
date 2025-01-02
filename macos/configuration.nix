@@ -45,6 +45,8 @@
 
       "olympus"
 
+      "ghostty"
+
       "1password-cli"
       "1password"
     ];
