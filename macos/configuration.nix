@@ -27,7 +27,6 @@
     ];
     brews = [
       "FelixKratz/formulae/borders"
-      "docker"
     ];
     casks = [
       "balenaetcher"
@@ -45,6 +44,8 @@
       "steam"
 
       "olympus"
+
+      "docker"
 
       "1password-cli"
       "1password"
