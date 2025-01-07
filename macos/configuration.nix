@@ -45,7 +45,7 @@
 
       "olympus"
 
-      "ghostty"
+      "docker"
 
       "1password-cli"
       "1password"
