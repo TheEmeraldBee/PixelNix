@@ -74,6 +74,7 @@
       uv
       ruff
       black
+      python312Packages.jedi-language-server
 
       # Rust
       rustfmt
