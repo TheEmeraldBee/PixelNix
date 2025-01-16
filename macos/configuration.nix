@@ -28,7 +28,6 @@
     ];
     brews = [
       "FelixKratz/formulae/borders"
-      "mysql"
     ];
     casks = [
       "balenaetcher"
@@ -48,8 +47,6 @@
       "olympus"
 
       "docker"
-
-      "mysqlworkbench"
 
       "1password-cli"
       "1password"
