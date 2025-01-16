@@ -24,6 +24,7 @@
     taps = [
       "nikitabobko/tap" # aerospace
       "FelixKratz/formulae" # jankyborders
+      "homebrew/services"
     ];
     brews = [
       "FelixKratz/formulae/borders"
