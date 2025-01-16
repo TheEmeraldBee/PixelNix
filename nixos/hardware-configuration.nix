@@ -19,12 +19,12 @@
   powerManagement.cpuFreqGovernor = "performance";
 
   boot.initrd.availableKernelModules = ["xhci_pci" "ahci" "nvme" "usbhid" "usb_storage" "sd_mod"];
-  # boot.initrd.kernelModules = ["nvidia" "i915" "nvidia-modeset" "nvidia_uvm" "nvidia_drm"];
+  boot.initrd.kernelModules = ["nvidia" "i915" "nvidia-modeset" "nvidia_uvm" "nvidia_drm"];
   boot.kernelModules = ["kvm-intel"];
   boot.extraModulePackages = [];
 
   # Enable specific nvidia settings in kernel
-  # boot.kernelParams = ["nvidia-drm.fbdev=1" "nvidia-drm.modeset=1"];
+  boot.kernelParams = ["nvidia-drm.fbdev=1" "nvidia-drm.modeset=1"];
 
   # Define Enabled File Systems
   fileSystems."/" = {
