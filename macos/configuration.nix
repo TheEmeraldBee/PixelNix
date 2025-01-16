@@ -47,6 +47,8 @@
 
       "olympus"
 
+      "godot"
+
       "docker"
 
       "mysqlworkbench"
