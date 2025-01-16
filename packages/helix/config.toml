@@ -22,10 +22,8 @@ a = ":sh zellij run -c -d right -- nu $ZELLIX_MOD/ai.nu pane"
 [keys.normal.';'.'m']
 m = ":sh nu $ZELLIX_MOD/makefile.nu"
 r = ":sh nu $ZELLIX_MOD/makefile.nu last"
-
-[keys.normal.';'.'M']
-m = ":sh nu $ZELLIX_MOD/makefile.nu wait"
-r = ":sh nu $ZELLIX_MOD/makefile.nu last wait"
+M = ":sh nu $ZELLIX_MOD/makefile.nu wait"
+R = ":sh nu $ZELLIX_MOD/makefile.nu last wait"
 
 [keys.normal.';'.'c']
 b = ":sh nu $ZELLIX_MOD/bacon.nu"
