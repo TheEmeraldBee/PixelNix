@@ -28,6 +28,7 @@
     ];
     brews = [
       "FelixKratz/formulae/borders"
+      "mysql"
     ];
     casks = [
       "balenaetcher"
