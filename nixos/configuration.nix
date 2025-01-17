@@ -20,16 +20,16 @@
     ./hardware-configuration.nix
   ];
 
-  #services.greetd = {
-  #  enable = true;
-  #  settings = rec {
-  #    initial_session = {
-  #      command = "Hyprland";
-  #      user = "brightonlcox";
-  #    };
-  #    default_session = initial_session;
-  #  };
-  #};
+  services.greetd = {
+    enable = true;
+    settings = rec {
+      initial_session = {
+        command = "Hyprland";
+        user = "brightonlcox";
+      };
+      default_session = initial_session;
+    };
+  };
 
   security.polkit.enable = true;
 
