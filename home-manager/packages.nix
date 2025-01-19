@@ -15,6 +15,9 @@
     # Applications #
     # ------------ #
 
+    # Programming
+    godot_4
+
     # Audio Editor
     pavucontrol
 
