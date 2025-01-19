@@ -139,8 +139,8 @@
     ];
     bind =
       [
-        "$mod, return, exec, alacritty"
-        "$mod, space, exec, alacritty --class AppLauncher -e app-launcher"
+        "$mod, return, exec, ghostty"
+        "$mod, space, exec, ghostty --class AppLauncher -e app-launcher"
 
         "$mod, X, killactive,"
         "$mod, M, exit,"
