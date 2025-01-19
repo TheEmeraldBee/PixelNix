@@ -14,6 +14,7 @@
 
     # Terminal
     ../packages/alacritty.nix
+    ../packages/ghostty.nix
     ../packages/starship.nix
     ../packages/zellij.nix
 
