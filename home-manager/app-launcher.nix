@@ -45,6 +45,13 @@
     [[app."Olympus".event]]
     Exec = "olympus"
 
+    [app."Godot".style]
+    icon = "\ue7ee"
+    icon_color = "blue"
+
+    [[app."Godot".event]]
+    Exec = "godot4"
+
     [app."Prism Launcher".style]
     icon = "󰍳"
     icon_color = "green"
