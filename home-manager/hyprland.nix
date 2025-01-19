@@ -125,7 +125,7 @@
     "$mod" = "SUPER";
     exec-once = [
       # Run lock on system
-      "hyprlock"
+      # "hyprlock"
 
       #
       "hyprctl setcursor Bibata-Modern-Classic 20"
