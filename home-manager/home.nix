@@ -27,6 +27,7 @@
     ./theme.nix
 
     # Programs
+    ../packages/ghostty.nix
     ../packages/alacritty.nix
 
     # AI Chat!
