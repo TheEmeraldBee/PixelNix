@@ -28,7 +28,6 @@
 
     # Programs
     ../packages/ghostty.nix
-    ../packages/alacritty.nix
 
     # AI Chat!
     ../packages/aichat.nix

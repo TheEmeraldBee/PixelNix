@@ -56,9 +56,6 @@
       # Applications #
       # ------------ #
 
-      # Terminal
-      alacritty
-
       # Communication
       discord
 
