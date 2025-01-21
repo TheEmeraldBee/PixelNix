@@ -11,6 +11,7 @@
   users.users.brightoncox = {
     name = "brightoncox";
     home = "/Users/brightoncox";
+    shell = pkgs.nushell;
   };
 
   homebrew = {
