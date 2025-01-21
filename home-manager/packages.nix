@@ -1,33 +1,37 @@
 {pkgs, ...}: {
-  home.packages = with pkgs; [
-    gnumake
+  home.packages = with pkgs;
+    [
+      gnumake
 
-    hypridle
-    hyprlock
+      hypridle
+      hyprlock
 
-    # Screenshots
-    grim
-    slurp
+      # Screenshots
+      grim
+      slurp
 
-    feh
+      feh
 
-    # ------------ #
-    # Applications #
-    # ------------ #
+      # ------------ #
+      # Applications #
+      # ------------ #
 
-    # Programming
-    godot_4
+      # Programming
+      godot_4
 
-    # Audio Editor
-    pavucontrol
+      # Audio Editor
+      pavucontrol
 
-    # Mods
-    nexusmods-app-unfree
+      # Mods
+      nexusmods-app-unfree
 
-    # ------------------- #
-    # Password Management #
-    # ------------------- #
-    _1password-gui
-    _1password
-  ];
+      # ------------------- #
+      # Password Management #
+      # ------------------- #
+      _1password-gui
+      _1password
+    ]
+    ++ [
+      inputs.ghostty.packages.${pkgs.system}.default
+    ];
 }
