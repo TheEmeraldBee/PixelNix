@@ -22,6 +22,9 @@
       # Misc Command Line #
       # ----------------- #
 
+      # Better ls
+      eza
+
       # Editor
       nil
 

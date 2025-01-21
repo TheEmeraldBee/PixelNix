@@ -74,8 +74,10 @@
       }
     '';
     shellAliases = {
-      # Listing Files
-      ll = "ls -al";
+      ls = "eza -l --icons";
+      ll = "eza -Alg --icons";
+      lf = "eza -lgTL2 --icons";
+      lg = "eza -lgTL4 --git-ignore --icons";
 
       # Rust
       bc = "bacon clippy";
