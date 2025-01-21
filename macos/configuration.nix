@@ -51,6 +51,8 @@
 
       "docker"
 
+      "ghostty"
+
       "mysqlworkbench"
 
       "1password-cli"
