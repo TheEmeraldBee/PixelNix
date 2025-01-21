@@ -14,6 +14,9 @@ f = "file_picker"
 t = ":sh zellij run -c -f -x 10% -y 10% --width 80% --height 80% -- nu $ZELLIX_MOD/yazi.nu"
 
 [keys.normal.';']
+w = ":w"
+q = ":q"
+x = ":wq"
 r = ":reload"
 s = ":sh zellij run -c -f -x 10% -y 10% --width 80% --height 80% -- nu"
 g = ":sh zellij run -c -d right -- gitui"
