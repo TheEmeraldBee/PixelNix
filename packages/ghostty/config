@@ -6,4 +6,4 @@ background-blur-radius = 5
 
 window-step-resize = true
 
-theme = catppuccin-frappe
+theme = catppuccin-mocha
