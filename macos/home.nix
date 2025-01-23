@@ -36,6 +36,7 @@
             "/usr/sbin"
             "/bin"
             "/sbin"
+            "/opt/homebrew/bin"
         ]
         $env.EDITOR = "VIM"
         $env.NIX_PATH = [
