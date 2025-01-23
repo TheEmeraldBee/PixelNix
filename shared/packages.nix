@@ -77,11 +77,7 @@
       python312Packages.jedi-language-server
 
       # Rust
-      rustfmt
-      clippy
-      cargo
-      rustc
-      rust-analyzer
+      rustup
 
       # Zig
       zls
