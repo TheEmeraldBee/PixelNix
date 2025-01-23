@@ -78,7 +78,6 @@
 
       # Rust
       rustup
-      # rust-analyzer
 
       # Zig
       zls
