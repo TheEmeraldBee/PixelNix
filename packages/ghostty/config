@@ -1,4 +1,7 @@
-font-family = Menlo
+font-family = FiraCode Nerd Font Mono
+font-family-bold = FiraCode Nerd Font Mono
+font-family-italic = FiraCode Nerd Font Mono
+font-family-bold-italic = FiraCode Nerd Font Mono
 font-size = 14
 
 background-opacity = 0.95
