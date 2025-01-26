@@ -4,7 +4,7 @@
     settings = {
       ui = {
         editor = "hx";
-        pager = "bat";
+        pager = "bat --decorations never";
         default-command = "status";
       };
       user = {
