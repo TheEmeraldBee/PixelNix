@@ -7,4 +7,12 @@
       gpg."ssh".program = "/opt/1Password/op-ssh-sign";
     };
   };
+
+  programs.jujutsu = {
+    enable = true;
+    user = {
+      email = "brightonlcox@gmail.com";
+      name = "Brighton Cox";
+    };
+  };
 }
