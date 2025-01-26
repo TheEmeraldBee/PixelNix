@@ -20,6 +20,8 @@
         $env.GEMINI_API_KEY = (op read op://secrets/gemini-key/password)
         $env.GEMINI_API_KEY | save ~/.gemini-key
       }
+
+      $env.EDITOR = zl
     '';
     shellAliases = {
       ls = "eza -l --icons";
