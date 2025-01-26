@@ -18,7 +18,8 @@
 
       yazi # Awesome Explorer!
 
-      jujutsu # 100x better git
+      jujutsu # Git replacement
+      lazyjj # Jujutsu UI
 
       # ----------------- #
       # Misc Command Line #
