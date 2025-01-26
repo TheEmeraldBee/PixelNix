@@ -21,7 +21,7 @@
         $env.GEMINI_API_KEY | save ~/.gemini-key
       }
 
-      $env.EDITOR = zl
+      $env.EDITOR = "zl"
     '';
     shellAliases = {
       ls = "eza -l --icons";
