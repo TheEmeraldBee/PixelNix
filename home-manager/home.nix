@@ -42,6 +42,8 @@
     ../packages/zellij.nix
     ../packages/starship.nix
 
+    ../packages/jujutsu.nix
+
     # For File Exploring
     ../packages/yazi.nix
 

@@ -20,6 +20,8 @@
     ../packages/helix.nix
     ../packages/zellix.nix
 
+    ../packages/jujutsu.nix
+
     # Shell
     (import ../shared/shell.nix {
       configScriptPath = "~/dotfiles/scripts/edit-macos.nu";
