@@ -10,6 +10,11 @@
 
   programs.jujutsu = {
     enable = true;
+    ui = {
+      editor = "hx";
+      pager = "bat";
+      default-command = "status";
+    };
     user = {
       email = "brightonlcox@gmail.com";
       name = "Brighton Cox";
