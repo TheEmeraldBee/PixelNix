@@ -18,6 +18,8 @@
 
       yazi # Awesome Explorer!
 
+      jujutsu # 100x better git
+
       # ----------------- #
       # Misc Command Line #
       # ----------------- #
