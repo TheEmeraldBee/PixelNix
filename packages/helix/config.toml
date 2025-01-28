@@ -19,14 +19,9 @@ q = ":q"
 x = ":wq"
 r = ":reload"
 s = ":sh zellij run -c -f -x 10% -y 10% --width 80% --height 80% -- nu"
+m = ":sh zellij run -c -f nu $ZELLIX_MOD/makefile.nu"
 g = ":sh zellij run -c -d right -- gitui"
 a = ":sh zellij run -c -d right -- nu $ZELLIX_MOD/ai.nu pane"
-
-[keys.normal.';'.'m']
-m = ":sh nu $ZELLIX_MOD/makefile.nu"
-r = ":sh nu $ZELLIX_MOD/makefile.nu last"
-M = ":sh nu $ZELLIX_MOD/makefile.nu wait"
-R = ":sh nu $ZELLIX_MOD/makefile.nu last wait"
 
 [keys.normal.';'.'c']
 b = ":sh nu $ZELLIX_MOD/bacon.nu"
