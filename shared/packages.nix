@@ -20,6 +20,7 @@
 
       jujutsu # Git replacement
       lazyjj # Jujutsu UI
+      graphite-cli
 
       # ----------------- #
       # Misc Command Line #
