@@ -18,7 +18,7 @@ model = "llama3-70b-8192"
 auth_token_env_var_name = "GROQ_KEY"
 
 [language-server.lsp-ai.config.completion]
-model = "groq"
+model = "gemini2"
 parameters = {contents = [{role = "user", parts = [{text = "{CONTEXT} and {CODE}"}]}],  systemInstruction = {role = "system", parts = [{text = "You're giving the user input completion for code in his editor"}]}}
 
 [[language]]
