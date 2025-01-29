@@ -1,6 +1,5 @@
-model: gemini
+model: groq
 clients:
-- type: gemini
 - type: openai-compatible
   name: groq
   api_base: https://api.groq.com/openai/v1
