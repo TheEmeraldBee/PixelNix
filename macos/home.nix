@@ -20,6 +20,8 @@
     ../packages/helix.nix
     ../packages/zellix.nix
 
+    ../packages/aichat.nix
+
     ../packages/jujutsu.nix
 
     # Shell
