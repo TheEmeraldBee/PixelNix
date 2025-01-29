@@ -9,7 +9,7 @@ type = "gemini"
 completions_endpoint = "https://generativelanguage.googleapis.com/v1beta/models/"
 chat_endpoint = "https://generativelanguage.googleapis.com/v1beta/models/"
 model = "gemini-2.0-flash-exp"
-auth_token_env_var_name = "GOOGLE_API_KEY"
+auth_token_env_var_name = "GEMINI_API_KEY"
 
 [language-server.lsp-ai.config.models.groq]
 type = "open_ai"
