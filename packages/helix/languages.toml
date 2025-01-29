@@ -13,6 +13,10 @@ auth_token_env_var_name = "GROQ_KEY"
 [language-server.lsp-ai.config.completion]
 model = "groq"
 
+[language-server.lsp-ai.config.completion.parameters]
+max_tokens = 64
+max_context = 1024
+
 [[language]]
 name = "rust"
 language-servers = ["rust-analyzer", "lsp-ai"]
