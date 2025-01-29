@@ -9,3 +9,10 @@ type = "open_ai"
 chat_endpoint = "https://api.groq.com/openai/v1/models"
 model = "deepseek-r1-distill-llama-70b"
 auth_token_env_var_name = "GROQ_KEY"
+
+[language-server.lsp-ai.config.completion]
+model = "groq"
+
+[[language]]
+name = "rust"
+language-servers = ["rust-analyzer", "lsp-ai"]
