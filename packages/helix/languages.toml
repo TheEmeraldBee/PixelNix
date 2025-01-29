@@ -6,7 +6,7 @@ file_store = { }
 
 [language-server.lsp-ai.config.models.groq]
 type = "open_ai"
-chat_endpoint = "https://api.groq.com/openai/v1/chat/completions"
+completions_endpoint = "https://api.groq.com/openai/v1/chat/completions"
 model = "deepseek-r1-distill-llama-70b"
 auth_token_env_var_name = "GROQ_KEY"
 
