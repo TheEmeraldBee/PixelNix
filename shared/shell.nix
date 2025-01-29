@@ -21,10 +21,10 @@
         $env.GEMINI_API_KEY | save ~/.gemini-key
       }
       try {
-        $env.GROQ_KEY = open ~/.groq-key
+        $env.GROQ_API_KEY = open ~/.groq-key
       } catch {
-        $env.GROQ_KEY = (op read op://secrets/groq-key/password)
-        $env.GROQ_KEY | save ~/.groq-key
+        $env.GROQ_API_KEY = (op read op://secrets/groq-key/password)
+        $env.GROQ_API_KEY | save ~/.groq-key
       }
 
       $env.EDITOR = "hx"
