@@ -1,0 +1,11 @@
+[language-server.lsp-ai]
+command = "lsp-ai"
+
+[language-server.lsp-ai.config.memory]
+file_store = { }
+
+[language-server.lsp-ai.config.models.groq]
+type = "open_ai"
+chat_endpoint = "https://api.groq.com/openai/v1/models"
+model = "deepseek-r1-distill-llama-70b"
+auth_token_env_var_name = "GROQ_KEY"
