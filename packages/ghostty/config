@@ -10,3 +10,5 @@ background-blur-radius = 5
 window-step-resize = true
 
 theme = catppuccin-mocha
+
+macos-titlebar-style = hidden
