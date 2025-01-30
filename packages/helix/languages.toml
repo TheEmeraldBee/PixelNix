@@ -11,14 +11,16 @@ file_store = { }
 
 [language-server.lsp-ai.config.models.model1]
 type = "ollama"
-model = "qwen2.5-coder:7b"
+model = "deepseek-coder"
 
 [language-server.lsp-ai.config.completion]
 model = "model1"
 
 [language-server.lsp-ai.config.completion.parameters]
-max_tokens = 64
 max_context = 1024
+
+[language-server.lsp-ai.config.completion.parameters.options]
+num_predict = 32
 
 #################################
 ## Configuration for languages ##
