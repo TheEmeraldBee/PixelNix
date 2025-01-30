@@ -2,7 +2,7 @@ use std/dirs shells-aliases *
 
 enter ~/dotfiles/
 
-# nu ~/.config/zellix/run.nu ~/.config/zellix/example
+nu ~/.config/zellix/run.nu ~/.config/zellix/example
 
 git diff -U0 "*"
 git add .
