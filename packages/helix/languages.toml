@@ -1,1 +1,35 @@
+# deepseek-r1:7b
+##############################
+## Configuration for lsp-ai ##
+##############################
 
+[language-server.lsp-ai]
+command = "lsp-ai"
+
+[language-server.lsp-ai.config.memory]
+file_store = { }
+
+[language-server.lsp-ai.config.models.ollama]
+type = "ollama"
+model = "qwen2.5-coder:7b"
+
+[language-server.lsp-ai.config.completion]
+model = "ollama"
+
+[language-server.lsp-ai.config.completion.parameters]
+max_tokens = 32
+max_context = 1024
+
+[language-server.lsp-ai.config.completion.parameters.fim]
+start = "<fim_prefix>"
+middle = "<fim_suffix>"
+end = "<fim_middle>"
+
+
+#################################
+## Configuration for languages ##
+#################################
+
+[[language]]
+name = "rust"
+language-servers = ["rust-analyzer", "lsp-ai"]
