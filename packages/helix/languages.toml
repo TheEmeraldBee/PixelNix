@@ -13,25 +13,12 @@ file_store = { }
 type = "ollama"
 model = "qwen2.5-coder:7b"
 
-# Action 1: Complete
-[[language-server.lsp-ai.config.actions]]
-action_display_name = "Complete"
+[language-server.lsp-ai.config.completion]
 model = "model1"
 
-[[language-server.lsp-ai.config.actions.parameters.messages]]
-role = "system"
-content = '''
-You are an AI coding assistant. Your task is to add a "Hello World" comment to the selected text.
-The user's cursor position is marked by "<CURSOR>".
-
-Follow these steps:
-
-1. Tell me what you believe I am asking you to do.
-'''
-
-[[language-server.lsp-ai.config.actions.parameters.messages]]
-role = "user"
-content = '{SELECTED_TEXT}'
+[language-server.lsp-ai.config.completion.parameters]
+max_tokens = 64
+max_context = 1024
 
 #################################
 ## Configuration for languages ##
