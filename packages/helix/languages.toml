@@ -19,8 +19,8 @@ model = "model1"
 [language-server.lsp-ai.config.completion.parameters]
 max_context = 1024
 
-[language-server.lsp-ai.config.completion.parameters.options]
-num_predict = 32
+# [language-server.lsp-ai.config.completion.parameters.options]
+# num_predict = 32
 
 #################################
 ## Configuration for languages ##
