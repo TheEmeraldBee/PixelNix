@@ -98,6 +98,7 @@
       # Fonts #
       # ----- #
       nerd-fonts.fira-code
+      nerd-fonts.hack
       fira-sans
     ]
     ++ [
