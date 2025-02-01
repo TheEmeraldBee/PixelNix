@@ -97,7 +97,7 @@
       # ----- #
       # Fonts #
       # ----- #
-      fira-code-nerdfont
+      nerd-fonts.fira-code
       fira-sans
     ]
     ++ [
