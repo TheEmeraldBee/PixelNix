@@ -50,12 +50,6 @@
       alt-shift-8 = 'move-node-to-workspace 8'
       alt-shift-9 = 'move-node-to-workspace 9'
       alt-shift-0 = 'move-node-to-workspace 10'
-
-      alt-r = 'mode resize'
-
-      [mode.resize.binding]
-      minus = 'resize smart -50'
-      equal = 'resize smart 50'
     '';
   };
 }
