@@ -62,7 +62,7 @@
       run = ['layout floating']
 
       [[on-window-detected]]
-      if.window-title-regex-substring = 'bevy'
+      if.app-name-regex-substring = 'the-beat-of-space'
       run = ['layout floating']
     '';
   };
