@@ -77,7 +77,8 @@
       # Python
       python3Full
       uv
-      ruff
+      ruff-lsp
+      pyright
 
       # Rust
       rustup
