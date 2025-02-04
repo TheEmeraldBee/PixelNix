@@ -71,6 +71,9 @@
       # Programming #
       # ----------- #
 
+      # Haskell
+      marksman
+
       # Python
       python3Full
       uv
