@@ -64,6 +64,10 @@
       [[on-window-detected]]
       if.app-name-regex-substring = 'the-beat-of-space'
       run = ['layout floating']
+
+      [[on-window-detected]]
+      if.app-name-regex-substring = 'idnh'
+      run = ['layout floating']
     '';
   };
 }
