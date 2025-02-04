@@ -78,7 +78,6 @@
       python3Full
       uv
       ruff
-      black
 
       # Rust
       rustup
