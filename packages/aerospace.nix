@@ -2,6 +2,14 @@
   home.file.aerospace = {
     target = ".aerospace.toml";
     text = ''
+      start-at-login = true
+
+      after-login-command = []
+
+      after-startup-command = [
+           'exec-and-forget borders active_color=0xee00ff99 inactive_color=0xaa595959 width=10.0'
+      ]
+
       [gaps]
       inner.horizontal = 15
       inner.vertical = 15
@@ -11,8 +19,6 @@
       outer.right = 15
 
       [mode.main.binding]
-      alt-shift-b = 'exec-and-forget borders active_color=0xee00ff99 inactive_color=0xaa595959 width=10.0'
-
       alt-f = 'fullscreen'
 
       alt-d = 'layout v_accordion tiles'
@@ -50,6 +56,14 @@
       alt-shift-8 = 'move-node-to-workspace 8'
       alt-shift-9 = 'move-node-to-workspace 9'
       alt-shift-0 = 'move-node-to-workspace 10'
+
+      [[on-window-detected]]
+      if.app-id = 'com.apple.finder'
+      run = ['layout floating']
+
+      [[on-window-detected]]
+      if.window-title-regex-substring = 'bevy'
+      run = ['layout floating']
     '';
   };
 }
