@@ -18,8 +18,6 @@
 
       yazi # Awesome Explorer!
 
-      jujutsu # Git replacement
-
       # ----------------- #
       # Misc Command Line #
       # ----------------- #
@@ -106,5 +104,6 @@
     ++ [
       inputs.helix.packages.${pkgs.system}.default
       inputs.ferrite.packages.${pkgs.system}.default
+      inputs.jujutsu.packages.${pkgs.system}.default
     ];
 }

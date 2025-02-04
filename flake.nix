@@ -8,6 +8,10 @@
     helix.url = "github:helix-editor/helix";
     helix.inputs.nixpkgs.follows = "nixpkgs";
 
+    # Jujutsu git replacement
+    jujutsu.url = "github:jj-vcs/jj";
+    jujutsu.inputs.nixpkgs.follows = "nixpkgs";
+
     # Terminal
     ghostty.url = "github:ghostty-org/ghostty";
 
