@@ -2,6 +2,9 @@
   programs.jujutsu = {
     enable = true;
     settings = {
+      git = {
+        subprocess = true;
+      };
       ui = {
         editor = "hx";
         pager = "bat --decorations never";
