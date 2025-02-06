@@ -94,6 +94,9 @@
       # Nix
       alejandra
 
+      # WGSL
+      wgsl-analyzer
+
       # ----- #
       # Fonts #
       # ----- #
