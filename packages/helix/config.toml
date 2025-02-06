@@ -3,7 +3,6 @@ theme = "cat_invis"
 [editor]
 line-number = "relative"
 idle-timeout = 100
-lsp.display-inlay-hints = true
 
 [editor.cursor-shape]
 insert = "bar"
@@ -16,9 +15,9 @@ t = ":sh zellij run -c -f -x 10% -y 10% --width 80% --height 80% -- nu $ZELLIX_M
 
 [keys.normal.';']
 w = ":w"
-q = ":q"
 x = ":wq"
 r = ":reload"
+f = ":format"
 s = ":sh zellij run -c -f -x 10% -y 10% --width 80% --height 80% -- nu"
 m = ":sh zellij run -c -f -- nu $ZELLIX_MOD/makefile.nu"
 g = ":sh zellij run -c -d right -- gitui"
