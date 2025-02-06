@@ -3,6 +3,7 @@ theme = "cat_invis"
 [editor]
 line-number = "relative"
 idle-timeout = 100
+lsp.display-inlay-hints = true
 
 [editor.cursor-shape]
 insert = "bar"
