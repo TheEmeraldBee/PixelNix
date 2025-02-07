@@ -59,6 +59,8 @@
 
       "1password-cli"
       "1password"
+
+      "firefox"
     ];
   };
 
