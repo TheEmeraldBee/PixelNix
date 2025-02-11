@@ -26,6 +26,12 @@
         $env.GROQ_API_KEY = (op read op://secrets/groq-key/password)
         $env.GROQ_API_KEY | save ~/.groq-key
       }
+      try {
+        $env.RPG_BOT_KEY = open ~/.rpg-bot
+      } catch {
+        $env.RPG_BOT_KEY = (op read op://secrets/rpg-bot/password)
+        $env.RPG_BOT_KEY | save ~/.rpg-bot
+      }
 
       $env.EDITOR = "hx"
     '';
