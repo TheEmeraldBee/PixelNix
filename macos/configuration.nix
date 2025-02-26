@@ -64,8 +64,6 @@
     ];
   };
 
-  services.nix-daemon.enable = true;
-
   nix.settings.experimental-features = "nix-command flakes";
 
   # Get from darwin-rebuild changelog.
