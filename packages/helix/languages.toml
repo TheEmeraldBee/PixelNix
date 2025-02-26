@@ -8,3 +8,11 @@ command = "ruff-lsp"
 
 [language-server.ruff.config.settings]
 args = ["--ignore", "E501"]
+
+[[language]]
+name = "zel"
+scope = "source.zl"
+injection-regex = "zel"
+file-types = ["zl"]
+comment-tokens = "//"
+indent = { tab-width = 2, unit = "  " }
