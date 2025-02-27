@@ -11,15 +11,15 @@ select = "underline"
 
 [keys.normal.space.f]
 f = "file_picker"
-t = ":sh zellij run -c -f -x 10% -y 10% --width 80% --height 80% -- nu $ZELLIX_MOD/yazi.nu %{buffer_name}"
+t = ":sh zellij run -c -f -x 10%% -y 10%% --width 80%% --height 80%% -- nu $ZELLIX_MOD/yazi.nu %{buffer_name}"
 
 [keys.normal.';']
 w = ":w"
 x = ":wq"
 r = ":reload"
 f = ":format"
-s = ":sh zellij run -c -f -x 10% -y 10% --width 80% --height 80% -- nu"
-m = ":sh zellij run -c -f -- nu $ZELLIX_MOD/makefile.nu"
+s = ":sh zellij run -c -f -x 10%% -y 10%% --width 80%% --height 80%% -- nu"
+m = ":sh zellij run -c -f -x 10%% -y 10%% --widht 80%% --height 80%% -- nu $ZELLIX_MOD/makefile.nu"
 g = ":sh zellij run -c -d right -- gitui"
 a = ":sh zellij run -c -d right -- nu $ZELLIX_MOD/ai.nu pane"
 b = ":sh nu $ZELLIX_MOD/bacon.nu"
