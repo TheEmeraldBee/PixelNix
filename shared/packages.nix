@@ -97,6 +97,9 @@
       # WGSL
       wgsl-analyzer
 
+      # Toml
+      taplo
+
       # ----- #
       # Fonts #
       # ----- #
