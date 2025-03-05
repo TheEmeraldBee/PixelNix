@@ -1,6 +1,6 @@
 {...}: {
   programs.jujutsu = {
-    # enable = true;
+    enable = true;
     settings = {
       git = {
         subprocess = true;
