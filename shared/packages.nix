@@ -69,9 +69,6 @@
       # Programming #
       # ----------- #
 
-      # LLVM
-      llvmPackages.mlir
-
       # Markdown
       marksman
 
