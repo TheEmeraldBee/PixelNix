@@ -69,7 +69,10 @@
       # Programming #
       # ----------- #
 
-      # Haskell
+      # LLVM
+      llvmPackages.mlir
+
+      # Markdown
       marksman
 
       # Python
