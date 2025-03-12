@@ -61,6 +61,8 @@
       "1password"
 
       "firefox"
+
+      "whisky"
     ];
   };
 
