@@ -69,6 +69,9 @@
       # Programming #
       # ----------- #
 
+      # SQL
+      sqlx-cli
+
       # Markdown
       marksman
 
