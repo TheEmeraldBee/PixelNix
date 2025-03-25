@@ -70,6 +70,7 @@
       # ----------- #
 
       # SQL
+      sqls
       sqlx-cli
 
       # Markdown
