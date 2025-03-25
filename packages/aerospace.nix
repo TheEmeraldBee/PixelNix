@@ -70,6 +70,10 @@
       run = ['layout floating']
 
       [[on-window-detected]]
+      if.app-name-regex-substring = 'galalith'
+      run = ['layout floating']
+
+      [[on-window-detected]]
       if.app-name-regex-substring = 'idnh'
       run = ['layout floating']
     '';
