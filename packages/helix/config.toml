@@ -1,10 +1,9 @@
 theme = "cat_invis"
 
-jump-label-alphabet = "jfkdls;aurieowpqnvmcxz"
-
 [editor]
 line-number = "relative"
 idle-timeout = 100
+jump-label-alphabet = "jfkdls;aurieowpqnvmcxz"
 
 [editor.cursor-shape]
 insert = "bar"
