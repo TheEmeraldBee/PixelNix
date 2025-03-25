@@ -1,5 +1,7 @@
 theme = "cat_invis"
 
+jump-label-alphabet = "jfkdls;aurieowpqnvmcxz"
+
 [editor]
 line-number = "relative"
 idle-timeout = 100
@@ -8,6 +10,9 @@ idle-timeout = 100
 insert = "bar"
 normal = "block"
 select = "underline"
+
+[keys.normal.space]
+l = ":toggle lsp.display-inlay-hints"
 
 [keys.normal.space.f]
 f = "file_picker"
