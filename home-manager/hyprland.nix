@@ -59,7 +59,7 @@
       "MOZ_ENABLE_WAYLAND,0"
     ];
 
-    monitor = ",prefered,auto,auto";
+    monitor = ",prefered,0x0,1";
 
     xwayland = {
       enabled = true;
