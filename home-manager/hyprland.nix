@@ -168,9 +168,9 @@
       "suppressevent maximize, class:.*"
       "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
 
-      "float,title:AppLauncher"
-      "pin,title:AppLauncher"
-      "stayfocused,title:AppLauncher"
+      "float,class:AppLauncher"
+      "pin,class:AppLauncher"
+      "stayfocused,class:AppLauncher"
     ];
   };
 }
