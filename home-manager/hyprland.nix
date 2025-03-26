@@ -135,7 +135,7 @@
     bind =
       [
         "$mod, return, exec, ghostty"
-        "$mod, space, exec, ghostty --title=AppLauncher -e app-launcher"
+        "$mod, space, exec, ghostty --class=com.example.AppLauncher -e app-launcher"
 
         "$mod, X, killactive,"
         "$mod, M, exit,"
