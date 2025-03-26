@@ -56,6 +56,7 @@
       "__GLX_VENDOR_LIBRARY_NAME,nvidia"
       "NVD_BACKEND,direct"
       "GDK_BACKEND,wayland"
+      "MOZ_ENABLE_WAYLAND,0"
     ];
 
     monitor = ",prefered,auto,auto";
