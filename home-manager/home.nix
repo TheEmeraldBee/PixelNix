@@ -37,7 +37,10 @@
     ../packages/zellix.nix
 
     # Shell
-    (import ../shared/shell.nix {configScriptPath = "~/dotfiles/scripts/edit-nixos.nu";})
+    (import ../shared/shell.nix {
+      configScriptPath = "~/dotfiles/scripts/edit-nixos.nu";
+      additionalConfig = "$env.PATH = ($env.PATH | spplit row(char esep) | prepend /run/wrappers/bin)";
+    })
     ./git.nix
     ../packages/zellij.nix
     ../packages/starship.nix

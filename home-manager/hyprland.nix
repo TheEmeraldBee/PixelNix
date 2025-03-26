@@ -1,9 +1,4 @@
-{
-  config,
-  libs,
-  pkgs,
-  ...
-}: {
+{...}: {
   services.hypridle = {
     enable = true;
     settings = {
@@ -101,7 +96,7 @@
 
     input = {
       follow_mouse = 1;
-      sensitivity = -0.5;
+      sensitivity = -0.8;
     };
 
     misc = {
@@ -125,7 +120,7 @@
     "$mod" = "SUPER";
     exec-once = [
       # Run lock on system
-      # "hyprlock"
+      "hyprlock"
 
       #
       "hyprctl setcursor Bibata-Modern-Classic 20"
@@ -140,7 +135,7 @@
     bind =
       [
         "$mod, return, exec, ghostty"
-        "$mod, space, exec, ghostty --class AppLauncher -e app-launcher"
+        "$mod, space, exec, ghostty --class AppLauncher -e \"nu -c \"sleep 50ms; app-launcher\"\""
 
         "$mod, X, killactive,"
         "$mod, M, exit,"

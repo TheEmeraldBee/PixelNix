@@ -23,9 +23,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     swww.url = "github:LGFae/swww";
-    zen-browser.url = "github:MarceColl/zen-browser-flake";
     app-launcher.url = "github:TheEmeraldBee/tui-launcher";
     ferrite.url = "github:TheEmeraldBee/ferrite";
+
+    zen-browser.url = "github:0xc000022070/zen-browser-flake";
+    zen-browser.inputs.nixpkgs.follows = "nixpkgs";
 
     # Macos Specific
     nix-darwin.url = "github:LnL7/nix-darwin";

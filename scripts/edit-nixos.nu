@@ -18,7 +18,7 @@ if $formatting_failed {
 
 print "Rebuilding Nixos"
 try {
-  sudo nixos-rebuild switch --flake ~/dotfiles#nixos
+  /run/wrappers/bin/sudo nixos-rebuild switch --flake ~/dotfiles#nixos
 } catch {
   print "Failed to Rebuild Nixos"
   exit 1

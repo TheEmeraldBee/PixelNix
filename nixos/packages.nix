@@ -42,7 +42,7 @@
     ]
     ++ [
       inputs.swww.packages.${pkgs.system}.swww
-      inputs.zen-browser.packages.${pkgs.system}.specific
+      inputs.zen-browser.packages.${pkgs.system}.default
       inputs.app-launcher.packages.${pkgs.system}.default
 
       inputs.nixpkgs-olympus.legacyPackages.${system}.olympus
