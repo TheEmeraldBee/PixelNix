@@ -119,8 +119,8 @@
 
     "$mod" = "SUPER";
     exec-once = [
-      # Run lock on system
-      "hyprlock"
+      # Run lock on system startup
+      # "hyprlock"
 
       #
       "hyprctl setcursor Bibata-Modern-Classic 20"
@@ -135,7 +135,7 @@
     bind =
       [
         "$mod, return, exec, ghostty"
-        "$mod, space, exec, ghostty --class AppLauncher -e \"nu -c \"sleep 50ms; app-launcher\"\""
+        "$mod, space, exec, ghostty --title=AppLauncher -e app-launcher"
 
         "$mod, X, killactive,"
         "$mod, M, exit,"
@@ -168,9 +168,9 @@
       "suppressevent maximize, class:.*"
       "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
 
-      "float,class:AppLauncher"
-      "pin,class:AppLauncher"
-      "stayfocused,class:AppLauncher"
+      "float,title:AppLauncher"
+      "pin,title:AppLauncher"
+      "stayfocused,title:AppLauncher"
     ];
   };
 }
