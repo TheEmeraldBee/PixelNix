@@ -56,7 +56,6 @@
       "__GLX_VENDOR_LIBRARY_NAME,nvidia"
       "NVD_BACKEND,direct"
       "GDK_BACKEND,wayland"
-      "MOZ_ENABLE_WAYLAND,0"
     ];
 
     monitor = ",prefered,0x0,1";
@@ -121,7 +120,7 @@
     "$mod" = "SUPER";
     exec-once = [
       # Run lock on system startup
-      # "hyprlock"
+      "hyprlock"
 
       #
       "hyprctl setcursor Bibata-Modern-Classic 20"
