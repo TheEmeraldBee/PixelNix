@@ -96,7 +96,7 @@
 
     input = {
       follow_mouse = 1;
-      sensitivity = -0.8;
+      sensitivity = -0.5;
     };
 
     misc = {
