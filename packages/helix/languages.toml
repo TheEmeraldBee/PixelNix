@@ -12,7 +12,6 @@ args = ["--ignore", "E501"]
 [[language]]
 name = "sql"
 language-servers = [ "sqls" ]
-auto-format = true
 
 [language-server.sqls]
 command = "sqls"
