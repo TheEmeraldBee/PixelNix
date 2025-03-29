@@ -135,7 +135,7 @@
     bind =
       [
         "$mod, return, exec, ghostty"
-        "$mod, space, exec, ghostty --class=com.example.AppLauncher -e app-launcher"
+        "$mod, space, exec, [float; pin; stayfocused] ghostty -e app-launcher"
 
         "$mod, X, killactive,"
         "$mod, M, exit,"
@@ -167,10 +167,6 @@
     windowrulev2 = [
       "suppressevent maximize, class:.*"
       "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
-
-      "float,class:AppLauncher"
-      "pin,class:AppLauncher"
-      "stayfocused,class:AppLauncher"
     ];
   };
 }
