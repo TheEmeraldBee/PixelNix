@@ -133,6 +133,8 @@
       "[workspace 4 silent] discord" # Messaging
       "[workspace 2 silent] ghostty" # Terminal!
       "[workspace 5 silent] 1password" # Password Manager
+
+      "[workspace special] ghostty"
     ];
     bind =
       [
@@ -146,6 +148,8 @@
         "$mod, V, togglefloating,"
 
         "$mod, F, fullscreenstate, 3"
+
+        "$mod, S, togglespecialworkspace"
 
         "$mod, O, exec, grim ~/Screenshots/$(date +'%Y%m%d%H%M.png')"
         "$mod SHIFT, O, exec, grim -g \"$(slurp)\" ~/Screenshots/$(date +'%Y%m%d%H%M.png')"
