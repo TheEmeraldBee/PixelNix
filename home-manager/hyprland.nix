@@ -129,8 +129,10 @@
       "mako"
 
       # Start Up Applications that are used everywhere.
-      "[workspace 2 silent] 1password"
-      "[workspace 1 silent] zen"
+      "[workspace 1 silent] zen" # Web-Browser
+      "[workspace 4 silent] discord" # Messaging
+      "[workspace 2 silent] ghostty" # Terminal!
+      "[workspace 5 silent] 1password" # Password Manager
     ];
     bind =
       [
