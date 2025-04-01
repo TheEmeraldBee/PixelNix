@@ -69,8 +69,10 @@
       # Programming #
       # ----------- #
 
+      # cargo subcommands
+      cargo-watch
+
       # SQL
-      sqls
       sqlx-cli
 
       # Markdown
