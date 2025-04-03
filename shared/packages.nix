@@ -55,6 +55,9 @@
       # AI Assistant!
       aichat
 
+      # CURL tui!
+      wuzz
+
       # ------------ #
       # Applications #
       # ------------ #
