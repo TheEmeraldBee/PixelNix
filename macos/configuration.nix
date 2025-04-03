@@ -31,6 +31,7 @@
       "FelixKratz/formulae/borders"
       "mysql"
       "ollama"
+      "npm"
     ];
     casks = [
       "balenaetcher"
