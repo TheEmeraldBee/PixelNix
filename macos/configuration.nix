@@ -6,7 +6,6 @@
   ...
 }: {
   imports = [
-    ../packages/postgres.nix
   ];
 
   users.users.brightoncox = {
@@ -33,6 +32,7 @@
       "mysql"
       "ollama"
       "npm"
+      "postgresql@17"
     ];
     casks = [
       "balenaetcher"
