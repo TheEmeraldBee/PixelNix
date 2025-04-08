@@ -58,6 +58,8 @@
       # CURL tui!
       wuzz
 
+      postgresql
+
       # ------------ #
       # Applications #
       # ------------ #
