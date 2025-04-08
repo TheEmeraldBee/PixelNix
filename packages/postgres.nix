@@ -1,7 +1,11 @@
-{pkgs, ...}: {
+{...}: {
   services.postgresql = {
     enable = true;
-    package = pkgs.postgresql;
+    ensureDatabases = ["pluto"];
+    authentication = ''
+      #type database  DBuser  auth-method
+      local all       all     trust
+    '';
     enableTCPIP = true;
   };
 }
