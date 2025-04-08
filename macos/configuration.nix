@@ -32,7 +32,6 @@
       "mysql"
       "ollama"
       "npm"
-      "postgresql@17"
     ];
     casks = [
       "balenaetcher"
