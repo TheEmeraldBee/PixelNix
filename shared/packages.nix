@@ -68,6 +68,9 @@
       # Gaming
       prismlauncher
 
+      # Postgres
+      postgresql
+
       # ----------- #
       # Programming #
       # ----------- #
