@@ -6,6 +6,7 @@
   ...
 }: {
   imports = [
+    ../packages/postgres.nix
   ];
 
   users.users.brightoncox = {
