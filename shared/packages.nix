@@ -92,9 +92,6 @@
       # Rust
       rustup
 
-      # AI LSP
-      lsp-ai
-
       # Zig
       zls
 
