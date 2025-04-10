@@ -54,6 +54,16 @@
 
         break
       }
+
+      def --env x [...args] {
+        if (zellij ls o+e>| str contains current) {
+          print "You are currently in a zellij session. Nested Sessions Aren't Supported"
+        } else {
+          zellij
+        }
+
+        hx ...args
+      }
     '';
     shellAliases = {
       ls = "eza -l --icons";
