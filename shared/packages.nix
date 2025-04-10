@@ -55,10 +55,7 @@
       # AI Assistant!
       aichat
 
-      # CURL tui!
-      wuzz
-
-      # postgresql
+      reflex
 
       # ------------ #
       # Applications #
@@ -118,6 +115,5 @@
     ++ [
       inputs.helix.packages.${pkgs.system}.default
       inputs.ferrite.packages.${pkgs.system}.default
-      inputs.hac.packages.${pkgs.system}.default
     ];
 }
