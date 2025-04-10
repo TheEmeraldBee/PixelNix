@@ -15,7 +15,8 @@ l = ":toggle lsp.display-inlay-hints"
 
 [keys.normal.space.f]
 f = "file_picker"
-t = ":sh zellij run -c -f -x 10%% -y 10%% --width 80%% --height 80%% -- nu $ZELLIX_MOD/yazi.nu %{buffer_name}"
+t = """:sh zellij run -c -f -x 10%% -y 10%% --width 80%% --height 80%% --\
+      nu ~/.config/helix/scripts/yazi.nu %{buffer_name}"""
 
 [keys.normal.';']
 w = ":w"
@@ -23,6 +24,6 @@ x = ":wq"
 r = ":reload"
 f = ":format"
 s = ":sh zellij run -c -f -x 10%% -y 10%% --width 80%% --height 80%% -- nu"
-m = ":sh zellij run -c -f -x 10%% -y 10%% --width 80%% --height 80%% -- nu $ZELLIX_MOD/makefile.nu"
-a = ":sh zellij run -c -d right -- nu $ZELLIX_MOD/ai.nu pane"
+m = ":sh zellij run -c -f -x 10%% -y 10%% --width 80%% --height 80%% -- nu ~/.config/helix/scripts/makefile.nu"
+a = ":sh zellij run -c -d right -- nu ~/.config/helix/scripts/ai.nu pane"
 b = ":sh zellij run -c -d down -- bacon clippy"

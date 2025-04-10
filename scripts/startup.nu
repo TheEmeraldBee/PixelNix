@@ -19,7 +19,6 @@ while (true) {
     | filter {|x| str trim | is-not-empty}
 
   let action = [
-      $"(ansi blue_bold)1. editor session(ansi reset)",
       $"(ansi gb)2. new session(ansi reset)", 
       $"(ansi grey)3. list sessions(ansi reset)", 
       $"(ansi blue_bold)4. attach(ansi reset)", 
@@ -29,10 +28,6 @@ while (true) {
 
   match $action {
     0 => {
-      nu ~/.config/zellix/run.nu ~/.config/zellix
-      break
-    }
-    1 => {
       let inputs = yazi --chooser-file=/dev/stdout ../ | each {|line| $line} | split row "\n"
 
       mut dir = if (($inputs | length) == 0) {
@@ -57,7 +52,7 @@ while (true) {
       }
       break
     }
-    2 => {
+    1 => {
       try { let _ = zellij ls } catch {
         print $"(ansi rb)There are no active sessions to attach to.(ansi reset)"
         continue
@@ -65,7 +60,7 @@ while (true) {
 
       print "Sessions:" $visual_sessions
     }
-    3 => {
+    2 => {
       try { let _ = zellij ls } catch {
         print $"(ansi rb)There are no active sessions to attach to.(ansi reset)"
         continue
@@ -82,7 +77,7 @@ while (true) {
       zellij a $attach
       break
     },
-    4 => {
+    3 => {
       try { let _ = zellij ls } catch {
         print $"(ansi rb)There are no active sessions to attach to.(ansi reset)"
         continue
@@ -106,7 +101,7 @@ while (true) {
         }
       }
     }
-    5 => {
+    4 => {
       zellij da
     }
     _ => {
