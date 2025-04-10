@@ -35,7 +35,7 @@
 
       $env.EDITOR = "hx"
 
-      def --env y [...args] {
+      def --env d [...args] {
       	let tmp = (mktemp -t "yazi-cwd.XXXXXX")
       	yazi ...$args --cwd-file $tmp
       	let cwd = (open $tmp)
