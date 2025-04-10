@@ -47,9 +47,6 @@
       # OS Stuff
       cd = "z";
 
-      # zellix
-      zl = "nu ~/.config/zellix/run.nu ~/.config/zellix";
-
       # Editing Configuration
       ne = "nu ${configScriptPath}";
 
