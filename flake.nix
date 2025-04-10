@@ -35,6 +35,9 @@
 
     zig.url = "github:mitchellh/zig-overlay";
     zig.inputs.nixpkgs.follows = "nixpkgs";
+
+    hac.url = "github:wllfaria/hac";
+    hac.inputs.nixpkgs.follows = "nixpkgs";
   };
   outputs = {
     nixpkgs,
