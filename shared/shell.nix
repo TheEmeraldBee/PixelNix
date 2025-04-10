@@ -36,13 +36,23 @@
       $env.EDITOR = "hx"
 
       def --env d [...args] {
-      	let tmp = (mktemp -t "yazi-cwd.XXXXXX")
-      	yazi ...$args --cwd-file $tmp
-      	let cwd = (open $tmp)
-      	if $cwd != "" and $cwd != $env.PWD {
-      		cd $cwd
-      	}
-      	rm -fp $tmp
+        let inputs = yazi --chooser-file=/dev/stdout ../ | each {|line| $line} | split row "\n"
+
+        mut dir = if (($inputs | length) == 0) {
+          print $"(ansi gb)No Folder Selected. Using `pwd`.(ansi reset)"
+          pwd
+        } else {
+          $inputs | get 0
+        }
+
+        while (($dir | path type) != dir) {
+          $dir = $dir | path dirname
+          print $"(ansi rb)Going back directory because picked item is file and not directory(ansi reset)" $"(ansi blue_bold)New Directory: ($dir)"
+        }
+
+        cd $dir
+
+        break
       }
     '';
     shellAliases = {
@@ -56,9 +66,6 @@
 
       # OS Stuff
       cd = "z";
-
-      # Zellix
-      zl = "nu ~/.config/zellix/run.nu ~/.config/zellix";
 
       # Editing Configuration
       ne = "nu ${configScriptPath}";
