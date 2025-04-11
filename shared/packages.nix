@@ -56,6 +56,7 @@
       aichat
 
       reflex
+      atac
 
       # ------------ #
       # Applications #
