@@ -2,20 +2,16 @@ on_force_close "quit"
 theme "catppuccin-mocha"
 pane_frames false
 
-keybinds {
+keybinds clear-defaults=true {
 	normal {
-		bind "Alt Space" { SwitchToMode "tmux"; }
-	}
-	tmux {
-		bind "Esc" { SwitchToMode "normal"; }
-		bind "r" { NewPane "Right"; SwitchToMode "normal"; }
-		bind "d" { NewPane "Down"; SwitchToMode "normal"; }
-		bind "t" { NewTab; SwitchToMode "normal"; }
-		bind "h" { MoveFocusOrTab "Left"; SwitchToMode "normal"; }
-		bind "k" { MoveFocus "Up"; SwitchToMode "normal"; }
-		bind "j" { MoveFocus "Down"; SwitchToMode "normal"; }
-		bind "l" { MoveFocusOrTab "Right"; SwitchToMode "normal"; }
-		bind "Up" { Resize "Increase"; }
-		bind "Down" { Resize "Decrease"; }
+		bind "Ctrl Alt r" { NewPane "Right"; }
+		bind "Ctrl Alt d" { NewPane "Down"; }
+		bind "Ctrl Alt t" { NewTab; }
+		bind "Ctrl Alt h" { MoveFocusOrTab "Left"; }
+		bind "Ctrl Alt k" { MoveFocus "Up"; }
+		bind "Ctrl Alt j" { MoveFocus "Down"; }
+		bind "Ctrl Alt l" { MoveFocusOrTab "Right"; }
+		bind "Ctrl Alt Up" { Resize "Increase"; }
+		bind "Ctrl Alt Down" { Resize "Decrease"; }
 	}
 }
