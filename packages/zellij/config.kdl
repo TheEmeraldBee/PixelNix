@@ -4,15 +4,18 @@ pane_frames false
 
 keybinds {
 	normal {
-		bind "Ctrl b" { SwitchToMode "tmux"; }
+		bind "Alt Space" { SwitchToMode "tmux"; }
 	}
 	tmux {
+		bind "Esc" { SwitchToMode "normal"; }
 		bind "r" { NewPane "Right"; SwitchToMode "normal"; }
 		bind "d" { NewPane "Down"; SwitchToMode "normal"; }
 		bind "t" { NewTab; SwitchToMode "normal"; }
 		bind "h" { MoveFocusOrTab "Left"; SwitchToMode "normal"; }
-		bind "j" { MoveFocusOrTab "Right"; SwitchToMode "normal"; }
-		bind "Up" { Resize "Increase"; SwitchToMode "normal"; }
-		bind "Down" { Resize "Decrease"; SwitchToMode "normal"; }
+		bind "k" { MoveFocus "Up"; SwitchToMode "normal"; }
+		bind "j" { MoveFocus "Down"; SwitchToMode "normal"; }
+		bind "l" { MoveFocusOrTab "Right"; SwitchToMode "normal"; }
+		bind "Up" { Resize "Increase"; }
+		bind "Down" { Resize "Decrease"; }
 	}
 }
