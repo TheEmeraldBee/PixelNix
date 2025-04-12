@@ -1,0 +1,14 @@
+on_force_close "quit"
+theme "catppuccin-mocha"
+pane_frames false
+
+keybinds {
+	normal {
+		bind "Alt r" { NewPane "Right"; }
+		bind "Alt d" { NewPane "Down"; }
+		bind "Alt h" { MoveFocusOrTab "Left"; }
+		bind "Alt j" { MoveFocusOrTab "Right"; }
+		bind "Alt Up" { Resize "Increase"; }
+		bind "Alt Down" { Resize "Decrease"; }
+	}
+}

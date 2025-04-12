@@ -55,7 +55,12 @@
         break
       }
 
-      if ("ZELLIJ_SESSION_NAME" in $env) { print "In zellij session, not making another" } else { nu ~/dotfiles/scripts/startup.nu }
+      if ("ZELLIJ_SESSION_NAME" in $env) {
+        print "In zellij session, not making another"
+      } else {
+        nu ~/dotfiles/scripts/startup.nu
+        exit
+      }
     '';
     shellAliases = {
       ls = "eza -l --icons";
@@ -68,6 +73,7 @@
 
       # OS Stuff
       cd = "z";
+      ci = "zi";
 
       # Editing Configuration
       ne = "nu ${configScriptPath}";
