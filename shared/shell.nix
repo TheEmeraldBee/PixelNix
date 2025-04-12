@@ -56,7 +56,6 @@
       }
 
       if ("ZELLIJ_SESSION_NAME" in $env) {
-        print "In zellij session, not making another"
       } else {
         nu ~/dotfiles/scripts/startup.nu
         exit
