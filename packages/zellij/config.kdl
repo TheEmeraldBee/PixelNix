@@ -4,9 +4,11 @@ pane_frames false
 
 keybinds clear-defaults=true {
 	normal {
-		LaunchOrFocusPlugin "zellij:session-manager" {
-            floating true
-        }
+		bind "Ctrl Alt w" {
+			LaunchOrFocusPlugin "zellij:session-manager" {
+	            floating true
+	        }
+	    }
 		bind "Ctrl Alt r" { NewPane "Right"; }
 		bind "Ctrl Alt d" { NewPane "Down"; }
 		bind "Ctrl Alt t" { NewTab; }
