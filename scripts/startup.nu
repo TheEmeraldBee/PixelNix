@@ -20,8 +20,8 @@ while (true) {
     | filter {|x| str trim | is-not-empty}
 
   let action = [
-      $"(ansi grey)0. random new(ansi reset)",
-      $"(ansi gb)1. new session(ansi reset)", 
+      $"(ansi gb)0. random new(ansi reset)",
+      $"(ansi cb)1. new session(ansi reset)", 
       $"(ansi grey)2. list sessions(ansi reset)", 
       $"(ansi blue_bold)3. attach(ansi reset)", 
       $"(ansi rb)4. delete session(ansi reset)"
