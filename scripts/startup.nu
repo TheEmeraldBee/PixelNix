@@ -1,7 +1,8 @@
 # On start, attach to, create, or delete zellij sessions.
 
+mut in_session = false
 if (zellij ls o+e>| str contains current) {
-  print "You are currently in a zellij session. Nested Sessions Aren't Supported"
+  print $"(ansi rb)You are currently in a zellij session. Nested Sessions Aren't Supported, please detach to re-run this code!(ansi reset)"
   exit 0
 }
 
@@ -19,11 +20,12 @@ while (true) {
     | filter {|x| str trim | is-not-empty}
 
   let action = [
-      $"(ansi gb)2. new session(ansi reset)", 
-      $"(ansi grey)3. list sessions(ansi reset)", 
-      $"(ansi blue_bold)4. attach(ansi reset)", 
-      $"(ansi rb)5. delete session(ansi reset)"
-      $"(ansi pb)6. delete all inactive sessions(ansi reset)"
+      $"(ansi gb)1. new session(ansi reset)", 
+      $"(ansi grey)2. list sessions(ansi reset)", 
+      $"(ansi blue_bold)3. attach(ansi reset)", 
+      $"(ansi rb)4. delete session(ansi reset)"
+      $"(ansi pb)5. delete all inactive sessions(ansi reset)"
+      $"(ansi rb)6. exit(ansi reset)"
     ] | input list $"(ansi cb)Which action?(ansi reset)" -i
 
   match $action {
@@ -53,7 +55,7 @@ while (true) {
       break
     }
     1 => {
-      try { let _ = zellij ls } catch {
+      try { let _ = zellij ls o+e> /dev/null } catch {
         print $"(ansi rb)There are no active sessions to attach to.(ansi reset)"
         continue
       }
@@ -69,13 +71,12 @@ while (true) {
       let name = $visual_sessions | input list $"(ansi cb)Which Session Would You Like To Use?(ansi reset)" -i
 
       if ($name | is-empty) {
-        break
+        continue
       }
 
       let attach = $sessions | get $name
       
       zellij a $attach
-      break
     },
     3 => {
       try { let _ = zellij ls } catch {

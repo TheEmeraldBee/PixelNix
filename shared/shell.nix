@@ -51,8 +51,6 @@
         }
 
         cd $dir
-
-        break
       }
 
       if ("ZELLIJ_SESSION_NAME" in $env) {
