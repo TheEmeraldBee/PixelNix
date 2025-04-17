@@ -59,6 +59,8 @@
 
       wget
 
+      httpie
+
       # ------------ #
       # Applications #
       # ------------ #
