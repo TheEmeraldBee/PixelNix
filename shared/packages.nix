@@ -59,7 +59,7 @@
 
       wget
 
-      httpie
+      wuzz
 
       # ------------ #
       # Applications #
