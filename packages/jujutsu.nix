@@ -6,7 +6,7 @@
         subprocess = true;
       };
       revsets = {
-        log = "present(@) | ancestors(immutable_heads().., 20) | present(trunk())";
+        log = "all()";
       };
       ui = {
         editor = "hx";
