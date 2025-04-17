@@ -56,7 +56,8 @@
       aichat
 
       reflex
-      atac
+
+      wget
 
       # ------------ #
       # Applications #
