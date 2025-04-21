@@ -4,6 +4,7 @@ theme = "cat_invis"
 line-number = "relative"
 idle-timeout = 100
 jump-label-alphabet = "jfkdls;aurieowpqnvmcxz"
+bufferline = "always"
 
 [editor.cursor-shape]
 insert = "bar"
