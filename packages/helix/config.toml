@@ -18,6 +18,16 @@ l = ":toggle lsp.display-inlay-hints"
 f = "file_picker"
 t = """:sh zellij run -c -f -x 10%% -y 10%% --width 80%% --height 80%% -- \
       nu ~/.config/helix/scripts/yazi.nu %{buffer_name}"""
+b = "buffer_picker"
+
+[keys.normal.space.b]
+n = ":buffer-next"
+p = ":buffer-previous"
+
+x = ":write-buffer-close"
+c = ":buffer-close"
+o = ":buffer-close-others"
+a = ":buffer-close-all"
 
 [keys.normal.';']
 w = ":w"
