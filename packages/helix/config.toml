@@ -16,7 +16,7 @@ l = ":toggle lsp.display-inlay-hints"
 
 [keys.normal.space.f]
 f = "file_picker"
-t = """:sh zellij run -c -i -- \
+t = """:sh zellij run -c -f -x 10%% -y 10%% --width 80%% --height 80%% -- \
       nu ~/.config/helix/scripts/yazi.nu hi %{buffer_name}"""
       
 r = """:sh zellij run -c -i -- \
