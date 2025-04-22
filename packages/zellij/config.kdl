@@ -12,7 +12,11 @@ keybinds clear-defaults=true {
 		bind "Ctrl Alt k" { MoveFocus "Up"; }
 		bind "Ctrl Alt j" { MoveFocus "Down"; }
 		bind "Ctrl Alt l" { MoveFocusOrTab "Right"; }
-		bind "Ctrl Alt Up" { Resize "Increase"; }
-		bind "Ctrl Alt Down" { Resize "Decrease"; }
+		bind "Ctrl Alt =" { Resize "Increase"; }
+		bind "Ctrl Alt -" { Resize "Increase"; }
+		bind "Ctrl Alt Up" { Resize "Up"; }
+		bind "Ctrl Alt Down" { Resize "Down"; }
+		bind "Ctrl Alt Left" { Resize "Left"; }
+		bind "Ctrl Alt Right" { Resize "Right"; }
 	}
 }
