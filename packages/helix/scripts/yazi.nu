@@ -22,26 +22,20 @@ def files [current_buffer] {
   return command_str
 }
 
-def "main right" [current_buffer] {
-  let command_str = files()
+def main [operation, current_buffer] {
+  let command_str = files $current_buffer
 
-  zellij run -c -d right -- hx $command_str
-}
+  match $operation { 
+    "right" => { zellij run -c -d right -- hx $command_str }
+    "down" => { zellij run -c -d down -- hx $command_str }
+    _ => {
+        # Set up the string for the actual command.
+        let run = ":open " + $command_str
 
-def "main down" [current_buffer] {
-  let command_str = files()
-
-  zellij run -c -d down -- hx $command_str
-}
-
-def "main regular" [current_buffer] {
-  let command_str = files()
-
-  # Set up the string for the actual command.
-  let run = ":open " + $command_str
-
-  zellij action toggle-floating-panes # Select Helix In The System
-  zellij action write 27 # Exit To Normal Mode
-  zellij action write-chars $run # Write actual Command
-  zellij action write 13 # Press Enter to run the command
+        zellij action toggle-floating-panes # Select Helix In The System
+        zellij action write 27 # Exit To Normal Mode
+        zellij action write-chars $run # Write actual Command
+        zellij action write 13 # Press Enter to run the command
+    }
+  }
 }
