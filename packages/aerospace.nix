@@ -80,6 +80,10 @@
       [[on-window-detected]]
       if.app-name-regex-substring = 'godot'
       run = ['layout floating']
+
+      [[on-window-detected]]
+      if.app-name-regex-substring = 'postman'
+      run = ['layout floating']
     '';
   };
 }
