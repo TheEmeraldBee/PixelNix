@@ -1,4 +1,4 @@
-def files [current_buffer] {
+def main [operation, current_buffer] {
   print $current_buffer
   mut current_path = $current_buffer | str join;
   if $current_path == "scratch" {
@@ -19,11 +19,6 @@ def files [current_buffer] {
   # Join the list of filepaths we had above to support writing the paths to helix.
   let command_str = $command | str join " "
 
-  return command_str
-}
-
-def main [operation, current_buffer] {
-  let command_str = files $current_buffer
 
   match $operation { 
     "right" => { zellij run -c -d right -- hx $command_str }
