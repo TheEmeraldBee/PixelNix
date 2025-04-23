@@ -5,13 +5,20 @@ pane_frames false
 keybinds clear-defaults=true {
 	normal {
 		bind "Ctrl Alt w" { Detach; }
+		bind "Ctrl Alt x" { CloseFocus; }
+
 		bind "Ctrl Alt r" { NewPane "Right"; }
 		bind "Ctrl Alt d" { NewPane "Down"; }
 		bind "Ctrl Alt t" { NewTab; }
+
 		bind "Ctrl Alt h" { MoveFocusOrTab "Left"; }
 		bind "Ctrl Alt k" { MoveFocus "Up"; }
 		bind "Ctrl Alt j" { MoveFocus "Down"; }
 		bind "Ctrl Alt l" { MoveFocusOrTab "Right"; }
+
+		bind "Ctrl Alt o" { GoToNextTab; }
+		bind "Ctrl Alt u" { GoToPreviousTab; }
+
 		bind "Ctrl Alt =" { Resize "Increase"; }
 		bind "Ctrl Alt -" { Resize "Increase"; }
 		bind "Ctrl Alt Up" { Resize "Up"; }
