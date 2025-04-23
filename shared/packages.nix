@@ -69,7 +69,7 @@
       discord
 
       # Gaming
-      prismlauncher
+      # prismlauncher
 
       # ----------- #
       # Programming #
@@ -87,7 +87,6 @@
       # Python
       python3Full
       uv
-      ruff-lsp
       pyright
 
       # Rust

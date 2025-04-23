@@ -8,7 +8,7 @@
     ./packages.nix
 
     # Window Manager
-    ../packages/aerospace.nix
+    # ../packages/aerospace.nix
 
     ../shared/packages.nix
 
