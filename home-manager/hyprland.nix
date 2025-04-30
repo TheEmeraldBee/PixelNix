@@ -58,7 +58,7 @@
       "GDK_BACKEND,wayland"
     ];
 
-    monitor = ",prefered,0x0,1";
+    monitor = ",prefered,auto,1.5";
 
     xwayland = {
       enabled = true;
