@@ -2,14 +2,17 @@ on_force_close "quit"
 theme "catppuccin-mocha"
 pane_frames false
 
-keybinds clear-defaults=true {
-	normal {
+keybinds {
+	normal clear-defaults=true {
+		bind "Ctrl Alt q" { Quit; }
 		bind "Ctrl Alt w" { Detach; }
 		bind "Ctrl Alt x" { CloseFocus; }
 
 		bind "Ctrl Alt r" { NewPane "Right"; }
 		bind "Ctrl Alt d" { NewPane "Down"; }
 		bind "Ctrl Alt t" { NewTab; }
+
+		bind "Ctrl Alt n" { SwitchToMode "renametab"; }
 
 		bind "Ctrl Alt h" { MoveFocusOrTab "Left"; }
 		bind "Ctrl Alt k" { MoveFocus "Up"; }
@@ -20,7 +23,7 @@ keybinds clear-defaults=true {
 		bind "Ctrl Alt u" { GoToPreviousTab; }
 
 		bind "Ctrl Alt =" { Resize "Increase"; }
-		bind "Ctrl Alt -" { Resize "Increase"; }
+		bind "Ctrl Alt -" { Resize "Decrease"; }
 		bind "Ctrl Alt Up" { Resize "Up"; }
 		bind "Ctrl Alt Down" { Resize "Down"; }
 		bind "Ctrl Alt Left" { Resize "Left"; }
