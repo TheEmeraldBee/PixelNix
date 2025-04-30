@@ -49,13 +49,9 @@
 
   wayland.windowManager.hyprland.settings = {
     env = [
-      "QT_QPA_PLATFORM,wayland"
       "LIBVA_DRIVER_NAME,nvidia"
-      "XDG_SESSION_TYPE,wayland"
       "GBM_BACKEND,nvidia-drm"
       "__GLX_VENDOR_LIBRARY_NAME,nvidia"
-      "NVD_BACKEND,direct"
-      "GDK_BACKEND,wayland"
     ];
 
     monitor = ",prefered,auto,1.5";
