@@ -58,6 +58,10 @@
         nu ~/dotfiles/scripts/startup.nu
         exit
       }
+
+      def jm [branch, ...args] {
+        jj bookmark move $branch --to @ ...$args
+      }
     '';
     shellAliases = {
       ls = "eza -l --icons";
@@ -79,6 +83,8 @@
       ask = "aichat -e";
 
       e = "nu ~/dotfiles/scripts/startup.nu";
+
+      jr = "jj git fetch; jj rebase -d";
     };
   };
 
