@@ -128,11 +128,12 @@
 
       # Start Up Applications that are used everywhere.
       "[workspace 1 silent] zen" # Web-Browser
-      "[workspace 4 silent] discord" # Messaging
-      "[workspace 2 silent] ghostty" # Terminal!
-      "[workspace 5 silent] 1password" # Password Manager
+      "[workspace 3 silent] discord" # Messaging
+      "[workspace 2 silent] steam" # Gaming
 
-      "[workspace special] ghostty"
+      "[workspace 4 silent] 1password" # Password Manager
+
+      "[workspace special silent] ghostty" # Floating Terminal
     ];
     bind =
       [
@@ -171,6 +172,10 @@
     windowrulev2 = [
       "suppressevent maximize, class:.*"
       "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
+
+      # Apps that don't start correctly
+      "workspace:3,title:discord"
+      "workspace:2,title:steam"
     ];
   };
 }
