@@ -41,7 +41,7 @@
       configScriptPath = "~/dotfiles/scripts/edit-nixos.nu";
       additionalConfig = "$env.PATH = ($env.PATH | split row esep | prepend /run/wrappers/bin)";
     })
-    ./git.nix
+    ../packages/git.nix
     ../packages/zellij.nix
     ../packages/starship.nix
 
@@ -51,9 +51,9 @@
     ../packages/yazi.nix
 
     # Applications
-    ./app-launcher.nix
+    ../packages/app-launcher.nix
 
     # Home Manager
-    ./hyprland.nix
+    ../packages/hyprland.nix
   ];
 }
