@@ -1,12 +1,12 @@
 [[each]]
 Exit = {}
 
-[app."Alacritty".style]
+[app."Ghostty".style]
 icon = ""
 icon_color = "green"
 
-[[app."Alacritty".event]]
-Exec = "alacritty"
+[[app."Ghostty".event]]
+Exec = "ghostty"
 
 [app."Zen Browser".style]
 icon = ""
@@ -64,9 +64,9 @@ icon_color = "blue"
 [[app."Nexus Mods".event]]
 Exec = "NexusMods.app"
 
-[app."Whiteboard".style]
-icon = "|"
-icon_color = "white"
+[app."ALVR".style]
+icon = ""
+icon_color = "magenta"
 
-[[app."Whiteboard".event]]
-Exec = "xournalpp"
+[[app."ALVR".event]]
+Exec = "alvr_dashboard"
