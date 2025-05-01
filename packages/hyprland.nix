@@ -129,7 +129,7 @@
       # Start Up Applications that are used everywhere.
       "[workspace 1 silent] zen" # Web-Browser
       "[workspace 3 silent] discord" # Messaging
-      "[workspace 2 silent] steam" # Gaming
+      "[workspace 2 silent] steam -silent" # Gaming
 
       "[workspace 4 silent] 1password" # Password Manager
 
