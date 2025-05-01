@@ -9,4 +9,6 @@ background-blur-radius = 5
 
 window-step-resize = true
 
+confirm-close-surface = true
+
 theme = catppuccin-mocha
