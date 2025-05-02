@@ -99,6 +99,9 @@
       google-java-format
       jdt-language-server
 
+      # Misc Language Servers
+      vscode-langservers-extracted
+
       # Nix
       alejandra
 
