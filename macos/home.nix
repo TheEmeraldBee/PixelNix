@@ -26,7 +26,6 @@
 
     # Shell
     (import ../shared/shell.nix {
-      configScriptPath = "~/dotfiles/scripts/edit-macos.nu";
       additionalConfig = ''
         $env.__NIX_DARWIN_SET_ENVIRONMENT_DONE = 1
 

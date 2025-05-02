@@ -1,8 +1,4 @@
-{
-  configScriptPath,
-  additionalConfig,
-  ...
-}: {pkgs, ...}: {
+{additionalConfig, ...}: {pkgs, ...}: {
   programs.nushell = {
     enable = true;
     extraConfig = ''
@@ -77,7 +73,7 @@
       ci = "zi";
 
       # Editing Configuration
-      ne = "nu ${configScriptPath}";
+      ne = "nu ~/dotfiles/scripts/edit.nu";
 
       ai = "aichat";
       ask = "aichat -e";

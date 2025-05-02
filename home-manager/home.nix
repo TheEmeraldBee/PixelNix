@@ -38,7 +38,6 @@
 
     # Shell
     (import ../shared/shell.nix {
-      configScriptPath = "~/dotfiles/scripts/edit-nixos.nu";
       additionalConfig = "$env.PATH = ($env.PATH | split row esep | prepend /run/wrappers/bin)";
     })
     ../packages/git.nix
