@@ -68,7 +68,7 @@
   {"id": "3", "icon": ""},
   {"id": "4", "icon": "󰍥"},
   {"id": "5", "icon": ""},
-  {"id": "6", "icon": ""}
+  {"id": "9", "icon": ""}
 ]')
 
 (defpoll selected_workspace :initial "1" :interval "500ms" "hyprctl monitors -j | jq 'map(.activeWorkspace.id) | max'")

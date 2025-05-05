@@ -123,16 +123,16 @@
       #
       "hyprctl setcursor Bibata-Modern-Classic 20"
       "swww-daemon && sleep 5sec && swww img /home/brightonlcox/wallpapers/forest.png && swww restore"
-      "eww daemon && eww open menu"
+      "eww daemon && eww open sidebar"
 
       # Start Up Applications that are used everywhere.
       "[workspace 1 silent] zen" # Web-Browser
       "[workspace 4 silent] discord" # Messaging
       "[workspace 2 silent] steam -silent" # Gaming
 
-      "[workspace 4 silent] 1password" # Password Manager
+      "[workspace 5 silent] 1password" # Password Manager
 
-      "[workspace 5 silent] ghostty" # Floating Terminal
+      "[workspace special silent] ghostty" # Floating Terminal
     ];
     bind = [
       "$mod, return, exec, ghostty"
