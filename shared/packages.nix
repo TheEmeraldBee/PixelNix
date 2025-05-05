@@ -119,7 +119,7 @@
       # ----- #
       nerd-fonts.fira-code
       nerd-fonts.hack
-      nerd-fonts.bigblue-terminal
+      nerd-fonts.departure-mono
       fira-sans
     ]
     ++ [
