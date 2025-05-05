@@ -27,6 +27,7 @@
     ./theme.nix
 
     ../packages/dunst.nix
+    ../packages/eww.nix
 
     # Programs
     ../packages/ghostty.nix

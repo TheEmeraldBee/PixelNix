@@ -61,6 +61,9 @@
 
       wuzz
 
+      # Json parser!
+      jq
+
       # ------------ #
       # Applications #
       # ------------ #

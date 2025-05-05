@@ -123,7 +123,7 @@
       #
       "hyprctl setcursor Bibata-Modern-Classic 20"
       "swww-daemon && sleep 5sec && swww img /home/brightonlcox/wallpapers/forest.png && swww restore"
-      "eww daemon && eww open sidebar"
+      "eww daemon && eww open menu"
 
       # Start Up Applications that are used everywhere.
       "[workspace 1 silent] zen" # Web-Browser

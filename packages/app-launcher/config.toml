@@ -57,23 +57,9 @@ icon_color = "green"
 [[app."Prism Launcher".event]]
 Exec = "prismlauncher"
 
-[app."Nexus Mods".style]
-icon = ""
-icon_color = "blue"
-
-[[app."Nexus Mods".event]]
-Exec = "NexusMods.app"
-
 [app."ALVR".style]
 icon = ""
 icon_color = "magenta"
 
 [[app."ALVR".event]]
 Exec = "alvr_dashboard"
-
-[app."Keymapp".style]
-icon = ""
-icon_color = "green"
-
-[[app."Keymapp".event]]
-Exec = "keymapp"
