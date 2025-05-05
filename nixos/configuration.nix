@@ -14,8 +14,8 @@
     ./services.nix
     ./nvidia.nix
 
-    ./steam.nix
-    ./1password.nix
+    ../packages/steam.nix
+    ../packages/1password.nix
 
     ./hardware-configuration.nix
   ];
@@ -30,6 +30,8 @@
       default_session = initial_session;
     };
   };
+
+  hardware.keyboard.zsa.enable = true;
 
   security.polkit.enable = true;
 

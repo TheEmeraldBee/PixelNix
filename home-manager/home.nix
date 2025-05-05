@@ -26,6 +26,8 @@
     # Theme the required applications
     ./theme.nix
 
+    ../packages/dunst.nix
+
     # Programs
     ../packages/ghostty.nix
 

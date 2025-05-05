@@ -29,11 +29,14 @@
       # Mods
       nexusmods-app-unfree
 
+      # Keyboard
+      wally-cli
+
       # ------------------- #
       # Password Management #
       # ------------------- #
       _1password-gui
-      _1password
+      _1password-cli
     ]
     ++ [
       inputs.ghostty.packages.${pkgs.system}.default

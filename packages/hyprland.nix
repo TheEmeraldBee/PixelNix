@@ -124,46 +124,50 @@
       "hyprctl setcursor Bibata-Modern-Classic 20"
       "swww-daemon && sleep 5sec && swww img /home/brightonlcox/wallpapers/forest.png && swww restore"
       "eww daemon && eww open sidebar"
-      "mako"
 
       # Start Up Applications that are used everywhere.
       "[workspace 1 silent] zen" # Web-Browser
-      "[workspace 3 silent] discord" # Messaging
+      "[workspace 4 silent] discord" # Messaging
       "[workspace 2 silent] steam -silent" # Gaming
 
       "[workspace 4 silent] 1password" # Password Manager
 
-      "[workspace special silent] ghostty" # Floating Terminal
+      "[workspace 5 silent] ghostty" # Floating Terminal
     ];
-    bind =
-      [
-        "$mod, return, exec, ghostty"
-        "$mod, space, exec, [float; pin; stayfocused] ghostty -e app-launcher"
+    bind = [
+      "$mod, return, exec, ghostty"
+      "$mod, space, exec, [float; pin; stayfocused] ghostty -e app-launcher"
 
-        "$mod, X, killactive,"
-        "$mod, M, exit,"
-        "$mod, P, pin,"
+      "$mod, X, killactive,"
+      "$mod, P, pin,"
 
-        "$mod, V, togglefloating,"
+      "$mod, V, togglefloating,"
 
-        "$mod, F, fullscreenstate, 3"
+      "$mod, F, fullscreenstate, 3"
 
-        "$mod, S, togglespecialworkspace"
+      "$mod, S, togglespecialworkspace"
 
-        "$mod, O, exec, grim ~/Screenshots/$(date +'%Y%m%d%H%M.png')"
-        "$mod SHIFT, O, exec, grim -g \"$(slurp)\" ~/Screenshots/$(date +'%Y%m%d%H%M.png')"
-      ]
-      ++ (
-        builtins.concatLists (builtins.genList (
-            i: let
-              ws = i + 1;
-            in [
-              "$mod, code:1${toString i}, workspace, ${toString ws}"
-              "$mod SHIFT, code:1${toString i}, movetoworkspace, ${toString ws}"
-            ]
-          )
-          9)
-      );
+      "$mod, O, exec, grim ~/Screenshots/$(date +'%Y%m%d%H%M.png')"
+      "$mod SHIFT, O, exec, grim -g \"$(slurp)\" ~/Screenshots/$(date +'%Y%m%d%H%M.png')"
+
+      "$mod, W, workspace, 9"
+
+      "$mod, H, workspace, 1"
+      "$mod SHIFT, H, movetoworkspace, 1"
+
+      "$mod, G, workspace, 2"
+      "$mod SHIFT, G, movetoworkspace, 2"
+
+      "$mod, P, workspace, 3"
+      "$mod SHIFT, P, movetoworkspace, 3"
+
+      "$mod, D, workspace, 4"
+      "$mod SHIFT, D, movetoworkspace, 4"
+
+      "$mod, code:10, workspace, 5"
+      "$mod SHIFT, code:10, movetoworkspace, 5"
+    ];
+
     bindm = [
       "$mod, mouse:272, movewindow"
       "$mod, mouse:273, resizewindow"
@@ -173,9 +177,7 @@
       "suppressevent maximize, class:.*"
       "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
 
-      # Apps that don't start correctly
-      "workspace:3,title:discord"
-      "workspace:2,title:steam"
+      "workspace 4, class:^(discord)$"
     ];
   };
 }

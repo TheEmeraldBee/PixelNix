@@ -69,7 +69,7 @@
       discord
 
       # Gaming
-      # prismlauncher
+      prismlauncher
 
       # ----------- #
       # Programming #

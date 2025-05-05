@@ -1,8 +1,14 @@
 try {
   home-manager switch --flake ~/dotfiles#brightonlcox
 } catch {
-  notify-send -e "Failed to Rebuild Home-Manager Configuration!"
+  notify-send -u critical -e "Failed to Rebuild Home-Manager Configuration!"
   exit 1
 }
 
-notify-send -e "Home-Manager Configuration Rebuilt Ok!"
+swww kill
+sleep 500ms
+hyprctl dispatch exec swww-daemon
+sleep 500ms
+swww img ~/dotfiles/assets/wallpapers/forest.png
+
+notify-send -u low -e "Home-Manager Configuration Rebuilt Ok!"

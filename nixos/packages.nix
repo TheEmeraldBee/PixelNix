@@ -22,9 +22,6 @@
       # TaskBar
       eww
 
-      # Notifications
-      mako
-
       bluez
 
       # Steam

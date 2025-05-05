@@ -70,3 +70,10 @@ icon_color = "magenta"
 
 [[app."ALVR".event]]
 Exec = "alvr_dashboard"
+
+[app."Keymapp".style]
+icon = ""
+icon_color = "green"
+
+[[app."Keymapp".event]]
+Exec = "keymapp"
