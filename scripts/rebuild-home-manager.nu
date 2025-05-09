@@ -1,5 +1,5 @@
 try {
-  home-manager switch --flake ~/dotfiles#brightonlcox
+  home-manager switch --flake ~/dotfiles#($env.FLAKE)
 } catch {
   notify-send -u critical -e "Failed to Rebuild Home-Manager Configuration!"
   exit 1

@@ -23,7 +23,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     swww.url = "github:LGFae/swww";
-    app-launcher.url = "github:TheEmeraldBee/tui-launcher";
+
+    ranch.url = "github:TheEmeraldBee/ranch";
     ferrite.url = "github:TheEmeraldBee/ferrite";
 
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
@@ -44,7 +45,7 @@
     ...
   } @ inputs: {
     nixosConfigurations = {
-      nixos = nixpkgs.lib.nixosSystem {
+      nvidia_pc = nixpkgs.lib.nixosSystem {
         pkgs = import nixpkgs {
           system = "x86_64-linux";
           config.allowUnfree = true;
@@ -52,7 +53,7 @@
 
         specialArgs = {inherit inputs;};
         modules = [
-          ./nixos/configuration.nix
+          ./machines/nvidia_pc/configuration.nix
         ];
       };
     };
@@ -77,7 +78,7 @@
     };
 
     homeConfigurations = {
-      brightonlcox = home-manager.lib.homeManagerConfiguration {
+      nvidia_pc = home-manager.lib.homeManagerConfiguration {
         pkgs = import nixpkgs {
           system = "x86_64-linux";
           config.allowUnfree = true;
@@ -86,13 +87,7 @@
         extraSpecialArgs = {inherit inputs;};
 
         modules = [
-          {
-            wayland.windowManager.hyprland = {
-              enable = true;
-              package = hyprland.packages.x86_64-linux.hyprland;
-            };
-          }
-          ./home-manager/home.nix
+          ./machines/nvidia_pc/home.nix
         ];
       };
     };
