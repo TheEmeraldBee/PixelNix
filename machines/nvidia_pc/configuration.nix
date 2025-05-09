@@ -23,6 +23,7 @@ in {
     (rootPath + /packages/applications/1password.nix) # Passwords
 
     (rootPath + /packages/wayland/hyprland_env.nix)
+    (rootPath + /packages/nixos/udisk.nix)
 
     # Font
     (rootPath + /packages/fonts.nix)
