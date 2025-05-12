@@ -3,7 +3,7 @@
   :geometry (geometry
     :x "5px"
     :y "0"
-    :width "2%"
+    :width "45px"
     :height "98%"
     :anchor "left center"
   )
@@ -48,6 +48,7 @@
       :spacing 15
       :space-evenly false
       :class "area"
+      (box :class "battery" (battery_display))
       (volume)
       (box :class "bluetooth" (bluetooth))
       (box :class "metric" (date))
@@ -129,7 +130,7 @@
   (box :orientation "v"
     :class "date"
     :halign "center"
-    day_word day month year
+    day_word month day year
   )
 )
 
@@ -137,6 +138,17 @@
 (defpoll day      :interval "10m" "date +%d")
 (defpoll month    :interval "1h"  "date +%m")
 (defpoll year     :interval "1h"  "date +%y")
+
+(defwidget battery_display[]
+  (box :orientation "v"
+    :class "battery"
+    :halign "center"
+    (label :class "percentage" :text "${battery}%")
+    (label :class "icon" :text {battery > 80 ? "" : battery > 50 ? "" : battery > 20 ? "": ""})
+  )
+)
+
+(defpoll battery :interval "20s" "cat /sys/class/power_supply/BAT1/capacity")
 
 (defwidget mode[]
   (box :orientation "v"

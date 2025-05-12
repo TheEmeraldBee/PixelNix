@@ -65,9 +65,22 @@
           icon: ""
           name: "Yazi"
           icon_color: yellow
-          ignore_each: true
           events:
             - !shell yazi
+
+        - !entry
+          icon: ""
+          name: "Powertop"
+          icon_color: red
+          events:
+            - !shell sudo powertop
+
+        - !entry
+          icon: "󰙵"
+          name: "Htop"
+          icon_color: green
+          events:
+            - !shell sudo htop
 
     - !folder
       name: "Gaming"

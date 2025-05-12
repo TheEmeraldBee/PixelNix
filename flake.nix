@@ -30,12 +30,11 @@
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     zen-browser.inputs.nixpkgs.follows = "nixpkgs";
 
-    # Macos Specific
-    nix-darwin.url = "github:LnL7/nix-darwin";
-    nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
-
     zig.url = "github:mitchellh/zig-overlay";
     zig.inputs.nixpkgs.follows = "nixpkgs";
+
+    # Framework 16 stuff
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   };
   outputs = {
     nixpkgs,
@@ -56,25 +55,18 @@
           ./machines/nvidia_pc/configuration.nix
         ];
       };
-    };
+      framework_laptop = nixpkgs.lib.nixosSystem {
+        pkgs = import nixpkgs {
+          system = "x86_64-linux";
+          config.allowUnfree = true;
+        };
 
-    darwinConfigurations."macos" = nix-darwin.lib.darwinSystem {
-      pkgs = import nixpkgs {
-        system = "aarch64-darwin";
-        config.allowUnfree = true;
+        specialArgs = {inherit inputs;};
+        modules = [
+          ./machines/framework_laptop/configuration.nix
+          inputs.nixos-hardware.nixosModules.framework-16-7040-amd
+        ];
       };
-
-      specialArgs = {inherit inputs;};
-      modules = [
-        ./macos/configuration.nix
-        home-manager.darwinModules.home-manager
-        {
-          home-manager.extraSpecialArgs = {inherit inputs;};
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.users.brightoncox = import ./macos/home.nix;
-        }
-      ];
     };
 
     homeConfigurations = {
@@ -88,6 +80,18 @@
 
         modules = [
           ./machines/nvidia_pc/home.nix
+        ];
+      };
+      framework_laptop = home-manager.lib.homeManagerConfiguration {
+        pkgs = import nixpkgs {
+          system = "x86_64-linux";
+          config.allowUnfree = true;
+        };
+
+        extraSpecialArgs = {inherit inputs;};
+
+        modules = [
+          ./machines/framework_laptop/home.nix
         ];
       };
     };

@@ -81,12 +81,21 @@
     settings = {
       env = [
         "MOZ_ENABLE_WAYLAND,1"
-        "LIBVA_DRIVER_NAME,nvidia"
-        "GBM_BACKEND,nvidia-drm"
-        "__GLX_VENDOR_LIBRARY_NAME,nvidia"
+        "AQ_DRM_DEVICES,/dev/dri/card2:/dev/dri/card1"
+        # "LIBVA_DRIVER_NAME,nvidia"
+        # "GBM_BACKEND,nvidia-drm"
+        # "__GLX_VENDOR_LIBRARY_NAME,nvidia"
       ];
 
-      monitor = ",prefered,auto,1.5";
+      animations = {
+        enabled = 1;
+        animation = [
+          "borderangle,0"
+        ];
+      };
+
+      monitor = "eDP-2,prefered,auto,1.25";
+      # monitor = ",prefered,auto,1.5";
 
       xwayland = {
         enabled = true;
@@ -109,12 +118,14 @@
         rounding = 10;
 
         blur = {
-          enabled = true;
+          enabled = false;
           size = 3;
           passes = 1;
 
           vibrancy = 0.1696;
         };
+
+        shadow.enabled = false;
       };
 
       dwindle = {
@@ -125,7 +136,15 @@
 
       input = {
         follow_mouse = 1;
-        sensitivity = -0.5;
+        sensitivity = -0.2;
+        natural_scroll = true;
+
+        touchpad = {
+          disable_while_typing = true;
+          natural_scroll = true;
+          scroll_factor = 0.3;
+          clickfinger_behavior = true;
+        };
       };
 
       misc = {
@@ -134,6 +153,8 @@
 
         mouse_move_enables_dpms = true;
         key_press_enables_dpms = true;
+
+        vfr = true;
       };
 
       render = {

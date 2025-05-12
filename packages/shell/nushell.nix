@@ -17,6 +17,7 @@
     ##########
     gnumake # Makefiles!
     htop # Task Manager
+    powertop
     reflex # Directory Watcher
     wget # Different `curl`
     jq # Json Parser
@@ -70,6 +71,10 @@
         }
 
         cd $dir
+      }
+
+      if not ("WAYLAND_DISPLAY" in $env) and not ($env.XDG_VTNR == 1) {
+        dbus-run-session Hyprland
       }
 
       if ("ZELLIJ_SESSION_NAME" in $env) {
