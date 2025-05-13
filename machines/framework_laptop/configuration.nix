@@ -14,8 +14,14 @@ in {
     (rootPath + /packages/nixos/services.nix) # Enable required services
     (rootPath + /packages/nixos/amd.nix) # GPU
     (rootPath + /packages/nixos/ppd.nix) # Power Profiles
+    # Network
     (import (rootPath + /packages/nixos/network.nix) {
       hostName = "brighton-laptop";
+    })
+
+    # Docker
+    (import (rootPath + /packages/nixos/docker.nix) {
+      user = "brightonlcox";
     })
 
     # Applications
@@ -24,7 +30,7 @@ in {
     (rootPath + /packages/applications/1password.nix) # Passwords
 
     (rootPath + /packages/wayland/hyprland_env.nix)
-    (rootPath + /packages/nixos/udisk.nix)
+    (rootPath + /packages/nixos/udisk.nix) # Auto Mount Drives
 
     # Font
     (rootPath + /packages/fonts.nix)

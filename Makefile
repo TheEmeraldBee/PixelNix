@@ -1,25 +1,11 @@
-rebuild-nvidia: git-add
-	FLAKE=nvidia_pc nu scripts/rebuild-nix.nu
+rebuild-os: git-add
+	nu scripts/rebuild-nix.nu
 
-rebuild-nvidia-home: git-add
-	FLAKE=nvidia_pc nu scripts/rebuild-home-manager.nu
+rebuild-home: git-add
+	nu scripts/rebuild-home-manager.nu
 
-rebuild-laptop: git-add
-	FLAKE=framework_laptop nu scripts/rebuild-nix.nu
-
-rebuild-laptop-home: git-add
-	FLAKE=framework_laptop nu scripts/rebuild-home-manager.nu
-
-commit-nixos: git-add
+commit: git-add
 	nu scripts/commit-nixos.nu
-
--------:
-
-rebuild-darwin: git-add
-	nu scripts/rebuild-darwin.nu
-
-commit-darwin: git-add
-	nu scripts/commit-darwin.nu
 
 -------:
 

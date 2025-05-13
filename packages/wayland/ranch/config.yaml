@@ -1,176 +1,185 @@
----
-  shell: "nu"
-  executor: "hyprctl dispatch exec"
+shell: "nu"
+executor: "hyprctl dispatch exec"
 
-  max_search: 30
-  max_render: 30
+max_search: 30
+max_render: 30
 
-  log: false
-  max_log: 30
+log: false
+max_log: 30
 
-  each:
-    - exit
+each:
+  - exit
 
-  binds:
-    logs:
-      - shift-L
+binds:
+  logs:
+    - shift-L
 
-    insert:
-      - i
+  insert:
+    - i
 
-    normal:
-      - esc
-      - q
+  normal:
+    - esc
+    - q
 
-    quit:
-      - esc
-      - q
+  quit:
+    - esc
+    - q
 
-    run:
-      - enter
+  run:
+    - enter
 
-    clear:
-      - c
+  clear:
+    - c
 
-    up:
-      - up
-      - k
+  up:
+    - up
+    - k
 
-    down:
-      - down
-      - j
+  down:
+    - down
+    - j
 
-    exit:
-      - left
-      - h
+  exit:
+    - left
+    - h
 
-    enter:
-      - right
-      - l
-      - enter
+  enter:
+    - right
+    - l
+    - enter
 
-  entries:
+entries:
 
-    - !folder
-      name: "Quick Actions"
-      entries:
-        - !entry
-          icon: "D"
-          name: "Update Displays"
-          icon_color: magenta
-          events:
-            - !shell nu ~/dotfiles/scripts/update-monitors.nu
-          
-        - !entry
-          icon: ""
-          name: "Yazi"
-          icon_color: yellow
-          events:
-            - !shell yazi
+  - !folder
+    name: "Quick Actions"
+    entries:
+      - !entry
+        icon: "D"
+        name: "Update Displays"
+        icon_color: magenta
+        events:
+          - !shell nu ~/dotfiles/scripts/update-monitors.nu
+        
+      - !entry
+        icon: ""
+        name: "Yazi"
+        icon_color: yellow
+        events:
+          - !shell yazi
 
-        - !entry
-          icon: ""
-          name: "Powertop"
-          icon_color: red
-          events:
-            - !shell sudo powertop
+      - !entry
+        icon: ""
+        name: "Powertop"
+        icon_color: red
+        events:
+          - !shell sudo powertop
 
-        - !entry
-          icon: "󰙵"
-          name: "Htop"
-          icon_color: green
-          events:
-            - !shell sudo htop
+      - !entry
+        icon: "󰙵"
+        name: "Htop"
+        icon_color: green
+        events:
+          - !shell sudo htop
 
-        - !entry
-          icon: ""
-          name: "Nvtop"
-          icon_color: "blue"
-          events:
-            - !shell sudo nvtop
+      - !entry
+        icon: ""
+        name: "Nvtop"
+        icon_color: "blue"
+        events:
+          - !shell sudo nvtop
 
-    - !folder
-      name: "Browsing"
-      entries:
-        - !entry
-          icon: ""
-          name: "Zen"
-          icon_color: magenta
-          events:
-            - !exec zen
+  - !folder
+    name: "Browsing"
+    entries:
+      - !entry
+        icon: ""
+        name: "Zen"
+        icon_color: magenta
+        events:
+          - !exec zen
 
-        - !entry
-          icon: ""
-          name: "Firefox"
-          icon_color: red
-          events:
-            - !exec firefox
+      - !entry
+        icon: ""
+        name: "Firefox"
+        icon_color: red
+        events:
+          - !exec firefox
 
-    - !folder
-      name: "Gaming"
-      entries:
-        - !entry
-          icon: ""
-          name: "Steam"
-          icon_color: blue
-          events:
-            - !exec steam
+  - !folder
+    name: "Productivity"
+    entries:
+      - !entry
+        icon: ""
+        name: "Obsidian"
+        icon_color: magenta
+        events:
+          - !exec obsidian
 
-        - !entry
-          icon: ""
-          name: "Olympus"
-          icon_color: magenta
-          events:
-            - !exec olympus
+  - !folder
+    name: "Gaming"
+    entries:
+      - !entry
+        icon: ""
+        name: "Steam"
+        icon_color: blue
+        events:
+          - !exec steam
 
-        - !entry
-          icon: "󰍳"
-          name: "Prism Launcher"
-          icon_color: green
-          events:
-            - !exec prismlauncher
+      - !entry
+        icon: ""
+        name: "Olympus"
+        icon_color: magenta
+        events:
+          - !exec olympus
 
-        - !entry
-          icon: ""
-          name: "ALVR"
-          icon_color: magenta
-          events:
-            - !exec alvr_dashboard
+      - !entry
+        icon: "󰍳"
+        name: "Prism Launcher"
+        icon_color: green
+        events:
+          - !exec prismlauncher
 
-    - !folder
-      name: "Programming"
-      entries:
-        - !entry
-          icon: ""
-          name: "Ghostty"
-          icon_color: green
-          events:
-            - !exec ghostty
+      - !entry
+        icon: ""
+        name: "ALVR"
+        icon_color: magenta
+        events:
+          - !exec alvr_dashboard
 
-        - !entry
-          icon: ""
-          name: "Godot"
-          icon_color: blue
-          events:
-            - !exec godot4
+  - !folder
+    name: "Programming"
+    entries:
+      - !entry
+        icon: ""
+        name: "Ghostty"
+        icon_color: green
+        events:
+          - !exec ghostty
 
-    - !folder
-      name: "Messaging"
-      entries:
-        - !entry
-          icon: ""
-          name: "Discord"
-          icon_color: blue
-          events:
-            - !exec discord
+      - !entry
+        icon: ""
+        name: "Godot"
+        icon_color: blue
+        events:
+          - !exec godot4
 
-    - !folder
-      name: "Security"
-      entries:
-        - !entry
-          icon: ""
-          name: "1Password"
-          icon_color: red
-          events:
-            - !exec 1password
- 
+  - !folder
+    name: "Messaging"
+    entries:
+      - !entry
+        icon: ""
+        name: "Discord"
+        icon_color: blue
+        events:
+          - !exec discord
+
+  - !folder
+    name: "Security"
+    entries:
+      - !entry
+        icon: ""
+        name: "1Password"
+        icon_color: red
+        events:
+          - !exec 1password
+

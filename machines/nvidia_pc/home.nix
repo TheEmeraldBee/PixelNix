@@ -22,15 +22,18 @@ in {
     (rootPath + /packages/applications/pavu.nix) # Audio Control
     (rootPath + /packages/applications/zen.nix) # Browser
     (rootPath + /packages/applications/olympus.nix) # Celeste Mods
+    (rootPath + /packages/applications/obsidian.nix) # Note Taking
 
     # Programming Languages
     (rootPath + /packages/lang/python.nix)
     (rootPath + /packages/lang/rust.nix)
+    (rootPath + /packages/lang/go.nix)
     (rootPath + /packages/lang/c.nix)
+    (rootPath + /packages/lang/web.nix)
 
     # Shell
     (import (rootPath + /packages/shell/nushell.nix) {
-      additionalConfig = "$env.PATH = ($env.PATH | split row esep | prepend /run/wrappers/bin)";
+      flake = "nvidia_pc";
     })
 
     (rootPath + /packages/shell/wally.nix) # ZSA Keyboard

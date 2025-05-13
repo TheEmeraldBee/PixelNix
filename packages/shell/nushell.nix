@@ -1,4 +1,4 @@
-{additionalConfig, ...}: {pkgs, ...}: {
+{flake, ...}: {pkgs, ...}: {
   home.packages = with pkgs; [
     nushell # Main Shell
     carapace # Autocompletions
@@ -30,7 +30,10 @@
   programs.nushell = {
     enable = true;
     extraConfig = ''
-      ${additionalConfig}
+      $env.PATH = ($env.PATH | split row esep | prepend /run/wrappers/bin)
+
+      $env.FLAKE = "${flake}"
+
       let carapace_completer = {|spans|
         carapace $spans.0 nushell $spans | from json
       }
@@ -90,6 +93,11 @@
       def jm [branch, ...args] {
         jj bookmark move $branch --to @ ...$args
       }
+
+      def jr [branch, ...args] {
+        jj git fetch
+        jj rebase -d $branch ...$args
+      }
     '';
     shellAliases = {
       ls = "eza -l --icons";
@@ -111,8 +119,6 @@
       ask = "aichat -e";
 
       e = "nu ~/dotfiles/scripts/startup.nu";
-
-      jr = "jj git fetch; jj rebase -d";
     };
   };
 

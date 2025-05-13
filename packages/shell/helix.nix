@@ -24,7 +24,7 @@
       # Misc Language Servers
       vscode-langservers-extracted
 
-      taplo # Toml
+      taplo # TOML
     ]
     ++ [
       ##########

@@ -2,9 +2,6 @@
   programs.jujutsu = {
     enable = true;
     settings = {
-      git = {
-        subprocess = true;
-      };
       revsets = {
         log = "all()";
       };

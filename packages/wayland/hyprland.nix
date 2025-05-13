@@ -187,11 +187,12 @@
         # Start Up Applications that are used everywhere.
         "[workspace 1 silent] zen" # Web-Browser
         "[workspace 4 silent] discord" # Messaging
+        "[workspace 3 silent] ghostty"
         "[workspace 2 silent] steam -silent" # Gaming
 
         "[workspace 5 silent] 1password" # Password Manager
 
-        "[workspace special silent] ghostty" # Floating Terminal
+        "[workspace special silent] ghostty -e zellij" # Floating Terminal
       ];
 
       bindm = [
