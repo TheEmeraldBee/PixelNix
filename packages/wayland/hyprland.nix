@@ -1,4 +1,4 @@
-{
+{envVars, ...}: {
   pkgs,
   inputs,
   ...
@@ -20,7 +20,7 @@
   };
 
   wayland.windowManager.hyprland = {
-    package = inputs.hyprland.packages.x86_64-linux.hyprland;
+    package = inputs.hyprland.packages.${pkgs.system}.hyprland;
   };
 
   services.hypridle = {
@@ -79,13 +79,12 @@
     '';
 
     settings = {
-      env = [
-        "MOZ_ENABLE_WAYLAND,1"
-        "AQ_DRM_DEVICES,/dev/dri/card2:/dev/dri/card1"
-        # "LIBVA_DRIVER_NAME,nvidia"
-        # "GBM_BACKEND,nvidia-drm"
-        # "__GLX_VENDOR_LIBRARY_NAME,nvidia"
-      ];
+      env =
+        [
+          "MOZ_ENABLE_WAYLAND,1"
+          "AQ_DRM_DEVICES,/dev/dri/card2:/dev/dri/card1"
+        ]
+        ++ envVars;
 
       animations = {
         enabled = 1;
@@ -94,8 +93,10 @@
         ];
       };
 
-      monitor = "eDP-2,prefered,auto,1.25";
-      # monitor = ",prefered,auto,1.5";
+      monitor = [
+        ",prefered,auto,1.5"
+        "eDP-2,prefered,auto,1.25"
+      ];
 
       xwayland = {
         enabled = true;
@@ -166,6 +167,12 @@
       cursor = {
         no_hardware_cursors = true;
       };
+
+      workspace = [
+        "r[1-5], monitor:DP-3"
+        "6, monitor:eDP-2"
+        "8, monitor:eDP-2"
+      ];
 
       "$mod" = "SUPER";
       exec-once = [

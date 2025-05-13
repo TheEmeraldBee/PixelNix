@@ -17,11 +17,11 @@ in {
     # Applications
     (rootPath + /packages/applications/discord.nix) # Chatting
     (rootPath + /packages/applications/ghostty.nix) # Terminal
-    #(rootPath + /packages/applications/prismlauncher.nix) # Minecraft
+    (rootPath + /packages/applications/prismlauncher.nix) # Minecraft
     (rootPath + /packages/applications/feh.nix) # Image Viewer
     (rootPath + /packages/applications/pavu.nix) # Audio Control
     (rootPath + /packages/applications/zen.nix) # Browser
-    #(rootPath + /packages/applications/olympus.nix) # Celeste Mods
+    # (rootPath + /packages/applications/olympus.nix) # Celeste Mods
 
     # Programming Languages
     (rootPath + /packages/lang/python.nix)
@@ -49,7 +49,9 @@ in {
     (rootPath + /packages/shell/zellij.nix) # Multiplexer
 
     # Wayland
-    (rootPath + /packages/wayland/hyprland.nix) # Window Manager
+    (import (rootPath + /packages/wayland/hyprland.nix) {
+      envVars = [];
+    }) # Window Manager
 
     (rootPath + /packages/wayland/theme.nix) # Make things pretty
 

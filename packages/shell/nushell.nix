@@ -15,10 +15,14 @@
     ##########
     # EXTRAS #
     ##########
-    gnumake # Makefiles!
-    htop # Task Manager
-    powertop
+    gnumake # Makefiles
+
+    htop # Task Watcher
+    powertop # Power Watcher
+    nvtopPackages.amd # GPU Watcher
+
     reflex # Directory Watcher
+
     wget # Different `curl`
     jq # Json Parser
   ];

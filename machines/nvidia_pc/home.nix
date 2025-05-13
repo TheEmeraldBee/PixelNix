@@ -49,7 +49,13 @@ in {
     (rootPath + /packages/shell/zellij.nix) # Multiplexer
 
     # Wayland
-    (rootPath + /packages/wayland/hyprland.nix) # Window Manager
+    (import (rootPath + /packages/wayland/hyprland.nix) {
+      envVars = [
+        "LIBVA_DRIVER_NAME,nvidia"
+        "GBM_BACKEND,nvidia-drm"
+        "__GLX_VENDOR_LIBRARY_NAME,nvidia"
+      ];
+    }) # Window Manager
 
     (rootPath + /packages/wayland/theme.nix) # Make things pretty
 

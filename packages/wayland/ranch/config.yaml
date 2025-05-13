@@ -51,16 +51,16 @@
 
   entries:
 
-    - !entry
-      icon: ""
-      name: "Zen"
-      icon_color: red
-      events:
-        - !exec zen
-
     - !folder
       name: "Quick Actions"
       entries:
+        - !entry
+          icon: "D"
+          name: "Update Displays"
+          icon_color: magenta
+          events:
+            - !shell nu ~/dotfiles/scripts/update-monitors.nu
+          
         - !entry
           icon: ""
           name: "Yazi"
@@ -81,6 +81,30 @@
           icon_color: green
           events:
             - !shell sudo htop
+
+        - !entry
+          icon: ""
+          name: "Nvtop"
+          icon_color: "blue"
+          events:
+            - !shell sudo nvtop
+
+    - !folder
+      name: "Browsing"
+      entries:
+        - !entry
+          icon: ""
+          name: "Zen"
+          icon_color: magenta
+          events:
+            - !exec zen
+
+        - !entry
+          icon: ""
+          name: "Firefox"
+          icon_color: red
+          events:
+            - !exec firefox
 
     - !folder
       name: "Gaming"

@@ -76,7 +76,7 @@
   {"id": "9", "icon": ""}
 ]')
 
-(defpoll selected_workspace :initial "1" :interval "500ms" "hyprctl monitors -j | jq 'map(.activeWorkspace.id) | max'")
+(defpoll selected_workspace :initial "1" :interval "500ms" "hyprctl monitors -j | jq 'map(.activeWorkspace.id) | min'")
 
 (defwidget volume []
   (box :class "volume"
