@@ -169,9 +169,9 @@
       };
 
       workspace = [
-        "r[1-5], monitor:DP-3"
-        "6, monitor:eDP-2"
-        "8, monitor:eDP-2"
+        "r[1-5], persistent:1, monitor:DP-3"
+        "6, persistent:1, monitor:eDP-2"
+        "8, persistent:1, monitor:eDP-2"
       ];
 
       "$mod" = "SUPER";
