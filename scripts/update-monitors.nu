@@ -1,5 +1,8 @@
 let connected = (hyprctl monitors -j | from json | get name)
 
+# Kill Pretty Background Thing
+nu ~/dotfiles/scripts/swww-rotate-utils.nu kill
+
 eww close-all
 swww kill
 
@@ -23,3 +26,5 @@ if ($connected | any { |m| $m == "DP-3" }) {
 }
 
 hyprctl dispatch exec swww-daemon
+
+nu ~/dotfiles/scripts/swww-rotate-utils.nu start 5min

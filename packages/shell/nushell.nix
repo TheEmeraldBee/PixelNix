@@ -9,7 +9,7 @@
     # REPLACEMENTS #
     ################
     eza # `ls`
-    bat # `cat`
+    see-cat # `cat`
     ripgrep # `grep`
 
     ##########
@@ -25,6 +25,7 @@
 
     wget # Different `curl`
     jq # Json Parser
+    glow # Markdown Viewer
   ];
 
   programs.nushell = {
@@ -100,6 +101,7 @@
       }
     '';
     shellAliases = {
+      core-ls = "ls";
       ls = "eza -l --icons";
       ll = "eza -Alg --icons";
       lf = "eza -lgTL2 --icons";
@@ -119,6 +121,8 @@
       ask = "aichat -e";
 
       e = "nu ~/dotfiles/scripts/startup.nu";
+
+      sr = "nu ~/dotfiles/scripts/swww-rotate-utils.nu";
     };
   };
 

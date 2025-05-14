@@ -96,7 +96,7 @@ entries:
         name: "Zen"
         icon_color: magenta
         events:
-          - !exec zen
+          - !exec zen-beta
 
       - !entry
         icon: ""

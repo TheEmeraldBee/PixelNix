@@ -30,6 +30,11 @@
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     zen-browser.inputs.nixpkgs.follows = "nixpkgs";
 
+    # Flatpak Stuff
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
+
+    zen-nebula.url = "github:JustAdumbPrsn/Nebula-A-Minimal-Theme-for-Zen-Browser";
+
     zig.url = "github:mitchellh/zig-overlay";
     zig.inputs.nixpkgs.follows = "nixpkgs";
 
@@ -52,6 +57,7 @@
 
         specialArgs = {inherit inputs;};
         modules = [
+          inputs.nix-flatpak.nixosModules.nix-flatpak
           ./machines/nvidia_pc/configuration.nix
         ];
       };
@@ -63,7 +69,6 @@
 
         specialArgs = {inherit inputs;};
         modules = [
-          ./machines/framework_laptop/configuration.nix
           inputs.nixos-hardware.nixosModules.framework-16-7040-amd
         ];
       };

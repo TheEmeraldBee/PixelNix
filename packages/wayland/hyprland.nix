@@ -181,11 +181,11 @@
 
         #
         "hyprctl setcursor Bibata-Modern-Classic 20"
-        "swww-daemon && sleep 5sec && swww img /home/brightonlcox/wallpapers/forest.png && swww restore"
+        "swww-daemon && sleep 5sec && nu ~/dotfiles/scripts/swww-rotate-utils.nu start 5min"
         "eww daemon && eww open sidebar"
 
         # Start Up Applications that are used everywhere.
-        "[workspace 1 silent] zen" # Web-Browser
+        "[workspace 1 silent] zen-beta" # Web-Browser
         "[workspace 4 silent] discord" # Messaging
         "[workspace 3 silent] ghostty"
         "[workspace 2 silent] steam -silent" # Gaming

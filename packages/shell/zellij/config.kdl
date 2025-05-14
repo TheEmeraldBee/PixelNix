@@ -1,6 +1,7 @@
 on_force_close "quit"
 theme "catppuccin-mocha"
 pane_frames false
+show_startup_tips false
 
 keybinds {
 	normal clear-defaults=true {
