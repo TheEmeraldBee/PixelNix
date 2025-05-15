@@ -5,10 +5,11 @@ try {
   exit 1
 }
 
+nu ~/dotfiles/scripts/swww-rotate-utils.nu kill
 swww kill
 sleep 500ms
 hyprctl dispatch exec swww-daemon
 sleep 500ms
-swww img ~/dotfiles/assets/wallpapers/forest.png
+nu ~/dotfiles/scripts/swww-rotate-utils.nu start 5min
 
 notify-send -u low -e "Home-Manager Configuration Rebuilt Ok!"
