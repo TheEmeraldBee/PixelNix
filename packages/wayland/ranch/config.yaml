@@ -183,3 +183,21 @@ entries:
         events:
           - !exec 1password
 
+  - !folder
+    name: "Settings"
+    entries:
+      - !entry
+        icon: ""
+        name: "Pavu Control"
+        icon_color: green
+        events:
+          - !exec pavucontrol
+
+      - !entry
+        icon: ""
+        name: "Blueman"
+        icon_color: blue
+        events:
+          - !exec blueman-manager
+
+

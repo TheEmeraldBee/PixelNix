@@ -96,7 +96,10 @@
       (box :orientation "v"
         :valign "fill"
         :vexpand true
-        (label :class "icon" :text "")
+        (button
+          :onclick "hyprctl dispatch exec pavucontrol"
+          (label :class "icon" :text "")
+        )
         (label :text "${volume}%")
       )
     )
