@@ -10,6 +10,7 @@
     ################
     eza # `ls`
     see-cat # `cat`
+    bat # `cat` but different
     ripgrep # `grep`
 
     ##########
