@@ -1,17 +1,13 @@
-rebuild-os: git-add
+rebuild-os: jj
 	nu scripts/rebuild-nix.nu
 
-rebuild-home: git-add
+rebuild-home: jj
 	nu scripts/rebuild-home-manager.nu
-
-commit: git-add
-	nu scripts/commit-nixos.nu
 
 -------:
 
-git-add:
-	git diff -U0 "*" &&\
-	git add .
+jj:
+	jj diff
 
 -------:
 
