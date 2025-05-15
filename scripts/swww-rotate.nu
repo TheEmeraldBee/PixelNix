@@ -8,6 +8,9 @@ def main [wait_time: duration] {
   let files = ls **/* | where type == "file" | shuffle
   let files_len = $files | length
   mut idx = 0
+
+  dunstify "Wallpaper Setup!" $"Loaded ($files_len) Wallpapers!" -t 5000
+  
   loop {
     let inner_id = $idx
     $monitors | each { |x|
@@ -18,6 +21,7 @@ def main [wait_time: duration] {
 
     $idx += 1
     if ($idx >= ($files | length)) {
+      $files | shuffle
       $idx = 0
     }
 
