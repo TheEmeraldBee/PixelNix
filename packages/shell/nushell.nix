@@ -10,6 +10,7 @@
     ################
     eza # `ls`
     see-cat # `cat`
+    bat # another `cat`
     ripgrep # `grep`
 
     ##########
@@ -28,10 +29,14 @@
     glow # Markdown Viewer
   ];
 
+  home.sessionPath = [
+    "~/dotfiles/script-bin"
+  ];
+
   programs.nushell = {
     enable = true;
     extraConfig = ''
-      $env.PATH = ($env.PATH | split row esep | prepend /run/wrappers/bin)
+      $env.PATH = ($env.PATH | split row esep | prepend /run/wrappers/bin | prepend ~/dotfiles/script-bin)
 
       $env.FLAKE = "${flake}"
 
@@ -87,7 +92,7 @@
 
       if ("ZELLIJ_SESSION_NAME" in $env) {
       } else {
-        nu ~/dotfiles/scripts/startup.nu
+        zellij
         exit
       }
 
@@ -114,15 +119,8 @@
       cd = "z";
       ci = "zi";
 
-      # Editing Configuration
-      ne = "nu ~/dotfiles/scripts/edit.nu";
-
       ai = "aichat";
       ask = "aichat -e";
-
-      e = "nu ~/dotfiles/scripts/startup.nu";
-
-      sr = "nu ~/dotfiles/scripts/swww-rotate-utils.nu";
     };
   };
 

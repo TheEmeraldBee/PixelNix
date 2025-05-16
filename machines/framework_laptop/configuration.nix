@@ -13,7 +13,8 @@ in {
     (rootPath + /packages/nixos/packages.nix) # Misc Required Packages for Nixos to run
     (rootPath + /packages/nixos/services.nix) # Enable required services
     (rootPath + /packages/nixos/amd.nix) # GPU
-    (rootPath + /packages/nixos/ppd.nix) # Power Profiles
+    (rootPath + /packages/nixos/tlp.nix) # Power Profiles
+
     # Network
     (import (rootPath + /packages/nixos/network.nix) {
       hostName = "brighton-laptop";

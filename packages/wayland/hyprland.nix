@@ -42,40 +42,16 @@
 
   programs.hyprlock = {
     enable = true;
-    settings = {
-      general = {};
-
-      background = [
-        {
-          path = "/home/brightonlcox/dotfiles/assets/wallpapers/forest.png";
-          blur_passes = 3;
-          blur_size = 8;
-        }
-      ];
-
-      input-field = [
-        {
-          size = "200, 50";
-          position = "0, -80";
-          monitor = "";
-          dots_center = true;
-          fade_on_empty = false;
-          font_color = "rgb(202, 211, 245)";
-          inner_color = "rgb(91, 96, 120)";
-          outer_color = "rgb(24, 25, 38)";
-          outline_thickness = 5;
-          placeholder_text = ''<span foreground="##cad3f5">Password...</span>'';
-          shadow_passes = 2;
-        }
-      ];
-    };
+    extraConfig = ''
+      ${builtins.readFile ./hyprland/hyprlock.conf}
+    '';
   };
 
   wayland.windowManager.hyprland = {
     enable = true;
 
     extraConfig = ''
-      ${builtins.readFile ./hyprland/config.conf}
+      ${builtins.readFile ./hyprland/hyprland.conf}
     '';
 
     settings = {
@@ -192,7 +168,7 @@
 
         "[workspace 5 silent] 1password" # Password Manager
 
-        "[workspace special silent] ghostty -e zellij" # Floating Terminal
+        "[workspace special silent] ghostty" # Floating Terminal
       ];
 
       bindm = [

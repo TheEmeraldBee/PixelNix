@@ -52,7 +52,6 @@
 
         specialArgs = {inherit inputs;};
         modules = [
-          inputs.nix-flatpak.nixosModules.nix-flatpak
           ./machines/nvidia_pc/configuration.nix
         ];
       };
@@ -65,6 +64,7 @@
         specialArgs = {inherit inputs;};
         modules = [
           inputs.nixos-hardware.nixosModules.framework-16-7040-amd
+          ./machines/framework_laptop/configuration.nix
         ];
       };
     };

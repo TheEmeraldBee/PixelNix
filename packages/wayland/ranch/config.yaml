@@ -105,6 +105,13 @@ entries:
         events:
           - !exec firefox
 
+      - !entry
+        icon: ""
+        name: "Chrome"
+        icon_color: yellow
+        events:
+          - !exec google-chrome-stable
+
   - !folder
     name: "Productivity"
     entries:

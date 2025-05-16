@@ -1,3 +1,5 @@
+#!/usr/bin/env nu
+
 use std/dirs shells-aliases *
 
 enter ~/dotfiles/

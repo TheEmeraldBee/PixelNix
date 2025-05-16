@@ -1,3 +1,5 @@
+#!/usr/bin/env nu
+
 # On start, attach to, create, or delete zellij sessions.
 
 mut in_session = false

@@ -5,11 +5,13 @@ try {
   exit 1
 }
 
-nu ~/dotfiles/scripts/swww-rotate-utils.nu kill
+~/dotfiles/script-bin/sr kill
 swww kill
+
 sleep 500ms
 hyprctl dispatch exec swww-daemon
 sleep 500ms
-nu ~/dotfiles/scripts/swww-rotate-utils.nu start 5min
+
+~/dotfiles/script-bin/sr start 5min
 
 notify-send -u low -e "Home-Manager Configuration Rebuilt Ok!"
