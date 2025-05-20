@@ -23,7 +23,7 @@ in {
     (rootPath + /packages/applications/zen.nix) # Browser
     # (rootPath + /packages/applications/olympus.nix) # Celeste Mods
     (rootPath + /packages/applications/obsidian.nix) # Note Taking
-    (rootPath + /packages/applications/bittorrent.nix) # Note Taking
+    (rootPath + /packages/applications/bittorrent.nix) # Torrent
 
     # Programming Languages
     (rootPath + /packages/lang/python.nix)

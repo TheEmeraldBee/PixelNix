@@ -113,16 +113,6 @@ entries:
           - !exec google-chrome-stable
 
   - !folder
-    name: "Productivity"
-    entries:
-      - !entry
-        icon: ""
-        name: "Obsidian"
-        icon_color: magenta
-        events:
-          - !exec obsidian
-
-  - !folder
     name: "Gaming"
     entries:
       - !entry
