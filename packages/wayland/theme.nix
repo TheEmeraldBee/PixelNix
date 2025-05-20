@@ -1,40 +1,32 @@
-{pkgs, ...}: {
+{
+  lib,
+  pkgs,
+  ...
+}: {
   home.pointerCursor = {
     gtk.enable = true;
     x11.enable = true;
-    package = pkgs.bibata-cursors;
-    name = "Bibata-Modern-Amber";
-    size = 20;
+    name = "Catppuccin-Mocha-Dark-Cursors";
+    package = pkgs.catppuccin-cursors.mochaDark;
+    size = 16;
   };
 
   gtk = {
     enable = true;
-    font.size = 10;
-    font.name = "Fira Sans";
-
     theme = {
-      name = "Juno";
-      package = pkgs.juno-theme;
+      name = "catppuccin-macchiato-green-compact+rimless,black";
+      package = pkgs.catppuccin-gtk.override {
+        accents = ["green"];
+        size = "compact";
+        tweaks = ["rimless" "black"];
+        variant = "macchiato";
+      };
     };
 
     cursorTheme = {
-      name = "Bibata-Modern-Classic";
-      package = pkgs.bibata-cursors;
-      size = 20;
-    };
-
-    gtk3.extraConfig = {
-      Settings = ''
-        gtk-application-prefer-dark-theme=1
-        gtk-cursor-theme-name=Bibata-Modern-Classic
-      '';
-    };
-
-    gtk4.extraConfig = {
-      Settings = ''
-        gtk-application-prefer-dark-theme=1
-        gtk-cursor-theme-name=Bibata-Modern-Classic
-      '';
+      name = "Catppuccin-Mocha-Dark-Cursors";
+      package = pkgs.catppuccin-cursors.mochaDark;
+      size = 16;
     };
   };
 
@@ -42,8 +34,18 @@
     enable = true;
     settings = {
       "org/gnome/desktop/interface" = {
+        gtk-theme = lib.mkForce "catppuccin-macchiato-green-compact+rimless,black";
         color-scheme = "prefer-dark";
       };
+    };
+  };
+
+  qt = {
+    enable = true;
+    platformTheme.name = "gtk3"; # Or "gtk2" if you prefer the Qt5/6 GTK2 look
+    style = {
+      package = pkgs.gtk3; # Or pkgs.gtk2 if using that platformTheme
+      name = "gtk3"; # Or "gtk2"
     };
   };
 }
