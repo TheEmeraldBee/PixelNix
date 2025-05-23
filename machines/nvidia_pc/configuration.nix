@@ -3,6 +3,7 @@
 in {
   # Enable flakes and the `nix` command
   nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.settings.trusted-users = ["root" "brightonlcox"];
 
   # Import all files that are needed
   imports = [

@@ -36,6 +36,8 @@ in {
       flake = "nvidia_pc";
     })
 
+    (rootPath + /packages/shell/devenv.nix) # Development Environment Tools
+
     (rootPath + /packages/shell/wally.nix) # ZSA Keyboard
 
     (rootPath + /packages/shell/aichat.nix) # AI

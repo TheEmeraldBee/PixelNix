@@ -11,11 +11,16 @@ args = ["--ignore", "E501"]
 
 [[language]]
 name = "zel"
-scope = "source.zl"
+scope = "source.zel"
 injection-regex = "zel"
-file-types = ["zl"]
+file-types = ["zel", "zl"]
 comment-tokens = "//"
 indent = { tab-width = 2, unit = "  " }
+roots = []
+
+[[grammar]]
+name = "zel"
+source = { path = "/home/brightonlcox/dotfiles/packages/shell/helix/langs/zel/"}
 
 [language-server.godot]
 command = "ncat" # or nc

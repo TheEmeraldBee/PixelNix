@@ -12,16 +12,23 @@
     ghostty.url = "github:ghostty-org/ghostty";
 
     # Nixos Specific
-    nixpkgs-olympus.url = "github:nixos/nixpkgs/57943708113949d3f9f7fce5b835f71a99ebc5b8";
+    nixpkgs-olympus.url = "github:nixos/nixpkgs/3be662c31b6cc04b10043641f4ccfc97c8a34704";
 
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
     hyprland = {
       url = "github:hyprwm/Hyprland";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    hy3 = {
+      url = "github:outfoxxed/hy3";
+      inputs.hyprland.follows = "hyprland";
+    };
+
     swww.url = "github:LGFae/swww";
 
     ranch.url = "github:TheEmeraldBee/ranch";

@@ -11,6 +11,10 @@ insert = "bar"
 normal = "block"
 select = "underline"
 
+[keys.normal]
+C-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+C-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+
 [keys.normal.space]
 l = ":toggle lsp.display-inlay-hints"
 

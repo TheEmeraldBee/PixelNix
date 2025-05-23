@@ -21,7 +21,7 @@ in {
     (rootPath + /packages/applications/feh.nix) # Image Viewer
     (rootPath + /packages/applications/pavu.nix) # Audio Control
     (rootPath + /packages/applications/zen.nix) # Browser
-    # (rootPath + /packages/applications/olympus.nix) # Celeste Mods
+    (rootPath + /packages/applications/olympus.nix) # Celeste Mods
     (rootPath + /packages/applications/obsidian.nix) # Note Taking
     (rootPath + /packages/applications/bittorrent.nix) # Torrent
 
@@ -36,6 +36,8 @@ in {
     (import (rootPath + /packages/shell/nushell.nix) {
       flake = "framework_laptop";
     })
+
+    (rootPath + /packages/shell/devenv.nix) # Development Environment Tools
 
     (rootPath + /packages/shell/wally.nix) # ZSA Keyboard
 

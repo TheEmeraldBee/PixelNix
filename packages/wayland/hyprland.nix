@@ -19,10 +19,6 @@
     recursive = true;
   };
 
-  wayland.windowManager.hyprland = {
-    package = inputs.hyprland.packages.${pkgs.system}.hyprland;
-  };
-
   services.hypridle = {
     enable = true;
     settings = {
@@ -49,6 +45,8 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
+    package = inputs.hyprland.packages.${pkgs.system}.hyprland;
+    plugins = [inputs.hy3.packages.${pkgs.system}.hy3];
 
     extraConfig = ''
       ${builtins.readFile ./hyprland/hyprland.conf}
@@ -88,7 +86,7 @@
         "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
         "col.inactive_border" = "rgba(595959aa)";
 
-        layout = "dwindle";
+        layout = "hy3";
       };
 
       decoration = {
@@ -103,6 +101,20 @@
         };
 
         shadow.enabled = false;
+      };
+
+      "group:groupbar" = {
+        "col.active" = "rgba(55ccffee) rgba(22ff99ee) 45deg";
+        "col.inactive" = "rgba(595959aa)";
+      };
+
+      plugin = {
+        hy3 = {
+          autotile = {
+            enable = true;
+            ephemeral_groups = true;
+          };
+        };
       };
 
       dwindle = {

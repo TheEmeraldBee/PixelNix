@@ -27,6 +27,8 @@
     wget # Different `curl`
     jq # Json Parser
     glow # Markdown Viewer
+
+    tree-sitter
   ];
 
   home.sessionPath = [
@@ -66,8 +68,6 @@
         $env.RPG_BOT_KEY | save ~/.rpg-bot
       }
 
-      $env.EDITOR = "hx"
-
       def --env d [...args] {
         let inputs = yazi --chooser-file=/dev/stdout ../ | each {|line| $line} | split row "\n"
 
@@ -90,11 +90,7 @@
         dbus-run-session Hyprland
       }
 
-      if ("ZELLIJ_SESSION_NAME" in $env) {
-      } else {
-        zellij
-        exit
-      }
+      $env.EDITOR = "hx"
 
       def jm [branch, ...args] {
         jj bookmark move $branch --to @ ...$args
@@ -111,6 +107,9 @@
       ll = "eza -Alg --icons";
       lf = "eza -lgTL2 --icons";
       lg = "eza -lgTL4 --git-ignore --icons";
+
+      core-hx = "hx";
+      hx = "zellij-helix";
 
       # Rust
       bc = "bacon clippy";

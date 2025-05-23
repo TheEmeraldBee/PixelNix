@@ -1,0 +1,10 @@
+prefix=/usr/local
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: tree-sitter-zel
+Description: 
+URL: https://github.com/tree-sitter/tree-sitter-zel
+Version: 0.1.0
+Libs: -L${libdir} -ltree-sitter-zel
+Cflags: -I${includedir}
