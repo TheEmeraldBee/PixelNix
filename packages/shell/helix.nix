@@ -13,11 +13,6 @@
       alejandra
 
       marksman # Markdown
-      zls # Zig
-
-      # Java
-      google-java-format
-      jdt-language-server
 
       wgsl-analyzer # WGSL
 

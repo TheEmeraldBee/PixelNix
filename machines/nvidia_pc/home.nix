@@ -24,13 +24,6 @@ in {
     (rootPath + /packages/applications/olympus.nix) # Celeste Mods
     (rootPath + /packages/applications/obsidian.nix) # Note Taking
 
-    # Programming Languages
-    (rootPath + /packages/lang/python.nix)
-    (rootPath + /packages/lang/rust.nix)
-    (rootPath + /packages/lang/go.nix)
-    (rootPath + /packages/lang/c.nix)
-    (rootPath + /packages/lang/web.nix)
-
     # Shell
     (import (rootPath + /packages/shell/nushell.nix) {
       flake = "nvidia_pc";

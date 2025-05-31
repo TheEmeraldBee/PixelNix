@@ -11,6 +11,9 @@
     grim
     slurp
 
+    # Brightness
+    brightnessctl
+
     wl-clipboard
   ];
 
