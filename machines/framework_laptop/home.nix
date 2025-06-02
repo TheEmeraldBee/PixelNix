@@ -17,6 +17,7 @@ in {
     # Applications
     (rootPath + /packages/applications/discord.nix) # Chatting
     (rootPath + /packages/applications/ghostty.nix) # Terminal
+    (rootPath + /packages/applications/godot.nix) # Game-Engine
     (rootPath + /packages/applications/prismlauncher.nix) # Minecraft
     (rootPath + /packages/applications/feh.nix) # Image Viewer
     (rootPath + /packages/applications/pavu.nix) # Audio Control

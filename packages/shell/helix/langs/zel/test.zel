@@ -1,7 +1,0 @@
-const main = fn() {
-  5 * 10;
-  let mut x = 4;
-  let y = fn(a, b) {
-    a + b
-  }(x, 5)
-}

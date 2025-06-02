@@ -37,9 +37,6 @@
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     zen-browser.inputs.nixpkgs.follows = "nixpkgs";
 
-    zig.url = "github:mitchellh/zig-overlay";
-    zig.inputs.nixpkgs.follows = "nixpkgs";
-
     # Framework 16 stuff
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   };

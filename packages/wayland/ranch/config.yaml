@@ -1,5 +1,5 @@
 shell: "nu"
-executor: "hyprctl dispatch exec"
+executor: "hyprctl dispatch exec --"
 
 max_search: 30
 max_render: 30
@@ -158,7 +158,7 @@ entries:
         name: "Godot"
         icon_color: blue
         events:
-          - !exec godot4
+          - !exec godot --display-driver wayland
 
   - !folder
     name: "Messaging"

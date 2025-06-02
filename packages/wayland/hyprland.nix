@@ -195,7 +195,7 @@
         "suppressevent maximize, class:.*"
         "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
 
-        "workspace 4, class:^(discord)$"
+        "workspace 4 silent, class:^(discord)$"
       ];
     };
   };
