@@ -15,6 +15,7 @@ in {
     (rootPath + /packages/nixos/services.nix) # Enable required services
     (rootPath + /packages/nixos/amd.nix) # GPU
     (rootPath + /packages/nixos/tlp.nix) # Power Profiles
+    (rootPath + /packages/nixos/nh.nix) # Better nix command
 
     # Network
     (import (rootPath + /packages/nixos/network.nix) {

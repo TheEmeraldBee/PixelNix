@@ -41,6 +41,7 @@
       $env.PATH = ($env.PATH | split row esep | prepend /run/wrappers/bin | prepend ~/dotfiles/script-bin)
 
       $env.FLAKE = "${flake}"
+      $env.NH_FLAKE = "${flake}"
 
       let carapace_completer = {|spans|
         carapace $spans.0 nushell $spans | from json
@@ -69,7 +70,7 @@
       }
 
       def --env d [...args] {
-        let inputs = yazi --chooser-file=/dev/stdout ../ | each {|line| $line} | split row "\n"
+        let inputs = yazi --chooser-file=/dev/stdout | each {|line| $line} | split row "\n"
 
         mut dir = if (($inputs | length) == 0) {
           print $"(ansi gb)No Folder Selected. Using `pwd`.(ansi reset)"
@@ -110,6 +111,8 @@
 
       core-hx = "hx";
       hx = "zellij-helix";
+
+      e = "startup";
 
       # Rust
       bc = "bacon clippy";

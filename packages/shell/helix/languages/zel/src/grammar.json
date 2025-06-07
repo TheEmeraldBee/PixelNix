@@ -1125,7 +1125,7 @@
     },
     "number_literal": {
       "type": "PATTERN",
-      "value": "\\d+(\\.\\d*)?"
+      "value": "\\d+"
     },
     "string_literal": {
       "type": "PATTERN",

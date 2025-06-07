@@ -17,7 +17,7 @@ def main [operation, current_buffer] {
   }
 
   # Join the list of filepaths we had above to support writing the paths to helix.
-  let command_str = $command | str join " "
+  let command_str = $command | each {|p| $"\"($p)\"" }| str join " "
 
 
   match $operation { 

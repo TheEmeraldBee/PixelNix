@@ -1,4 +1,7 @@
-{...}: {
+{pkgs, ...}: {
+  home.packages = with pkgs; [
+    gitAndTools.gh
+  ];
   programs.jujutsu = {
     enable = true;
     settings = {

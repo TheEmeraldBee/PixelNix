@@ -1,6 +1,6 @@
 [[language]]
 name = "python"
-language-servers = [ "pyright", "ruff" ]
+language-servers = ["pyright", "ruff"]
 auto-format = true
 
 [language-server.ruff]
@@ -20,12 +20,12 @@ roots = []
 
 [[grammar]]
 name = "zel"
-source = { path = "/home/brightonlcox/dotfiles/packages/shell/helix/langs/zel/"}
+source = { path = "/home/brightonlcox/dotfiles/packages/shell/helix/languages/zel/" }
 
 
 [language-server.godot]
-command = "ncat" # or nc
-args = [ "127.0.0.1", "6005"]
+command = "ncat"             # or nc
+args = ["127.0.0.1", "6005"]
 
 [[language]]
 name = "gdscript"
@@ -34,4 +34,4 @@ language-servers = ["godot"]
 [[language]]
 name = "nix"
 auto-format = true
-formatter = {command = "alejandra", args = ["-q"]}
+formatter = { command = "alejandra", args = ["-q"] }

@@ -154,6 +154,13 @@ entries:
           - !exec ghostty
 
       - !entry
+        icon: "H"
+        name: "Postman"
+        icon_color: red
+        events:
+          - !exec postman
+
+      - !entry
         icon: ""
         name: "Godot"
         icon_color: blue

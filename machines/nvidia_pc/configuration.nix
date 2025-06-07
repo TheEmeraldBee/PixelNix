@@ -14,6 +14,8 @@ in {
     (rootPath + /packages/nixos/packages.nix) # Misc Required Packages for Nixos to run
     (rootPath + /packages/nixos/services.nix) # Enable required services
     (rootPath + /packages/nixos/nvidia.nix) # GPU
+    (rootPath + /packages/nixos/nh.nix) # Better nix command
+
     # Network
     (import (rootPath + /packages/nixos/network.nix) {
       hostName = "brighton-pc";

@@ -1,7 +1,9 @@
 #!/usr/bin/env nu
 
-if not ("ZELLIJ_SESSION_NAME" in $env) {
-  zellij
-} else {
-  hx
+def main [] {
+  if not ("ZELLIJ_SESSION_NAME" in $env) {
+    zellij
+  } else {
+    hx
+  }
 }

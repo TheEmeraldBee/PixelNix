@@ -22,7 +22,6 @@ while (true) {
     | filter {|x| str trim | is-not-empty}
 
   let action = [
-      $"(ansi gb)0. random new(ansi reset)",
       $"(ansi cb)1. new session(ansi reset)", 
       $"(ansi grey)2. list sessions(ansi reset)", 
       $"(ansi blue_bold)3. attach(ansi reset)", 
@@ -31,10 +30,7 @@ while (true) {
       $"(ansi rb)6. exit(ansi reset)"
     ] | input list $"(ansi cb)Which action?(ansi reset)" -i
 
-  match $action {
-    0 => {
-      zellij
-    }
+  match ($action - 1) {
     1 => {
       let inputs = yazi --chooser-file=/dev/stdout ../ | each {|line| $line} | split row "\n"
 
