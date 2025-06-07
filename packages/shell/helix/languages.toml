@@ -18,6 +18,11 @@ comment-tokens = "//"
 indent = { tab-width = 2, unit = "  " }
 roots = []
 
+[[grammar]]
+name = "zel"
+source = { path = "/home/brightonlcox/dotfiles/packages/shell/helix/langs/zel/"}
+
+
 [language-server.godot]
 command = "ncat" # or nc
 args = [ "127.0.0.1", "6005"]
