@@ -33,7 +33,6 @@ in {
 
     (rootPath + /packages/shell/wally.nix) # ZSA Keyboard
 
-    (rootPath + /packages/shell/aichat.nix) # AI
     (rootPath + /packages/shell/direnv.nix) # Auto setup when entering directory
 
     (rootPath + /packages/shell/ferrite.nix) # Makefile Runner

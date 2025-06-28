@@ -120,9 +120,6 @@
       # OS Stuff
       cd = "z";
       ci = "zi";
-
-      ai = "aichat";
-      ask = "aichat -e";
     };
   };
 

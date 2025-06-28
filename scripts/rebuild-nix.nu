@@ -1,5 +1,5 @@
 try {
-  /run/wrappers/bin/sudo nixos-rebuild switch --flake ~/dotfiles#($env.FLAKE)
+  nh os switch ~/dotfiles#nixosConfigurations.($env.FLAKE)
 } catch {
   notify-send -u critical -e "Failed to Rebuild Nix Configuration!"
   exit 1

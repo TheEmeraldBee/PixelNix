@@ -1,6 +1,0 @@
-model: groq
-clients:
-- type: openai-compatible
-  name: groq
-  api_base: https://api.groq.com/openai/v1
-  api_key: null
