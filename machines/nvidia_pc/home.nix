@@ -23,6 +23,7 @@ in {
     (rootPath + /packages/applications/zen.nix) # Browser
     (rootPath + /packages/applications/olympus.nix) # Celeste Mods
     (rootPath + /packages/applications/obsidian.nix) # Note Taking
+    (rootPath + /packages/applications/intellij.nix) # Java Development
 
     # Shell
     (import (rootPath + /packages/shell/nushell.nix) {
@@ -41,6 +42,7 @@ in {
     (rootPath + /packages/shell/jujutsu.nix) # Improved Git UX
 
     (rootPath + /packages/shell/helix.nix) # Editor
+    (rootPath + /packages/shell/neovim.nix) # Editor
     (rootPath + /packages/shell/starship.nix) # Prompt
     (rootPath + /packages/shell/yazi.nix) # File Explorer
     (rootPath + /packages/shell/zellij.nix) # Multiplexer

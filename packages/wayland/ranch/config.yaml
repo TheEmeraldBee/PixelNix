@@ -154,6 +154,13 @@ entries:
           - !exec ghostty
 
       - !entry
+        icon: ""
+        name: "Intellij Idea"
+        icon_color: magenta
+        events:
+          - !exec idea-community
+
+      - !entry
         icon: "H"
         name: "Postman"
         icon_color: red

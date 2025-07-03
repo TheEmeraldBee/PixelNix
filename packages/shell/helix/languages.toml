@@ -22,7 +22,6 @@ roots = []
 name = "zel"
 source = { path = "/home/brightonlcox/dotfiles/packages/shell/helix/languages/zel/" }
 
-
 [language-server.godot]
 command = "ncat"             # or nc
 args = ["127.0.0.1", "6005"]

@@ -29,6 +29,9 @@
     glow # Markdown Viewer
 
     tree-sitter
+
+    zip
+    unzip
   ];
 
   home.sessionPath = [

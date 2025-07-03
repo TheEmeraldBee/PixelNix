@@ -8,6 +8,12 @@
     helix.url = "github:helix-editor/helix";
     helix.inputs.nixpkgs.follows = "nixpkgs";
 
+    # Neovim
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # Terminal
     ghostty.url = "github:ghostty-org/ghostty";
 
@@ -83,6 +89,7 @@
         extraSpecialArgs = {inherit inputs;};
 
         modules = [
+          inputs.nixvim.homeModules.nixvim
           ./machines/nvidia_pc/home.nix
         ];
       };
@@ -95,6 +102,7 @@
         extraSpecialArgs = {inherit inputs;};
 
         modules = [
+          inputs.nixvim.homeModules.nixvim
           ./machines/framework_laptop/home.nix
         ];
       };
