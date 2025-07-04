@@ -5,7 +5,7 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     # Helix editor
-    helix.url = "github:helix-editor/helix";
+    helix.url = "github:mattwparas/helix/steel-event-system";
     helix.inputs.nixpkgs.follows = "nixpkgs";
 
     # Neovim
