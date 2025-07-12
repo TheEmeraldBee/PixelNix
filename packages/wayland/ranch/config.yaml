@@ -99,13 +99,6 @@ entries:
           - !exec zen-beta
 
       - !entry
-        icon: ""
-        name: "Firefox"
-        icon_color: red
-        events:
-          - !exec firefox
-
-      - !entry
         icon: ""
         name: "Chrome"
         icon_color: yellow
@@ -148,31 +141,17 @@ entries:
     entries:
       - !entry
         icon: ""
-        name: "Ghostty"
+        name: "Alacritty"
         icon_color: green
         events:
-          - !exec ghostty
+          - !exec alacritty
 
       - !entry
-        icon: ""
-        name: "Intellij Idea"
-        icon_color: magenta
-        events:
-          - !exec idea-community
-
-      - !entry
-        icon: "H"
+        icon: "P"
         name: "Postman"
         icon_color: red
         events:
           - !exec postman
-
-      - !entry
-        icon: ""
-        name: "Godot"
-        icon_color: blue
-        events:
-          - !exec godot --display-driver wayland
 
   - !folder
     name: "Messaging"

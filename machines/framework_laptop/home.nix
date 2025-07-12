@@ -16,8 +16,7 @@ in {
     ############
     # Applications
     (rootPath + /packages/applications/discord.nix) # Chatting
-    (rootPath + /packages/applications/ghostty.nix) # Terminal
-    (rootPath + /packages/applications/godot.nix) # Game-Engine
+    (rootPath + /packages/applications/alacritty.nix) # Terminal
     (rootPath + /packages/applications/prismlauncher.nix) # Minecraft
     (rootPath + /packages/applications/feh.nix) # Image Viewer
     (rootPath + /packages/applications/pavu.nix) # Audio Control
@@ -26,7 +25,6 @@ in {
     (rootPath + /packages/applications/obsidian.nix) # Note Taking
     (rootPath + /packages/applications/bittorrent.nix) # Torrent
     (rootPath + /packages/applications/postman.nix) # HTTP Testing
-    (rootPath + /packages/applications/intellij.nix) # Java Development
 
     # Shell
     (import (rootPath + /packages/shell/nushell.nix) {
@@ -55,10 +53,13 @@ in {
       envVars = [];
     }) # Window Manager
 
+    (import (rootPath + /packages/wayland/eww.nix) {
+      theme = "laptop";
+    }) # Sidebar
+
     (rootPath + /packages/wayland/theme.nix) # Make things pretty
 
     (rootPath + /packages/wayland/dunst.nix) # Notifications
-    (rootPath + /packages/wayland/eww.nix) # Sidebar
     (rootPath + /packages/wayland/swww.nix) # Wallpaper
 
     (rootPath + /packages/wayland/ranch.nix) # App Launcher

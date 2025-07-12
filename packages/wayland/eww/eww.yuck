@@ -11,55 +11,49 @@
   :exclusive true
   :focusable false
   :namespace "sidebar"
-  (bar :screen 1)
+  (bar)
 )
 
-(defwidget metric [icon ?font-size]
-  (box :class "metric"
-       :orientation "v"
-    (label :class "metric-icon"
-           :style {font-size != "" ? "font-size: ${font-size}rem;" : ""}
-           :text icon)
-    (children)))
-
-
-(defwidget bar [screen]
-  (centerbox :orientation "v"
-    (box :class "top"
-      :valign "start"
-      :orientation "v"
-      :spacing 15
-      :space-evenly false
+(defwidget bar []
+  (box
+    :orientation "v"
+    :space-evenly false
+    :class "bar"
+    (box
       :class "area"
-      (box :class "mode" (mode))
+      :orientation "v"
+      :valign "start"
+      :space-evenly false
+      :spacing "15"
+      (mode)
       (workspaces)
     )
-    (box :class "middle"
-      :valign "center"
-      :orientation "v"
-      :spacing 15
-      :space-evenly false
+    (box :vexpand true)
+    (box
       :class "area"
-      (time)
-    )
-    (box :class "bottom"
+      :orientation "v"
       :valign "end"
-      :orientation "v"
-      :spacing 15
       :space-evenly false
-      :class "area"
-      (box :class "battery" (battery_display))
+      :spacing "15"
+      (brightness)
       (volume)
-      (box :class "bluetooth" (bluetooth))
-      (box :class "metric" (date))
+      (bluetooth)
+      (time)
+      (battery_display)
+      (power)
     )
   )
 )
 
 (defwidget workspaces []
-  (box :orientation "v" :class "workspaces" :space-evenly true :spacing 15
+  (box
+    :orientation "v"
+    :class "workspaces"
+    :space-evenly true
+    :spacing 15
     (for wsp in workspaces
-      (button :class "${wsp.id == selected_workspace ? "active": "inactive"}"
+      (button
+        :class "workspace-button ${wsp.id == selected_workspace ? "active": "inactive"}"
         :onclick "hyprctl dispatch workspace ${wsp.id}"
         {wsp.icon}
       )
@@ -76,90 +70,160 @@
   {"id": "9", "icon": ""}
 ]')
 
-(defpoll selected_workspace :initial "1" :interval "500ms" "hyprctl monitors -j | jq 'map(.activeWorkspace.id) | min'")
+(defpoll selected_workspace
+  :initial "1"
+  :interval "500ms"
+  "hyprctl monitors -j | jq 'map(.activeWorkspace.id) | min'"
+)
 
 (defwidget volume []
-  (box :class "volume"
-    :orientation "v"
-    :space-evenly false
-    :valign "fill"
-    :vexpand false
-    (scale :orientation "h"
-      :min 0
-      :max 100
-      :onchange "pactl set-sink-volume 0 $(printf %.0f {})%"
-      :value volume
-    )
-    (eventbox :onscroll "if [ '{}' == 'up' ]; then pactl set-sink-volume 0 +5%; else pactl set-sink-volume 0 -5%; fi"
-      :vexpand true
-      :valign "fill"
-      (box :orientation "v"
-        :valign "fill"
-        :vexpand true
-        (button
-          :onclick "hyprctl dispatch exec pavucontrol"
-          (label :class "icon" :text "")
+  (eventbox
+    :onhover "eww update show_volume_details=true"
+    :onhoverlost "eww update show_volume_details=false"
+    :class "volume-wrapper"
+    (box
+      :orientation "v"
+      :space-evenly false
+      :valign "center"
+      (revealer
+        :transition "slideup"
+        :reveal show_volume_details
+        :duration "350ms"
+        (box
+          :class "volume-slider-container"
+          (scale
+            :class "volume-slider"
+            :orientation "v"
+            :flipped true
+            :min 0
+            :max 100
+            :onchange "pactl set-sink-volume @DEFAULT_SINK@ $(printf %.0f {})%"
+            :value volume
+          )
         )
-        (label :text "${volume}%")
       )
+      (button :class "volume-button icon" "")
     )
   )
 )
 
-(defpoll volume :initial "0" :interval "100ms" "echo \"$(pactl get-sink-volume 0 | awk '{ print $5 }')\" | sed \"s/%//\"")
+(defvar show_volume_details false)
+(defpoll volume
+  :initial "0"
+  :interval "100ms"
+  "echo \"$(pactl get-sink-volume @DEFAULT_SINK@ | awk '{ print $5 }')\" | sed \"s/%//\""
+)
+
+(defwidget brightness []
+  (eventbox
+    :onhover "eww update show_brightness_details=true"
+    :onhoverlost "eww update show_brightness_details=false"
+    :class "volume-wrapper"
+    (box
+      :orientation "v"
+      :space-evenly false
+      :valign "center"
+      (revealer
+        :transition "slideup"
+        :reveal show_brightness_details
+        :duration "350ms"
+        (box
+          :class "volume-slider-container"
+          (scale
+            :class "volume-slider"
+            :orientation "v"
+            :flipped true
+            :min 0
+            :max 255
+            :onchange "brightnessctl set $(printf %f {})"
+            :value brightness
+          )
+        )
+      )
+      (button :class "brightness-button icon" "󰃠")
+    )
+  )
+)
+
+(defvar show_brightness_details false)
+(defpoll brightness
+  :initial "0"
+  :interval "100ms"
+  "brightnessctl get"
+)
 
 (defwidget bluetooth []
-  (box :orientation "v"
-    :halign "center"
-    (button :onclick "hyprctl dispatch exec blueman-manager"
-      (label :class "icon" :text "󰂱")
-    )
+  (button
+    :class "bluetooth-button icon"
+    :onclick "hyprctl dispatch exec blueman-manager"
+    :tooltip "${bluetooth}"
+    "󰂱"
   )
 )
 
+(defpoll bluetooth :interval "20s" "bluetoothctl devices Connected")
+
 (defwidget time[]
-  (box :orientation "v"
-    :class "time"
-    hour min sec loc
-  )
-)
+  (box :orientation "v" :class "time" :halign "center" hour min))
 
 (defpoll hour :interval "1s" "date +%I")
 (defpoll min :interval "1s" "date +%M")
-(defpoll sec :interval "1s" "date +%S")
-(defpoll loc :interval "1s" "date +%p")
-
-(defwidget date[]
-  (box :orientation "v"
-    :class "date"
-    :halign "center"
-    day_word month day year
-  )
-)
-
-(defpoll day_word :interval "10m" "date +%a")
-(defpoll day      :interval "10m" "date +%d")
-(defpoll month    :interval "1h"  "date +%m")
-(defpoll year     :interval "1h"  "date +%y")
 
 (defwidget battery_display[]
-  (box :orientation "v"
+  (box
+    :orientation "v"
     :class "battery"
     :halign "center"
-    (label :class "percentage" :text "${battery}%")
-    (label :class "icon" :text {battery > 80 ? "" : battery > 50 ? "" : battery > 20 ? "": ""})
+    (label
+      :class "icon"
+      :tooltip "${battery}%"
+      :text {battery > 80 ? "" : battery > 50 ? "" : battery > 20 ? "": ""}
+    )
   )
 )
 
-(defpoll battery :interval "20s" "cat /sys/class/power_supply/BAT1/capacity")
+(defpoll battery
+  :interval "20s"
+  "cat /sys/class/power_supply/BAT1/capacity"
+)
 
 (defwidget mode[]
-  (box :orientation "v"
-    :halign "center"
-    (button :onclick "hyprctl dispatch exec \"[float; pin; stayfocused] ghostty -e ranch\""
-      (label :text {cur_mode == "main" ? "󰓩" : cur_mode == "window" ? "󱂬" : ""})
-    )
+  (button
+    :class "mode-button"
+    :onclick "hyprctl dispatch exec \"[float; pin; stayfocused] alacritty -e ranch\""
+    {cur_mode == "main" ? "󰓩" : cur_mode == "window" ? "󱂬" : ""}
   )
 )
 
 (defpoll cur_mode :interval "100ms" "cat /tmp/hypr-submap")
+
+(defwidget power_menu []
+  (box
+    :orientation "v"
+    :spacing 15
+    :class "power-menu-revealed"
+    (button :class "lock-button" :onclick "hyprctl dispatch exec hyprlock" "󰌾")
+    (button :class "reboot-button" :onclick "systemctl reboot" "󰜉")
+  )
+)
+
+(defvar show_power_menu false)
+(defwidget power []
+  (eventbox
+    :onhover "eww update show_power_menu=true"
+    :onhoverlost "eww update show_power_menu=false"
+    (box
+      :orientation "v"
+      :class "power-wrapper"
+      :valign "center"
+      :space-evenly false
+      (revealer
+        :transition "slideup"
+        :reveal show_power_menu
+        :duration "350ms"
+        (power_menu)
+      )
+      (button :class "power-button icon" :onclick "systemctl poweroff" "")
+    )
+  )
+)

@@ -32,6 +32,8 @@
 
     zip
     unzip
+
+    neofetch
   ];
 
   home.sessionPath = [

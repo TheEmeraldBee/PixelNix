@@ -1,97 +1,132 @@
-$bg-color: rgba(26, 27, 38, 0.5);
-$box-color: rgba(13, 14, 18, 0.8);
+$bg-color: rgba(21, 25, 23, 0.9);
+$box-color: #1c2420;
 
-$active-workspace-color: rgba(50, 150, 80, 1.0);
+$main-text: #d5e0d9;
+$hover-color: #ffffff;
 
-$main-text: darkolivegreen;
-$button-hover-color: teal;
-
-$slider-color: darkseagreen;
-
-.area {
-  &>* {
-    border-radius: 5px;
-    background-color: $box-color;
-  }
-}
+$active-color: #6ebc82;
+$battery-color: #e6c381;
+$bluetooth-color: #81a1e6;
+$volume-color: #81e6aa;
+$brightness-color: #f6f7a9;
+$power-color: #e68181;
+$reboot-color: #e6d881;
+$lock-color: #81b2e6;
 
 * {
   all: unset;
-}
-
-window {
-  font-family: DepartureMono Nerd Font;
-  font-size: 16px;
-
-  background-color: rgba(0, 0, 0, 0);
-
-  color: $main-text;
-
-  &>* {
-    margin: 3px;
-  }
-}
-
-.workspaces {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.active {
-  color: $active-workspace-color;
-}
-
-.metric {
-  padding: 5px 2px;
-}
-
-.volume {
-  padding-bottom: 7px;
-  min-height: 70px;
-
-  slider {
-    all: unset;
-    padding: 0;
-  }
-
-  scale trough highlight {
-    border-radius: 10px;
-    all: unset;
-    background-color: $slider-color;
-  }
-
-  scale trough {
-    all: unset;
-    background-color: $box-color;
-    min-width: 34px;
-    min-height: 2px;
-  }
-}
-
-.mode {
-  padding-top: 7px;
-  padding-bottom: 7px;
-}
-
-.mode :hover {
-  color: $button-hover-color;
-}
-
-.bluetooth {
-  padding-top: 7px;
-  padding-bottom: 7px;
-}
-
-.bluetooth :hover {
-  color: $button-hover-color;
-}
-
-.time {
-  padding-top: 7px;
-  padding-bottom: 7px;
+  font-family: Hack Nerd Font Mono;
 }
 
 .sidebar {
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 16px;
+}
+
+.bar {
   background-color: $bg-color;
+  margin: 5px;
+  color: $main-text;
+}
+
+.area {
+  background-color: $box-color;
   border-radius: 12px;
+  padding: 10px 5px;
+}
+
+button {
+  font-size: 18px;
+}
+
+button:hover {
+  color: $hover-color;
+}
+
+.icon {
+  font-size: 24px;
+}
+
+.workspaces .active {
+  color: $active-color;
+}
+
+.battery .icon {
+  color: $battery-color;
+}
+
+.bluetooth-button {
+  color: $bluetooth-color;
+}
+
+.volume-button {
+  color: $volume-color;
+}
+
+.volume-slider-container {
+  margin-bottom: 15px;
+}
+
+scale.volume-slider trough {
+  all: unset;
+  background-color: darken($box-color, 5%);
+  border-radius: 10px;
+  min-width: 8px;
+  min-height: 80px;
+}
+
+scale.volume-slider trough highlight {
+  all: unset;
+  border-radius: 10px;
+  background-color: $brightness-color;
+}
+
+.brightness-button {
+  color: $brightness-color;
+}
+
+.brightness-slider-container {
+  margin-bottom: 15px;
+}
+
+scale.brightness-slider trough {
+  all: unset;
+  background-color: darken($box-color, 5%);
+  border-radius: 10px;
+  min-width: 8px;
+  min-height: 80px;
+}
+
+scale.brightness-slider trough highlight {
+  all: unset;
+  border-radius: 10px;
+  background-color: $brightness-color;
+}
+
+.time {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.power-icon-default {
+  color: $power-color;
+  font-size: 18px;
+}
+
+.power-menu-revealed {
+  margin-bottom: 15px;
+}
+
+.power-button {
+  color: $power-color;
+  color: $power-color;
+  font-size: 18px;
+}
+
+.reboot-button {
+  color: $reboot-color;
+}
+
+.lock-button {
+  color: $lock-color;
 }

@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{theme}: {pkgs, ...}: {
   home.packages = with pkgs; [
     eww
   ];

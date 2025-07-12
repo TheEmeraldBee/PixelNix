@@ -16,14 +16,13 @@ in {
     ############
     # Applications
     (rootPath + /packages/applications/discord.nix) # Chatting
-    (rootPath + /packages/applications/ghostty.nix) # Terminal
+    (rootPath + /packages/applications/alacritty.nix) # Terminal
     (rootPath + /packages/applications/prismlauncher.nix) # Minecraft
     (rootPath + /packages/applications/feh.nix) # Image Viewer
     (rootPath + /packages/applications/pavu.nix) # Audio Control
     (rootPath + /packages/applications/zen.nix) # Browser
     (rootPath + /packages/applications/olympus.nix) # Celeste Mods
     (rootPath + /packages/applications/obsidian.nix) # Note Taking
-    (rootPath + /packages/applications/intellij.nix) # Java Development
 
     # Shell
     (import (rootPath + /packages/shell/nushell.nix) {
@@ -56,10 +55,13 @@ in {
       ];
     }) # Window Manager
 
+    (import (rootPath + /packages/wayland/waybar.nix) {
+      theme = "doom";
+    }) # Sidebar
+
     (rootPath + /packages/wayland/theme.nix) # Make things pretty
 
     (rootPath + /packages/wayland/dunst.nix) # Notifications
-    (rootPath + /packages/wayland/eww.nix) # Sidebar
     (rootPath + /packages/wayland/swww.nix) # Wallpaper
 
     (rootPath + /packages/wayland/ranch.nix) # App Launcher
