@@ -55,22 +55,32 @@
         show_banner: false,
       }
 
+      $env.SSH_AUTH_SOCK = "/home/brightonlcox/.bitwarden-ssh-agent.sock"
+
+      alias core-bw = bw
+      def --env --wrapped bw [...args] {
+        if not ("BW_SESSION" in $env) {
+          $env.BW_SESSION = (core-bw unlock --raw)
+        }
+        core-bw ...$args
+      }
+
       try {
         $env.GEMINI_API_KEY = open ~/.gemini-key
       } catch {
-        $env.GEMINI_API_KEY = (op read op://secrets/gemini-key/password)
+        $env.GEMINI_API_KEY = (bw get password gemini-key --raw)
         $env.GEMINI_API_KEY | save ~/.gemini-key
       }
       try {
         $env.GROQ_API_KEY = open ~/.groq-key
       } catch {
-        $env.GROQ_API_KEY = (op read op://secrets/groq-key/password)
+        $env.GROQ_API_KEY = (bw get password groq-key --raw)
         $env.GROQ_API_KEY | save ~/.groq-key
       }
       try {
         $env.RPG_BOT_KEY = open ~/.rpg-bot
       } catch {
-        $env.RPG_BOT_KEY = (op read op://secrets/rpg-bot/password)
+        $env.RPG_BOT_KEY = (bw get password rpg-bot --raw)
         $env.RPG_BOT_KEY | save ~/.rpg-bot
       }
 

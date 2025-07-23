@@ -3,7 +3,7 @@ let connected = (hyprctl monitors -j | from json | get name)
 # Kill Pretty Background Thing
 nu ~/dotfiles/script-bin/sr kill
 
-eww close-all
+ps | where name =~ .eww-wrapped | get pid | each {|id| kill $id}
 swww kill
 
 if ($connected | any { |m| $m == "DP-3" }) {

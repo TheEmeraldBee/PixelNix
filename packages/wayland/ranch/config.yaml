@@ -168,10 +168,10 @@ entries:
     entries:
       - !entry
         icon: ""
-        name: "1Password"
+        name: "Bitwarden"
         icon_color: red
         events:
-          - !exec 1password
+          - !exec bitwarden
 
   - !folder
     name: "Settings"

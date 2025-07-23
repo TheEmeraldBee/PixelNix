@@ -30,7 +30,7 @@ in {
     # Applications
     (rootPath + /packages/applications/steam.nix) # Gaming
     (rootPath + /packages/applications/alvr.nix) # VR
-    (rootPath + /packages/applications/1password.nix) # Passwords
+    (rootPath + /packages/applications/bitwarden.nix) # Passwords
 
     (rootPath + /packages/wayland/hyprland_env.nix)
     (rootPath + /packages/nixos/udisk.nix) # Auto Mount Drives

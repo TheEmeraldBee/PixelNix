@@ -176,11 +176,14 @@
 
         # Start Up Applications that are used everywhere.
         "[workspace 1 silent] zen-beta" # Web-Browser
+
         "[workspace 4 silent] discord" # Messaging
-        "[workspace 3 silent] alacritty"
+
+        "[workspace 3 silent] alacritty" # Terminal
+
         "[workspace 2 silent] steam -silent" # Gaming
 
-        "[workspace 5 silent] 1password" # Password Manager
+        "[workspace 5 silent] bitwarden" # Password Manager
 
         "[workspace special silent] alacritty" # Floating Terminal
       ];
