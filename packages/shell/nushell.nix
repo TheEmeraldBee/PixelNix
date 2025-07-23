@@ -1,4 +1,6 @@
-{flake, ...}: {pkgs, ...}: {
+{ flake, ... }:
+{ pkgs, ... }:
+{
   home.packages = with pkgs; [
     nushell # Main Shell
     carapace # Autocompletions
@@ -106,7 +108,7 @@
         dbus-run-session Hyprland
       }
 
-      $env.EDITOR = "hx"
+      $env.EDITOR = "zellij-nvim"
 
       def jm [branch, ...args] {
         jj bookmark move $branch --to @ ...$args
@@ -126,6 +128,9 @@
 
       core-hx = "hx";
       hx = "zellij-helix";
+
+      core-nvim = "nvim";
+      nvim = "zellij-nvim";
 
       e = "startup";
 

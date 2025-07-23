@@ -2,8 +2,10 @@
   pkgs,
   inputs,
   ...
-}: {
-  home.packages = with pkgs;
+}:
+{
+  home.packages =
+    with pkgs;
     [
       ####################
       # Language Servers #

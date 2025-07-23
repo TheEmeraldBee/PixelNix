@@ -2,8 +2,8 @@
 
 def main [] {
   if not ("ZELLIJ_SESSION_NAME" in $env) {
-    nu ~/.config/helix/scripts/run.nu
+    nu ~/.config/nvim/scripts/run.nu
   } else {
-    hx
+    nvim
   }
 }

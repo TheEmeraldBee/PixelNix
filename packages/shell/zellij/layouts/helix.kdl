@@ -28,7 +28,7 @@ layout {
       pane focus=true { 
         name "neovim"
         command "nu" 
-        args "-c" "nu ~/.config/nvim/scripts/nvim.nu"
+        args "-c" "nu ~/.config/helix/scripts/helix.nu"
       }
     }
     tab name="Terminal" {

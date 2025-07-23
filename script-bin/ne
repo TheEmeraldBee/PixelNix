@@ -4,6 +4,6 @@ use std/dirs shells-aliases *
 
 enter ~/dotfiles/
 
-zellij-helix
+zellij-nvim
 
 n

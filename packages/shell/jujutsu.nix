@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   home.packages = with pkgs; [
     gitAndTools.gh
   ];
@@ -9,7 +10,7 @@
         log = "all()";
       };
       ui = {
-        editor = "hx";
+        editor = "nvim";
         pager = "bat --decorations never";
         default-command = "status";
       };

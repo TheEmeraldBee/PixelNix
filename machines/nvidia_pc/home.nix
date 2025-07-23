@@ -1,6 +1,8 @@
-{...}: let
+{ ... }:
+let
   rootPath = ../../.;
-in {
+in
+{
   news.display = "silent";
 
   # Define Normal Home Modules
@@ -41,7 +43,7 @@ in {
     (rootPath + /packages/shell/jujutsu.nix) # Improved Git UX
 
     (rootPath + /packages/shell/helix.nix) # Editor
-    (rootPath + /packages/shell/neovim.nix) # Editor
+    (rootPath + /packages/shell/neovim/init.nix) # Editor
     (rootPath + /packages/shell/starship.nix) # Prompt
     (rootPath + /packages/shell/yazi.nix) # File Explorer
     (rootPath + /packages/shell/zellij.nix) # Multiplexer
