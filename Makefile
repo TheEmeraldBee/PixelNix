@@ -7,7 +7,7 @@ rebuild-home: jj
 -------:
 
 jj:
-	jj diff
+	jj diff || true
 
 -------:
 

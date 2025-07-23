@@ -20,8 +20,6 @@
       vscode-langservers-extracted
 
       taplo # TOML
-
-      steel
     ]
     ++ [
       ##########

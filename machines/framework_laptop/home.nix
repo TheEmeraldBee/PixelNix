@@ -46,6 +46,7 @@ in {
     (rootPath + /packages/shell/neovim.nix) # Editor
     (rootPath + /packages/shell/starship.nix) # Prompt
     (rootPath + /packages/shell/yazi.nix) # File Explorer
+    (rootPath + /packages/shell/xplr.nix) # File Explorer 2.0
     (rootPath + /packages/shell/zellij.nix) # Multiplexer
 
     # Wayland
