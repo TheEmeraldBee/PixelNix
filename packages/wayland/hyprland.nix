@@ -1,8 +1,10 @@
-{envVars, ...}: {
+{ envVars, ... }:
+{
   pkgs,
   inputs,
   ...
-}: {
+}:
+{
   home.packages = with pkgs; [
     hypridle # Checks for idling machine
     hyprlock # Makes machine lockable
@@ -49,20 +51,18 @@
   wayland.windowManager.hyprland = {
     enable = true;
     package = inputs.hyprland.packages.${pkgs.system}.hyprland;
-    plugins = [inputs.hy3.packages.${pkgs.system}.hy3];
+    plugins = [ inputs.hy3.packages.${pkgs.system}.hy3 ];
 
     extraConfig = ''
       ${builtins.readFile ./hyprland/hyprland.conf}
     '';
 
     settings = {
-      env =
-        [
-          "MOZ_ENABLE_WAYLAND,1"
-          "AQ_DRM_DEVICES,/dev/dri/card2:/dev/dri/card1"
-          "XCURSOR_SIZE,20"
-        ]
-        ++ envVars;
+      env = [
+        "MOZ_ENABLE_WAYLAND,1"
+        "AQ_DRM_DEVICES,/dev/dri/card2:/dev/dri/card1"
+        "XCURSOR_SIZE,20"
+      ] ++ envVars;
 
       animations = {
         enabled = 1;

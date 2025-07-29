@@ -26,7 +26,7 @@ layout {
     }
     tab name="Editor" focus=true {
       pane focus=true { 
-        name "neovim"
+        name "helix"
         command "nu" 
         args "-c" "nu ~/.config/helix/scripts/helix.nu"
       }

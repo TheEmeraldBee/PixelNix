@@ -47,6 +47,7 @@ in
     (rootPath + /packages/shell/starship.nix) # Prompt
     (rootPath + /packages/shell/yazi.nix) # File Explorer
     (rootPath + /packages/shell/zellij.nix) # Multiplexer
+    (rootPath + /packages/shell/gemini.nix) # AI
 
     # Wayland
     (import (rootPath + /packages/wayland/hyprland.nix) {
