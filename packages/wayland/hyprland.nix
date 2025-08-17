@@ -62,7 +62,8 @@
         "MOZ_ENABLE_WAYLAND,1"
         "AQ_DRM_DEVICES,/dev/dri/card2:/dev/dri/card1"
         "XCURSOR_SIZE,20"
-      ] ++ envVars;
+      ]
+      ++ envVars;
 
       animations = {
         enabled = 1;
@@ -72,8 +73,10 @@
       };
 
       monitor = [
+        "eDP-2,prefered,2560x0,1.25"
+        "DP-4,prefered,0x0,1.5"
+        # Layout remaining monitors automatically
         ",prefered,auto,1.5"
-        "eDP-2,prefered,auto,1.25"
       ];
 
       xwayland = {

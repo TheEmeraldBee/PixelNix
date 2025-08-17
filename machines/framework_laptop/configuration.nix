@@ -1,9 +1,17 @@
-{pkgs, ...}: let
+{ pkgs, ... }:
+let
   rootPath = ../../.;
-in {
+in
+{
   # Enable flakes and the `nix` command
-  nix.settings.experimental-features = ["nix-command" "flakes"];
-  nix.settings.trusted-users = ["root" "brightonlcox"];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
+  nix.settings.trusted-users = [
+    "root"
+    "brightonlcox"
+  ];
 
   # Import all files that are needed
   imports = [
@@ -16,6 +24,7 @@ in {
     (rootPath + /packages/nixos/amd.nix) # GPU
     (rootPath + /packages/nixos/tlp.nix) # Power Profiles
     (rootPath + /packages/nixos/nh.nix) # Better nix command
+    (rootPath + /packages/nixos/touchid.nix) # Touch ID
 
     # Network
     (import (rootPath + /packages/nixos/network.nix) {
@@ -57,7 +66,7 @@ in {
   # Define User Account
   users.users.brightonlcox = {
     isNormalUser = true;
-    extraGroups = ["wheel"]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
     shell = pkgs.nushell;
   };
 

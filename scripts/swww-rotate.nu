@@ -2,7 +2,7 @@ use std/dirs shells-aliases *
 
 def main [wait_time: duration] {
   # Get all monitors (assumes that monitor 2 is to the right of 1)
-  let monitors = hyprctl monitors -j | from json | get name | reverse | enumerate
+  let monitors = hyprctl monitors -j | from json | get name | enumerate
   # Get all wallpaper images and shuffle them around
   enter ~/dotfiles/assets/wallpapers
   let files = ls **/* | where type == "file" | shuffle

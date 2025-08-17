@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ ... }:
 
 {
   opts = {
@@ -20,6 +20,7 @@
       "noinsert"
     ];
     expandtab = true;
+    tabstop = 4; # 4 spaces = 1 tab
     shiftwidth = 2;
     smarttab = true;
 
